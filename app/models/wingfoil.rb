@@ -1,0 +1,2 @@
+class Wingfoil < ApplicationRecord
+end
