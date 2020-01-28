@@ -1,0 +1,120 @@
+<%= render "layouts/navbar" %>
+<br>
+<br>
+<div class="card">
+  <div class="card-body">
+    <h4 class="text"> <%= @board.name %></h4>
+
+  <div class="card p-2">
+    <div class="row d-flex justify-content-around">
+
+      <div class="card p-2">
+        <div class="col-sm-6">
+          <%= image_tag "/assets/board ride.jpg", alt: "photo bandit app" %>
+        </div>
+      </div>
+
+      <div class="card p-2">
+        <div class="col-sm-6">
+          <%= image_tag "/assets/board.jpg", alt: "photo bandit ruby" %>
+        </div>
+        <div class="card-body">
+          <%= image_tag "/assets/board fin.jpg", alt: "photo bandit ruby" %>
+          <%= image_tag "/assets/board strap.jpg", alt: "photo bandit ruby" %>
+          <%= image_tag "/assets/board strap2.jpg", alt: "photo bandit ruby" %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<br>
+<br>
+
+  <div class="card p-2">
+    <div class="row d-flex justify-content-around">
+
+      <div class="card">
+        <div class="col-sm-6">
+	  <div class="card card-body m-2" style="width: 400px">
+            <p class="card-text">
+	      Control : <%= @board.control %> 
+              <% while @control < @board.control %>
+	        <i class="fas fa-star"></i>
+	        <% @control = @control + 1 %>
+	      <%end%>
+              <% while @control < 5 %>
+	        <i class="far fa-star"></i>
+                <% @control = @control + 1 %>
+              <%end%>
+		<br>
+	      Progression <%= @board.progression %>
+              <% while @progression < @board.progression %>
+	        <i class="fas fa-star"></i>
+	        <% @progression = @progression + 1 %>
+	      <%end%>
+              <% while @progression < 5 %>
+	        <i class="far fa-star"></i>
+                <% @progression = @progression + 1 %>
+              <%end%>
+		<br>
+	      Freeride <%= @board.freeride %> 
+              <% while @freeride < @board.freeride %>
+	        <i class="fas fa-star"></i>
+	        <% @freeride = @freeride + 1 %>
+	      <%end%>
+              <% while @freeride < 5 %>
+	        <i class="far fa-star"></i>
+                <% @freeride = @freeride + 1 %>
+              <%end%>
+		<br>
+	      Freestyle <%= @board.freestyle %> 
+              <% while @freestyle < @board.freestyle %>
+	        <i class="fas fa-star"></i>
+	        <% @freestyle = @freestyle + 1 %>
+	      <%end%>
+              <% while @freestyle < 5 %>
+	        <i class="far fa-star"></i>
+                <% @freestyle = @freestyle + 1 %>
+              <%end%>
+		<br>
+	      Maniability <%= @board.maniability %> 
+              <% while @maniability < @board.maniability %>
+	        <i class="fas fa-star"></i>
+	        <% @maniability = @maniability + 1 %>
+	      <%end%>
+      		<% while @maniability < 5 %>
+	        <i class="far fa-star"></i>
+        	<% @maniability = @maniability + 1 %>
+              <%end%>
+		<br>
+            </p>
+	  </div>
+        </div>
+
+        <div class="card-body">
+	  <div class="card">
+            <%= image_tag "/assets/barre bandit.jpg", alt: "photo bandit ruby" %>
+	  </div>
+        </div>
+      </div>
+
+      <div class="card p-2">
+          <div class="card card-body" style="width: 600px">
+            <h2 class="text"> <%= @board.name %></h4>
+	    <h3 class="text"> <%= @board.marque %></h3>	
+            <p class="card-text"><small class="text-muted">board nue : <%= @board.price %>€</small></p>
+	    <h6 class="card-text text-muted">taille disponible : <%= @board.tailledispo %></h6>	
+        </div>
+
+	<div class="card bg-light m-2" style="max-width: 50rem;">
+	  <div class="card-body">
+	    <p class="card-text"><%= @board.description %></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+    ID : <%= @board.id %> <br>
+</div>

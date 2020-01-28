@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kitesurfmag</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+<br>
+<br>
+<br>
+	Page test board index
+
+<br>
+<br>
+<br>
+      <% @boards.each do |t, index| %>
+
+<div class="card-deck">
+  <div class="card col-sm-3">
+    <img src="/assets/board.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= t.name %></h5>
+      <p class="card-text"><%= t.marque %></p>
+      <p class="card-text"><small class="text-muted">		ID : <%= t.id %> <br>
+
+		<%= link_to "détails", board_path(t) %><br></small></p>
+    </div>
+  </div>
+</div>
+
+
+
+      <%end%>
+
+      <% @boards.each do |t, index| %>
+
+<h3 class="font-weight-bold"> <%= t.name %></h3>
+<%= t.description %> <br>
+Control : <%= t.control.to_i %> /5 <br>
+Progression : <%= t.progression.to_i %> /5 <br>
+Freeride : <%= t.freeride.to_i %> /5 <br>
+Freestyle <%= t.freestyle.to_i %> /5 <br>
+Maniability <%= t.maniability.to_i %> /5 <br>
+Voile 9m nue <%= t.price.to_i %> € <br>
+
+      <%end%>
+
+ 
+    <%= yield %>
+  </body>
+</html>
