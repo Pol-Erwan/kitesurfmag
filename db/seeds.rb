@@ -87,7 +87,7 @@ variable = 0
 
 10.times do
 
-	kite << Kite.create(name: kite_name[variable],description: kite_description[0],domain: "freestyle",brand: kite_brand[variable],wind: "6/7/8/9/10/11/12/13/14", favorite: "#freeride", testsize: "10", wave: rand(0..5),bigair: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5),feeling: rand(0..5), price: rand(1200..1600),year: "2020")
+	kite << Kite.create(name: kite_name[variable],description: kite_description[0],domain: "freestyle",brand: brand[variable],wind: "6/7/8/9/10/11/12/13/14", favorite: "#freeride", testsize: "10", wave: rand(0..5),bigair: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5),feeling: rand(0..5), price: rand(1200..1600),year: "2020")
 
 	board << Board.create(name: board_name[variable],description: board_description[0],control: rand(0..5),progression: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5), price: rand(500..1000),year: "2020")
 

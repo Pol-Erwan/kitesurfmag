@@ -10,9 +10,174 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_02_05_171851) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accessories", force: :cascade do |t|
+    t.string "name"
+    t.string "brand"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.string "domain"
+    t.string "description"
+    t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bars", force: :cascade do |t|
+    t.string "name"
+    t.string "brand"
+    t.string "domain"
+    t.string "description"
+    t.integer "transitions"
+    t.string "size"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "boards", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "domain"
+    t.string "brand"
+    t.string "tailledispo"
+    t.string "tailletest"
+    t.string "favorite"
+    t.string "picture"
+    t.integer "control"
+    t.integer "progression"
+    t.integer "freeride"
+    t.integer "freestyle"
+    t.integer "maniability"
+    t.integer "price"
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "foils", force: :cascade do |t|
+    t.string "name"
+    t.string "brand"
+    t.string "domain"
+    t.string "description"
+    t.string "picture"
+    t.integer "transitions"
+    t.integer "courbes"
+    t.integer "wind"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "kites", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "domain"
+    t.string "brand"
+    t.string "wind"
+    t.string "favorite"
+    t.string "picture"
+    t.integer "testsize"
+    t.integer "wave"
+    t.integer "bigair"
+    t.integer "freeride"
+    t.integer "freestyle"
+    t.integer "maniability"
+    t.integer "feeling"
+    t.integer "price"
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "portfolios", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "straps", force: :cascade do |t|
+    t.string "name"
+    t.string "brand"
+    t.string "domain"
+    t.string "description"
+    t.string "picture"
+    t.integer "transitions"
+    t.integer "courbes"
+    t.integer "wind"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "surfboards", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "transitions"
+    t.string "domain"
+    t.string "brand"
+    t.string "tailledispo"
+    t.string "favorite"
+    t.string "picture"
+    t.integer "tailletest"
+    t.integer "courbes"
+    t.integer "wind"
+    t.integer "sideshore"
+    t.integer "onshore"
+    t.integer "wave"
+    t.integer "freestyle"
+    t.integer "straps"
+    t.integer "strapless"
+    t.integer "price"
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trips", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.string "domain"
+    t.string "description"
+    t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "wingfoils", force: :cascade do |t|
+    t.string "name"
+    t.string "brand"
+    t.string "domain"
+    t.string "description"
+    t.string "picture"
+    t.integer "transitions"
+    t.integer "courbes"
+    t.integer "wind"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
