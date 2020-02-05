@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root 'article#index'
+  root 'static_page#index'
+
+  resources :static_pages
 
   resources :user
 
@@ -13,6 +15,7 @@ Rails.application.routes.draw do
   resources :strap
   resources :wingfoil
   resources :accessory
+  resources :portfolio
 
   resources :article
   resources :trip

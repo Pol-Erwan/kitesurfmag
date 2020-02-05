@@ -1,212 +1,220 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kitesurfmag</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
 <br>
 <br>
 <br>
-	Page kitesurf mag index
-    <img src="/assets/kite index3.jpg" width="100%">
+<br>
+<br>
+	Page kitesurf mag test kite index
+<br>
 
-       <div class="container show-service-container">
-         <div class="row justify-content-center">
-           <div class="col-lg-12">
-             <div class="row row-grid">
-               <div class="col-lg-4">
-                 <div class="card card-lift--hover shadow border-0">
-                   <div class="card-body py-5">
-                     <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
-                       <i class="ni ni-check-bold"></i>
-                     </div>
-                     <h6 class="text-primary text-uppercase">Ce qu'il faut savoir</h6>
-                     <p class="description mt-3">Une nuit, ou plus ? Avec pension complète ou demi-pension ? À ta guise ! <br>Découvre nos hôtels situés à proximité de tes spots préférés.</p>
-                     <div>
-                       <span class="badge badge-pill badge-primary">Wifi</span>
-                       <span class="badge badge-pill badge-primary">Pension</span>
-                       <span class="badge badge-pill badge-primary">Demi-pension</span>
-                     </div>
-                     <%= link_to "+ D'infos", kite_index_path(anchor: "full-board"), class:"btn btn-primary mt-4 " %>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-lg-4">
-                 <div class="card card-lift--hover shadow border-0">
-                   <div class="card-body py-5">
-                     <div class="icon icon-shape icon-shape-success rounded-circle mb-4">
-                       <i class="ni ni-istanbul"></i>
-                     </div>
-                     <h6 class="text-success text-uppercase">materiel testé</h6>
-                     <p class="description mt-3">Tu n'as pas de matoss' ? Pas de soucis. <br> Tous nos établissements proposent tout le matériel nécessaire au Kite-Surf à la location.  </p>
-                     <div>
-                       <span class="badge badge-pill badge-success">Voiles</span>
-                       <span class="badge badge-pill badge-success">Planches</span>
-                       <span class="badge badge-pill badge-success">Combinaisons</span>
-                     </div>
-                     <%= link_to "+ D'infos", kite_index_path(anchor: "material"), class:"btn btn-success mt-4 " %>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-lg-4">
-                 <div class="card card-lift--hover shadow border-0">
-                   <div class="card-body py-5">
-                     <div class="icon icon-shape icon-shape-info rounded-circle mb-4">
-                       <i class="ni ni-planet"></i>
-                     </div>
-                     <h6 class="text-info text-uppercase">comparer</h6>
-                     <p class="description mt-3">Tu débutes ? Tu souhaites perfectionner ta technique et tes skills ? <br> Nos profs sont là pour te donner un coup de pouce. </p>
-                     <div>
-                       <span class="badge badge-pill badge-info">Leçons</span>
-                       <span class="badge badge-pill badge-info">Cours particuliers</span>
-                     </div>
-                     <%= link_to "+ D'infos", kite_index_path(anchor: "lessons"), class:"btn btn-info mt-4 " %>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
+<% @kites.each do |t, index| %>
+<div class="card-deck">
+<div class="row mx-5">
+  
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4 m-2 pl-2">
+        <img src="assets/bandit" class="img-raised rounded img-fluid" alt="...">
+          <p class="card-text m-1"><small class="text-muted"><a href="<%= kite_path(t) %>" class="btn btn-primary">voir test complet</a></small></p>
+      </div>
+      <div class="col-md-6 m-2">
+        <div class="card-body">
+          <h3 class="card-title"><%= t.brand %> <%= t.name %></h3>
+          <p class="card-text">	      Wave : <%= t.wave %> 
+              <% while @wave < t.wave %>
+	        <i class="fas fa-star"></i>
+	        <% @wave = @wave + 1 %>
+	      <%end%>
+              <% while @wave < 5 %>
+	        <i class="far fa-star"></i>
+                <% @wave = @wave + 1 %>
+              <%end%>
+		<% @wave = 0 %>
+		<br>
+	      Big Air <%= t.bigair %>
+              <% while @bigair < t.bigair %>
+	        <i class="fas fa-star"></i>
+	        <% @bigair = @bigair + 1 %>
+	      <%end%>
+              <% while @bigair < 5 %>
+	        <i class="far fa-star"></i>
+                <% @bigair = @bigair + 1 %>
+              <%end%>
+		<% @bigair = 0 %>
+		<br>
+	      Freeride <%= t.freeride %> 
+              <% while @freeride < t.freeride %>
+	        <i class="fas fa-star"></i>
+	        <% @freeride = @freeride + 1 %>
+	      <%end%>
+              <% while @freeride < 5 %>
+	        <i class="far fa-star"></i>
+                <% @freeride = @freeride + 1 %>
+              <%end%>
+		<% @freeride = 0 %>
+		<br>
+	      Freestyle <%= t.freestyle %> 
+              <% while @freestyle < t.freestyle %>
+	        <i class="fas fa-star"></i>
+	        <% @freestyle = @freestyle + 1 %>
+	      <%end%>
+              <% while @freestyle < 5 %>
+	        <i class="far fa-star"></i>
+                <% @freestyle = @freestyle + 1 %>
+              <%end%>
+		<% @freestyle = 0 %>
+		<br>
+	      Maniability <%= t.maniability %> 
+              <% while @maniability < t.maniability %>
+	        <i class="fas fa-star"></i>
+	        <% @maniability = @maniability + 1 %>
+	      <%end%>
+      		<% while @maniability < 5 %>
+	        <i class="far fa-star"></i>
+        	<% @maniability = @maniability + 1 %>
+              <%end%>
+		<% @maniability = 0 %>
+		<br>
+	      Feeling <%= t.feeling %> 
+              <% while @feeling < t.feeling %>
+		<i class="fas fa-star"></i>
+		<% @feeling = @feeling + 1 %>
+	      <%end%>
+              <% while @feeling < 5 %>
+		<i class="far fa-star"></i>
+        	<% @feeling = @feeling + 1 %>
+              <%end%>
+		<% @feeling = 0 %>
 
-
-
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Présentation</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">list</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">comparer</a>
-  </li>
-</ul>
-
-<div class="tab-content" id="myTabContent">
-
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-<div class="card m-5 p-5">
-<h1>LES AILES DU
-BOUT DES LIGNES</h1>
-<h2>NOTULES<br>
-Pas de révolution en vue sur le marché des ailes de kite qui se
-compose à 95% d’ailes 4 lignes SLE (Supported Leading Edge).</h2>
-<h6>Les ailes en C sont dédiées au wakestyle exclusivement. Nous ne les
-testons pas car la demande est quasi nulle ou réservée à des riders
-très expérimentés. Elles sont montées en 4 lignes, avec une 5e ligne
-supplémentaire qui fait office de sécurité mais qui maintient également
-le bord d’attaque en son centre et le profil de l’aile, on s'en sert aussi
-pour redécoller. Ce sont des ailes qui offrent un excellent timing dans
-la navigation déhookée. Tu auras un effet "pop" prononcé et précis au
-moment où tu crantes pour obtenir le "coup de mou" (ou slack) dans
-les lignes qui te permet de passer la barre. Les C-shapes sont donc plus
-techniques à utiliser, moins confortables et moins sécurisantes mais sont
-ce qu’il y a de plus performant dans la discipline du wakestyle.
-Les hybrides englobent toutes les ailes au bord d’attaque suspenté,
-quelle que soit leur forme (Delta shape, Delta C-shape…)
-Ce sont des ailes 4 lignes SLE qui représentent quasiment tout le marché du
-kite. Le profil est maintenu grâce au bridage, l’aile se régule presque toute
-seule pour accepter les rafales de vent. La navigation est plus confortable
-et sécurisante, la plage d’utulisation accrue. Ces ailes sont bonnes à
-tout faire, même du wakestyle, car certaines ont cette tendance au
-programme ; d’autres seront plus performantes en sustentation ou alors
-dans les vagues. On leur donne le programme freeride-freestyle.
-Savoir lire entre les lignes
-Toutes sont équipées du "One Pump" qui permet de gonfler ton aile
-depuis un unique point de gonflage.
-Certaines barres permettent de se déhooker en mode "sucide leash",
-tout en bénéficiant de la sécurité : si tu lâches la barre, ton aile reste
-accrochée au leash sans basculer dans la sécurité, l’aile tracte toujours ;
-en cas de problème hooké tu peux quand même déclencher le largueur
-et la puissance de ton aile sera neutralisée; C’est la nouvelle tendance
-pour donner plus de liberté à ceux qui veulent tenter des figures sans pour
-autant larguer tout le temps leur kite en cas de "bonne gamelle".
-Certaines ailes disposent de plusieurs réglages qui permettent de les
-customiser en fonction de ce que tu veux faire. Tu rendras ton aile plus
-vive ou plus calée en fenêtre, plus présente en barre ou plus légère. Nous
-avons cette année testé le réglage dit "d’usine" ainsi que les differentes
-options pour affiner le choix.
-Poulies ou non sur le bridage ? Les poulies sont prévues d’origine pour
-moduler l’angle d’incidence de l’aile dans les rafales de vent. Ton aile
-est plus tolérante, plus progressive. Elles accentuent aussi la réactivité de
-l’aile hybride qui est ralentie à la base par le bridage ; à la différence de
-l’aile en C aux connexions et au pilotage directs. Tu trouveras dans les
-tests un logo indiquant la présence ou non de poulies sur le bridage.
-Les valves sur le bord d’attaque : toutes les marques ont adopté la Big
-Valve de gonflage et dégonflage mais certaines proposent un système
-exclusif. Veillez à avoir le bon embout pour gonflez votre kite.</h6>
-</div>
-
-
-  </div>
-
-  <div class="tab-pane fade" id="list" role="tabpanel" aria-labelledby="list-tab">
-      <% @kites.each do |t, index| %>
-
-<div class="card-picture col-4 col-sm-4 col-md-4 col-lg-6  col-xl-6 px-3 my-3">
-  <div class="card">
-    <img class="card-img-top" src="/assets/bandit.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title"><%= t.name %></h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-</div>
-<%end%>
-
-
-      <% @kites.each do |t, index| %>
-
-      <div class="container py-3">
-        <div class="card">
-          <div class="row ">
-            <div class="col-md-3">
-            <img src="/assets/bandit.jpg" class="w-100">
-            </div>
-            <div class="col-md-8 px-3">
-              <div class="card-block px-3">
-                <h4 class="card-title"><%= t.name %></h4>
-                <p class="card-text"><%= t.marque %></p>
-                <p class="card-text">Taille testé : <%= t.testsize %></p>
-                <p class="card-text">#<%= t.domain %></p>
-                <a href="<%= kite_path(t) %>" class="btn btn-primary">voir test complet</a>
-              </div>
-            </div>
-          </div>
+          </p>
         </div>
       </div>
-      <%end%>
-
+    </div>
   </div>
 
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+</div>
+</div>
+<%end%>
 
 <table class="table">
   <thead>
     <tr>
-      <th scope="col"></th>
-      <th scope="col">Wave</th>
-      <th scope="col">Big Air</th>
-      <th scope="col">Freeride</th>
-      <th scope="col">Freestyle</th>
-      <th scope="col">Maniability</th>
-      <th scope="col">Feeling</th>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
     </tr>
   </thead>
-      <% @kites.each do |t, index| %>
   <tbody>
     <tr>
-      <th scope="row"><%= t.name %></th>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table">
+
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">
+	<label for="kite-select">Choose a kite:</label>
+	<select name="kite" id="kite-select">
+	<option value="">--Please choose an option--</option>
+      <% @kites.each do |t, index| %>
+	<option value="a"><%= t.name %></option>
+	<%end%>
+	</select>
+      </th>
+      <th scope="col">
+	<label for="kite-select">Choose a kite:</label>
+	<select name="kite" id="kite-select">
+	<option value="">--Please choose an option--</option>
+      <% @kites.each do |t, index| %>
+	<option value="a"><%= t.name %></option>
+	<%end%>
+	</select>
+      </th>      
+      <th scope="col">
+
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+	</tr>
+	<tr>
+      <th scope="row">Wave</th>
+      <td>
+	<% @kites.each do |t, index| %>
+	<% while @wave < t.wave %>
+	    <i class="fas fa-star"></i>
+	    <% @wave = @wave + 1 %>
+	  <%end%>
+              <% while @wave < 5 %>
+	        <i class="far fa-star"></i>
+                <% @wave = @wave + 1 %>
+              <%end%>
+	  <% @wave = 0 %>
+	<%end%>
+      </td>
+	</tr>
+
+	<tr>
+      <th scope="row">Big Air</th>
+	<td>
+	<% @kites %>
+              <% while @bigair < 3 %>
+	        <i class="fas fa-star"></i>
+	        <% @bigair = @bigair + 1 %>
+	      <%end%>
+              <% while @bigair < 5 %>
+	        <i class="far fa-star"></i>
+                <% @bigair = @bigair + 1 %>
+              <%end%>
+		<% @bigair = 0 %>
+		</td>
+	</tr>
+	<tr>
+      <th scope="row">Freeride</th>
+</tr>
+<tr>
+      <th scope="row">Freestyle</th>
+</tr>
+<tr>
+      <th scope="row">Maniability</th>
+</tr>
+<tr>
+      <th scope="row">Feeling</th>
+    </tr>
+  </tbody>
+</table>
+
+      <% @kites.each do |t, index| %>
+
       <td><% while @wave < t.wave %>
 	    <i class="fas fa-star"></i>
 	    <% @wave = @wave + 1 %>
@@ -247,15 +255,6 @@ exclusif. Veillez à avoir le bon embout pour gonflez votre kite.</h6>
     </tr>
   </tbody>
 <%end%>
-</table>  
-</div>
-</div>
-
-
-
-
-
-
 
     <%= yield %>
   </body>
