@@ -1,4 +1,5 @@
 class AccessoryController < ApplicationController
+
   def index
     @accessories = Accessory.all
   end
@@ -31,4 +32,5 @@ class AccessoryController < ApplicationController
     # Méthode qui récupère le potin concerné et le détruit en base
     # Une fois la suppression faite, on redirige généralement vers la méthode index (pour afficher la liste à jour)
   end
+
 end
