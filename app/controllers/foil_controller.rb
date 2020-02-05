@@ -1,0 +1,2 @@
+class FoilController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class StrapController < ApplicationController
+end

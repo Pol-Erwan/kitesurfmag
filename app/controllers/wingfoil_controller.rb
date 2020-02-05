@@ -1,0 +1,2 @@
+class WingfoilController < ApplicationController
+end

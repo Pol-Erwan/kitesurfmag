@@ -1,0 +1,2 @@
+class KiteController < ApplicationController
+end
