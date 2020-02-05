@@ -23,7 +23,7 @@ board = []
 surfboard = []
 
 kite_name = ["Bandit","Boost II","GTS","RPM","Torch","Chaos","Razor","Vegas","Reo","FS"]
-kite_marque = ["F-One","Flysurfer","Core","Slingshot","Naish","Cabrinha","Airush","Duotone","Ozone","Eleveight"]
+brand = ["F-One","Flysurfer","Core","Slingshot","Naish","Cabrinha","Airush","Duotone","Ozone","Eleveight"]
 kite_description = ["Inutile de présenter la fameuse Bandit dont c'est la 12e édition
 et qui est toujours plus performante que jamais. C'est difficile de
 toujours rester au top quand on connait le succès mais la Bandit
@@ -87,7 +87,7 @@ variable = 0
 
 10.times do
 
-	kite << Kite.create(name: kite_name[variable],description: kite_description[0],domain: "freestyle",marque: kite_marque[variable],wind: "6/7/8/9/10/11/12/13/14", favorite: "#freeride", testsize: "10", wave: rand(0..5),bigair: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5),feeling: rand(0..5), price: rand(1200..1600),year: "2020")
+	kite << Kite.create(name: kite_name[variable],description: kite_description[0],domain: "freestyle",brand: kite_brand[variable],wind: "6/7/8/9/10/11/12/13/14", favorite: "#freeride", testsize: "10", wave: rand(0..5),bigair: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5),feeling: rand(0..5), price: rand(1200..1600),year: "2020")
 
 	board << Board.create(name: board_name[variable],description: board_description[0],control: rand(0..5),progression: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5), price: rand(500..1000),year: "2020")
 

@@ -4,7 +4,7 @@ class CreateKites < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :description
       t.string :domain
-      t.string :marque
+      t.string :brand
       t.string :wind
       t.string :favorite
       t.string :picture

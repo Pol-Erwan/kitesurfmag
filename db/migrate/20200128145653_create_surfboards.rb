@@ -5,7 +5,7 @@ class CreateSurfboards < ActiveRecord::Migration[5.2]
       t.string :description
       t.integer :transitions
       t.string :domain
-      t.string :marque
+      t.string :brand
       t.string :tailledispo
       t.string :favorite
       t.string :picture

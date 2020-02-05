@@ -2,7 +2,7 @@ class CreateWingfoils < ActiveRecord::Migration[5.2]
   def change
     create_table :wingfoils do |t|
       t.string :name
-      t.string :marque
+      t.string :brand
       t.string :domain
       t.string :description
       t.string :picture
