@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-
+  root 'article#index'
   devise_for :users
-  root 'static_page#index'
 
-  resources :static_pages
+  resources :static_page, only:[:index]
 
   resources :user
 

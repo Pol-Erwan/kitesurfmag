@@ -1,138 +1,193 @@
-<!DOCTYPE html>
-<html>
-  <head>
-
-  </head>
-
-  <body>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-	Page kitesurf mag test kite index
-<br>
-
-<% @kites.each do |t, index| %>
-<div class="card-deck">
-<div class="row mx-5">
-  
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="row no-gutters">
-      <div class="col-md-4 m-2 pl-2">
-        <img src="assets/bandit" class="img-raised rounded img-fluid" alt="...">
-          <p class="card-text m-1"><small class="text-muted"><a href="<%= kite_path(t) %>" class="btn btn-primary">voir test complet</a></small></p>
-      </div>
-      <div class="col-md-6 m-2">
-        <div class="card-body">
-          <h3 class="card-title"><%= t.brand %> <%= t.name %></h3>
-          <p class="card-text">	      Wave : <%= t.wave %> 
-              <% while @wave < t.wave %>
-	        <i class="fas fa-star"></i>
-	        <% @wave = @wave + 1 %>
-	      <%end%>
-              <% while @wave < 5 %>
-	        <i class="far fa-star"></i>
-                <% @wave = @wave + 1 %>
-              <%end%>
-		<% @wave = 0 %>
-		<br>
-	      Big Air <%= t.bigair %>
-              <% while @bigair < t.bigair %>
-	        <i class="fas fa-star"></i>
-	        <% @bigair = @bigair + 1 %>
-	      <%end%>
-              <% while @bigair < 5 %>
-	        <i class="far fa-star"></i>
-                <% @bigair = @bigair + 1 %>
-              <%end%>
-		<% @bigair = 0 %>
-		<br>
-	      Freeride <%= t.freeride %> 
-              <% while @freeride < t.freeride %>
-	        <i class="fas fa-star"></i>
-	        <% @freeride = @freeride + 1 %>
-	      <%end%>
-              <% while @freeride < 5 %>
-	        <i class="far fa-star"></i>
-                <% @freeride = @freeride + 1 %>
-              <%end%>
-		<% @freeride = 0 %>
-		<br>
-	      Freestyle <%= t.freestyle %> 
-              <% while @freestyle < t.freestyle %>
-	        <i class="fas fa-star"></i>
-	        <% @freestyle = @freestyle + 1 %>
-	      <%end%>
-              <% while @freestyle < 5 %>
-	        <i class="far fa-star"></i>
-                <% @freestyle = @freestyle + 1 %>
-              <%end%>
-		<% @freestyle = 0 %>
-		<br>
-	      Maniability <%= t.maniability %> 
-              <% while @maniability < t.maniability %>
-	        <i class="fas fa-star"></i>
-	        <% @maniability = @maniability + 1 %>
-	      <%end%>
-      		<% while @maniability < 5 %>
-	        <i class="far fa-star"></i>
-        	<% @maniability = @maniability + 1 %>
-              <%end%>
-		<% @maniability = 0 %>
-		<br>
-	      Feeling <%= t.feeling %> 
-              <% while @feeling < t.feeling %>
-		<i class="fas fa-star"></i>
-		<% @feeling = @feeling + 1 %>
-	      <%end%>
-              <% while @feeling < 5 %>
-		<i class="far fa-star"></i>
-        	<% @feeling = @feeling + 1 %>
-              <%end%>
-		<% @feeling = 0 %>
-
-          </p>
+<body class="index-page sidebar-collapse">
+  <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('./assets/backgroundtestkite.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+          <div class="brand">
+            <h1>tests kite</h1>
+            <h3>A Badass Bootstrap 4 UI Kit based on Material Design.</h3>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="main main-raised">
 
+            <div class="navbar navbar-expand-lg bg-info">
+              <div class="container">
+                <div class="collapse navbar-collapse">
+                  <ul class="navbar-nav">
+                    <li class="active nav-item">
+           <%= link_to "menu", kite_index_path(anchor: "menu"), class:" nav-link"%>
+                     </li>
+                    <li class="nav-item">
+           <%= link_to "presentation", kite_index_path(anchor: "presentation"), class:" nav-link"%>
+                    </li>
+                    <li class="nav-item">
+           <%= link_to "kites", kite_index_path(anchor: "kite"), class:" nav-link"%>
+                    </li>
+                    <li class="nav-item">
+           <%= link_to "compare", kite_index_path(anchor: "compare"), class:" nav-link"%>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+<section id="presentation">
+<div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
+   <div class="container for-about">
+   <h1>Ils ont testé pour vous</h1>
+   </div>
 </div>
+
+        <div class="team">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="/assets/Hugo.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Hugo
+                    <br>
+                    <small class="card-description text-muted">Model</small>
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="/assets/Greg.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Greg
+                    <br>
+                    <small class="card-description text-muted">Designer</small>
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="/assets/Marvin.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Mzrvin
+                    <br>
+                    <small class="card-description text-muted">Model</small>
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+   </section>
+
+<section id="kite">
+<div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
+   <div class="container for-about">
+   <h1>kite</h1>
+   </div>
+</div>
+
+<div class="row">
+<% @kites.each do |t, index| %>
+
+<div class="card-deck m-3">
+  <div class="row mx-3">  
+    <div class="card m-3 p-2" style="max-width: 200px;">
+        <a href="<%= kite_path(t) %>">
+	<img src="assets/testkite/bandit" class="img-raised rounded img-fluid" alt="..."></a>
+    
+          <h3 class="card-title"><%= t.name %></h3><h4> <%= t.brand %></h4>
+    </div>
+  </div>
 </div>
 <%end%>
+</div>
+</section>
+
+<section id="compare">
+<div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
+   <div class="container for-about">
+   <h1>comparer kite</h1>
+   </div>
+</div>
+
 
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col"></th>
+      <th scope="col">Wave</th>
+      <th scope="col">Big Air</th>
+      <th scope="col">Freeride</th>
+      <th scope="col">Freestyle</th>
+      <th scope="col">Maniability</th>
+      <th scope="col">Feeling</th>
     </tr>
   </thead>
+      <% @kites.each do |t, index| %>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <th scope="row"><%= t.name %></th>
+      <td><% while @wave < t.wave %>
+	    <i class="fas fa-star"></i>
+	    <% @wave = @wave + 1 %>
+	  <%end%>
+	  <% @wave = 0 %>
+      </td>
+      <td><% while @bigair < t.bigair %>
+	    <i class="fas fa-star"></i>
+	    <% @bigair = @bigair + 1 %>
+	  <%end%>
+	  <% @bigair = 0 %>
+      </td>
+      <td><% while @freeride < t.freeride %>
+	    <i class="fas fa-star"></i>
+	    <% @freeride = @freeride + 1 %>
+	  <%end%>
+	  <% @freeride = 0 %>
+      </td>
+      <td><% while @freestyle < t.freestyle %>
+	    <i class="fas fa-star"></i>
+	    <% @freestyle = @freestyle + 1 %>
+	  <%end%>
+	  <% @freestyle = 0 %>
+      </td>
+      <td><% while @maniability < t.maniability %>
+	    <i class="fas fa-star"></i>
+	    <% @maniability = @maniability + 1 %>
+	  <%end%>
+	  <% @maniability = 0 %>
+      </td>
+      <td><% while @feeling < t.feeling %>
+	    <i class="fas fa-star"></i>
+	    <% @feeling = @feeling + 1 %>
+	  <%end%>
+	  <% @feeling = 0 %>
+      </td>
+
     </tr>
   </tbody>
-</table>
+<%end%>
+</table> 
+</section>
 
 <table class="table">
 
@@ -256,6 +311,102 @@
   </tbody>
 <%end%>
 
+<div class="row">
+<% @kites.each do |t, index| %>
+
+<div class="card-deck m-3">
+<div class="row mx-3">  
+  <div class="card m-3 p-2" style="max-width: 250px;">
+        <a href="<%= kite_path(t) %>">
+	<img src="assets/testkite/bandit" class="img-raised rounded img-fluid" alt="..."></a>
+    <div class="row no-gutters">
+      <div class="col-md-12 m-2 pl-2">
+          <h3 class="card-title"><%= t.brand %> <%= t.name %></h3>
+      </div>
+      <div class="col-md-12 center">
+
+
+        <div class="card-body">
+          <p class="card-text">	      Wave : <%= t.wave %> 
+              <% while @wave < t.wave %>
+	        <i class="fas fa-star"></i>
+	        <% @wave = @wave + 1 %>
+	      <%end%>
+              <% while @wave < 5 %>
+	        <i class="far fa-star"></i>
+                <% @wave = @wave + 1 %>
+              <%end%>
+		<% @wave = 0 %>
+		<br>
+	      Big Air <%= t.bigair %>
+              <% while @bigair < t.bigair %>
+	        <i class="fas fa-star"></i>
+	        <% @bigair = @bigair + 1 %>
+	      <%end%>
+              <% while @bigair < 5 %>
+	        <i class="far fa-star"></i>
+                <% @bigair = @bigair + 1 %>
+              <%end%>
+		<% @bigair = 0 %>
+		<br>
+	      Freeride <%= t.freeride %> 
+              <% while @freeride < t.freeride %>
+	        <i class="fas fa-star"></i>
+	        <% @freeride = @freeride + 1 %>
+	      <%end%>
+              <% while @freeride < 5 %>
+	        <i class="far fa-star"></i>
+                <% @freeride = @freeride + 1 %>
+              <%end%>
+		<% @freeride = 0 %>
+		<br>
+	      Freestyle <%= t.freestyle %> 
+              <% while @freestyle < t.freestyle %>
+	        <i class="fas fa-star"></i>
+	        <% @freestyle = @freestyle + 1 %>
+	      <%end%>
+              <% while @freestyle < 5 %>
+	        <i class="far fa-star"></i>
+                <% @freestyle = @freestyle + 1 %>
+              <%end%>
+		<% @freestyle = 0 %>
+		<br>
+	      Maniability <%= t.maniability %> 
+              <% while @maniability < t.maniability %>
+	        <i class="fas fa-star"></i>
+	        <% @maniability = @maniability + 1 %>
+	      <%end%>
+      		<% while @maniability < 5 %>
+	        <i class="far fa-star"></i>
+        	<% @maniability = @maniability + 1 %>
+              <%end%>
+		<% @maniability = 0 %>
+		<br>
+	      Feeling <%= t.feeling %> 
+              <% while @feeling < t.feeling %>
+		<i class="fas fa-star"></i>
+		<% @feeling = @feeling + 1 %>
+	      <%end%>
+              <% while @feeling < 5 %>
+		<i class="far fa-star"></i>
+        	<% @feeling = @feeling + 1 %>
+              <%end%>
+		<% @feeling = 0 %>
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+<%end%>
+</div>
+
+</div>
+</div>
     <%= yield %>
+
   </body>
 </html>

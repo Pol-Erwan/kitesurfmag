@@ -1,143 +1,112 @@
+<!DOCTYPE html>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<section>
-            <nav class="navbar navbar-expand-lg bg-primary">
-              <div class="container">
-                <div class="navbar-translate">
-                  <a class="navbar-brand" href="/presentation.html">Menu</a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                  <ul class="navbar-nav">
-                    <li class="active nav-item">
-                      <a href="#pablo" class="nav-link">Link</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#pablo" class="nav-link">Link</a>
-                    </li>
-                    <li class="dropdown nav-item">
-                      <a href="#pablo" class="dropdown-toggle nav-link" data-toggle="dropdown">Dropdown</a>
-                      <div class="dropdown-menu">
-                        <h6 class="dropdown-header">Dropdown header</h6>
-                        <a href="#pablo" class="dropdown-item">Action</a>
-                        <a href="#pablo" class="dropdown-item">Another action</a>
-                        <a href="#pablo" class="dropdown-item">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#pablo" class="dropdown-item">Separated link</a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#pablo" class="dropdown-item">One more separated link</a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+<body class="profile-page sidebar-collapse">
+
+  <div class="page-header" data-parallax="true" style="background-image: url('/assets/Cape_Town.jpg');"></div>
+  <div class="main main-raised">
+    <div class="profile-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 ml-auto mr-auto">
+            <div class="profile">
+              <div class="avatar">
+                <img src="/assets/testkite/bandit.jpg" alt="Circle Image" class="img-raised rounded img-fluid">
               </div>
-            </nav>
+	    </div>
+	  </div>
+          <div class="col-md-4 ml-auto mr-auto">
+            <div class="profile">
+              <div class="name">
+                <h3 class="title"><%= @kite.brand %> <%= @kite.name %></h3>
+                <h6>Domain : <%= @kite.domain %></h6>
+                <h6>Taille testé : <%= @kite.testsize %>m</h6>
+                <h6>Son point fort : <%= @kite.favorite %></h6>
+                <h6>Taille disponible : <%= @kite.wind %></h6>
+                <h6>Prix en shop : <%= @kite.price %>€ pour une <%= @kite.testsize %>m nue</h6>
+
+              </div>
+            </div>
+          </div>
+        </div>
+	</div>
+	</div>
+
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto">
+            <div class="profile-tabs">
+              <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#resume" role="tab" data-toggle="tab">
+                    <i class="fas fa-id-card"></i> présentation
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#zoom" role="tab" data-toggle="tab">
+                    <i class="material-icons">camera</i> Zoom
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#water" role="tab" data-toggle="tab">
+                    <i class="fas fa-images"></i> photos
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#competence" role="tab" data-toggle="tab">
+                    <i class="material-icons">favorite</i> competences
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
+                    <i class="fas fa-video"></i> video
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tab-content tab-space">
+          <div class="tab-pane active text-center gallery" id="resume">
+            <div class="row">
+        <div class="description text-center">
+          <p class="card-text"><%= @kite.description %></p>
+        </div>
+
+            </div>
           </div>
 
-<ul class="nav justify-content-center">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Résumé</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Compétences</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Barre</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Comparer</a>
-  </li>
-  <li class="nav-item">
-           <%= link_to "Video", kite_path(anchor: "kitevideo"), class:" nav-link"%>
-  </li>
-</ul>
-</section>
+          <div class="tab-pane text-center gallery" id="zoom">
+            <div class="row">
+              <div class="col-md-3 ml-auto">
+                <img src="/assets/testkite/bridage bandit.jpg" class="rounded">
+                <img src="/assets/testkite/valve bandit.jpg" class="rounded">
+              </div>
+              <div class="col-md-3 mr-auto">
+                <img src="/assets/testkite/poulie bandit.jpg" class="rounded">
+                <img src="/assets/testkite/bandit.jpg" class="rounded">
 
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane text-center gallery" id="water">
+            <div class="row">
+              <div class="col-md-3 ml-auto">
+                <img src="/assets/testkite/bandit ride.jpg" class="rounded">
+                <img src="/assets/examples/clem-onojegaw.jpg" class="rounded">
+                <img src="/assets/testkite/bandit ride.jpg" class="rounded">
+              </div>
+              <div class="col-md-3 mr-auto">
+                <img src="/assets/examples/mariya-georgieva.jpg" class="rounded">
+                <img src="/assets/testkite/bandit ride.jpg" class="rounded">
+                <img src="/assets/testkite/bandit.jpg" class="rounded">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane text-center gallery" id="competence">
+            <div class="row">
 
-<canvas id="radarChart"></canvas>
-<script>
-//radar
-var ctxR = document.getElementById("radarChart").getContext('2d');
-var myRadarChart = new Chart(ctxR, {
-type: 'radar',
-data: {
-labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
-datasets: [{
-label: "My First dataset",
-data: [65, 59, 90, 81, 56, 55, 40],
-backgroundColor: [
-'rgba(105, 0, 132, .2)',
-],
-borderColor: [
-'rgba(200, 99, 132, .7)',
-],
-borderWidth: 2
-},
-{
-label: "My Second dataset",
-data: [28, 48, 40, 19, 96, 27, 100],
-backgroundColor: [
-'rgba(0, 250, 220, .2)',
-],
-borderColor: [
-'rgba(0, 213, 132, .7)',
-],
-borderWidth: 2
-}
-]
-},
-options: {
-responsive: true
-}
-});
-</script>
-
-
-
-      <div class="card">
-        <div class="col-sm-12">
-	  <div class="card card-body m-2" style="width: 800px">
-
-<canvas id="polarChart" width="600"></canvas>
-<script>
-var ctxPA = document.getElementById("polarChart").getContext('2d');
-var myPolarChart = new Chart(ctxPA, {
-type: 'polarArea',
-data: {
-labels: ["Waveriding", "Freeride", "Big Air", "Freestyle", "Feeling", "Maniability"],
-datasets: [{
-data: [<%= @kite.wave %>, <%= @kite.freeride %>, <%= @kite.bigair %>, <%= @kite.freestyle %>, <%= @kite.feeling %>,<%= @kite.maniability %>,],
-backgroundColor: ["rgba(219, 0, 0, 0.1)", "rgba(0, 165, 2, 0.1)", "rgba(255, 195, 15, 0.2)",
-"rgba(55, 59, 66, 0.1)", "rgba(0, 0, 0, 0.3)"
-],
-hoverBackgroundColor: ["rgba(219, 0, 0, 0.2)", "rgba(0, 165, 2, 0.2)",
-"rgba(255, 195, 15, 0.3)", "rgba(55, 59, 66, 0.1)", "rgba(0, 0, 0, 0.4)"
-]
-}]
-},
-options: {
-responsive: true
-}
-});
-</script>
-</div>
-</div>
-</div>
-
-
-      <div class="card">
-        <div class="col-sm-6">
-	  <div class="card card-body m-2" style="width: 400px">
+	  <div class="card card-body m-2" style="width: 300px">
             <p class="card-text">
 	      Wave : <%= @kite.wave %> 
               <% while @wave < @kite.wave %>
@@ -206,299 +175,27 @@ responsive: true
 		<% @feeling = 0 %>
             </p>
 	  </div>
-        </div>
 
-
-
-<div class="card">
-  <div class="card-body">
-    <h4 class="text"> <%= @kite.name %></h4>
-    <h5 class="text"><i class="fas fa-arrow-alt-circle-right"></i> <%= @kite.domain %></h5>
-    <h5 class="text"><i class="fas fa-heart"></i> <%= @kite.favorite %></h5>
-
-
-
-  <div class="card p-2">
-    <div class="row d-flex justify-content-around">
-
-      <div class="card p-2">
-        <div class="col-sm-6">
-          <%= image_tag "/assets/bandit ride.jpg", alt: "photo bandit app" %>
-        </div>
-      </div>
-
-      <div class="card p-2">
-        <div class="col-sm-6">
-          <%= image_tag "/assets/bandit.jpg", alt: "photo bandit ruby" %>
-        </div>
-        <div class="card-body">
-          <%= image_tag "/assets/bridage bandit.jpg", alt: "photo bandit ruby" %>
-          <%= image_tag "/assets/valve bandit.jpg", alt: "photo bandit ruby" %>
-          <%= image_tag "/assets/poulie bandit.jpg", alt: "photo bandit ruby" %>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-<br>
-<br>
-
-  <div class="card p-2">
-    <div class="row d-flex justify-content-around">
-
-      <div class="card">
-        <div class="col-sm-6">
-	  <div class="card card-body m-2" style="width: 400px">
-            <p class="card-text">
-	      Wave : <%= @kite.wave %> 
-              <% while @wave < @kite.wave %>
-	        <i class="fas fa-star"></i>
-	        <% @wave = @wave + 1 %>
-	      <%end%>
-              <% while @wave < 5 %>
-	        <i class="far fa-star"></i>
-                <% @wave = @wave + 1 %>
-              <%end%>
-		<% @wave = 0 %>
-		<br>
-	      Big Air <%= @kite.bigair %>
-              <% while @bigair < @kite.bigair %>
-	        <i class="fas fa-star"></i>
-	        <% @bigair = @bigair + 1 %>
-	      <%end%>
-              <% while @bigair < 5 %>
-	        <i class="far fa-star"></i>
-                <% @bigair = @bigair + 1 %>
-              <%end%>
-		<% @bigair = 0 %>
-		<br>
-	      Freeride <%= @kite.freeride %> 
-              <% while @freeride < @kite.freeride %>
-	        <i class="fas fa-star"></i>
-	        <% @freeride = @freeride + 1 %>
-	      <%end%>
-              <% while @freeride < 5 %>
-	        <i class="far fa-star"></i>
-                <% @freeride = @freeride + 1 %>
-              <%end%>
-		<% @freeride = 0 %>
-		<br>
-	      Freestyle <%= @kite.freestyle %> 
-              <% while @freestyle < @kite.freestyle %>
-	        <i class="fas fa-star"></i>
-	        <% @freestyle = @freestyle + 1 %>
-	      <%end%>
-              <% while @freestyle < 5 %>
-	        <i class="far fa-star"></i>
-                <% @freestyle = @freestyle + 1 %>
-              <%end%>
-		<% @freestyle = 0 %>
-		<br>
-	      Maniability <%= @kite.maniability %> 
-              <% while @maniability < @kite.maniability %>
-	        <i class="fas fa-star"></i>
-	        <% @maniability = @maniability + 1 %>
-	      <%end%>
-      		<% while @maniability < 5 %>
-	        <i class="far fa-star"></i>
-        	<% @maniability = @maniability + 1 %>
-              <%end%>
-		<% @maniability = 0 %>
-		<br>
-	      Feeling <%= @kite.feeling %> 
-              <% while @feeling < @kite.feeling %>
-		<i class="fas fa-star"></i>
-		<% @feeling = @feeling + 1 %>
-	      <%end%>
-              <% while @feeling < 5 %>
-		<i class="far fa-star"></i>
-        	<% @feeling = @feeling + 1 %>
-              <%end%>
-		<% @feeling = 0 %>
-            </p>
-	  </div>
-        </div>
-
-        <div class="card-body">
-	  <div class="card">
-            <%= image_tag "/assets/barre bandit.jpg", alt: "photo bandit ruby" %>
-	  </div>
-        </div>
-      </div>
-
-      <div class="card p-2">
-          <div class="card card-body" style="width: 600px">
-            <h2 class="text"> <%= @kite.name %></h4>
-	    <h3 class="text"> <%= @kite.brand %></h3>	
-            <p class="card-text"><small class="text-muted">voile 9m nue : <%= @kite.price %>€</small></p>
-	    <h6 class="card-text text-muted">taille disponible : <%= @kite.wind %></h6>	
-        </div>
-
-	<div class="card bg-light m-2" style="max-width: 50rem;">
-	  <div class="card-body">
-	    <p class="card-text"><%= @kite.description %></p>
+            </div>
           </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-    ID : <%= @kite.id %> <br>
-</div>
-
-<section id="kitevideo">
+          <div class="tab-pane text-center gallery" id="favorite">
+            <div class="row">
+              <div class="col-md-3 mr-auto">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZhDjjSTaDcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</section>
-
-<div class="card">
-<div class="rond">
-<div class="card" style="width:100px lenght:100px">
-  <div class="rond2">
-    <div class="rond3">
-      <div class="rond4">
-	<div class="rond5">
-	  <div class="rond6">
-	    <div class="rond7">
-	      <div class="rond8">
-		<div class="rond9">
-		<div class="rond10">
-		  <div class="horizontale">
-		    <div class="verticale">
-		      <div class="oblique">
-			<div class="oblique2">
-			</div>
-		      </div>
-		    </div>
-		  </div>
 		</div>
-		</div>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>	
-</div>
-
-
-<div class="card">
-<div class="rond">
-  <div class="rond2">
-    <div class="rond3">
-      <div class="rond4">
-	<div class="rond5">
-	  <div class="rond6">
-	    <div class="rond7">
-	      <div class="rond8">
-		<div class="rond9">
-		<div class="rond10">
-		  <div class="horizontale">
-		    <div class="verticale">
-		      <div class="oblique">
-			<div class="oblique2">
-			</div>
-		      </div>
-		    </div>
-		  </div>
-		</div>
-		</div>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>	
-
-
-<div class="card">
-  <div class="rond">
-  </div>
-</div>
-
-<div class="card">
-<div class="rondTriangle">
-</div>
-</div>
-
-<div class="card">
-<div class="competences">
-</div>
-</div>
-	  <div class="card card-body m-2" style="width: 400px">
-            <p class="card-text">
-	      Wave : <%= @kite.wave %> 
-              <% while @wave < @kite.wave %>
-	        <i class="fas fa-star"></i>
-	        <% @wave = @wave + 1 %>
-	      <%end%>
-              <% while @wave < 5 %>
-	        <i class="far fa-star"></i>
-                <% @wave = @wave + 1 %>
-              <%end%>
-		<% @wave = 0 %>
-		<br>
-	      Big Air <%= @kite.bigair %>
-              <% while @bigair < @kite.bigair %>
-	        <i class="fas fa-star"></i>
-	        <% @bigair = @bigair + 1 %>
-	      <%end%>
-              <% while @bigair < 5 %>
-	        <i class="far fa-star"></i>
-                <% @bigair = @bigair + 1 %>
-              <%end%>
-		<% @bigair = 0 %>
-		<br>
-	      Freeride <%= @kite.freeride %> 
-              <% while @freeride < @kite.freeride %>
-	        <i class="fas fa-star"></i>
-	        <% @freeride = @freeride + 1 %>
-	      <%end%>
-              <% while @freeride < 5 %>
-	        <i class="far fa-star"></i>
-                <% @freeride = @freeride + 1 %>
-              <%end%>
-		<% @freeride = 0 %>
-		<br>
-	      Freestyle <%= @kite.freestyle %> 
-              <% while @freestyle < @kite.freestyle %>
-	        <i class="fas fa-star"></i>
-	        <% @freestyle = @freestyle + 1 %>
-	      <%end%>
-              <% while @freestyle < 5 %>
-	        <i class="far fa-star"></i>
-                <% @freestyle = @freestyle + 1 %>
-              <%end%>
-		<% @freestyle = 0 %>
-		<br>
-	      Maniability <%= @kite.maniability %> 
-              <% while @maniability < @kite.maniability %>
-	        <i class="fas fa-star"></i>
-	        <% @maniability = @maniability + 1 %>
-	      <%end%>
-      		<% while @maniability < 5 %>
-	        <i class="far fa-star"></i>
-        	<% @maniability = @maniability + 1 %>
-              <%end%>
-		<% @maniability = 0 %>
-		<br>
-	      Feeling <%= @kite.feeling %> 
-              <% while @feeling < @kite.feeling %>
-		<i class="fas fa-star"></i>
-		<% @feeling = @feeling + 1 %>
-	      <%end%>
-              <% while @feeling < 5 %>
-		<i class="far fa-star"></i>
-        	<% @feeling = @feeling + 1 %>
-              <%end%>
-		<% @feeling = 0 %>
-            </p>
-	  </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+    </div>
+      </div>
+
+  </div>
+</body>
+
+
+
+
+
 

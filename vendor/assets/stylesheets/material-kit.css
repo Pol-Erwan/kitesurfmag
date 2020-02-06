@@ -17353,13 +17353,12 @@ footer .pull-center {
 }
 
 .profile-page .profile {
-  text-align: center;
+  text-align: start;
 }
 
 .profile-page .profile img {
-  max-width: 160px;
+  max-width: 300px;
   width: 100%;
-  margin: 0 auto;
   -webkit-transform: translate3d(0, -50%, 0);
   -moz-transform: translate3d(0, -50%, 0);
   -o-transform: translate3d(0, -50%, 0);
@@ -17368,7 +17367,8 @@ footer .pull-center {
 }
 
 .profile-page .profile .name {
-  margin-top: -80px;
+  margin-left: 50px;
+  margin-top: -230px;
 }
 
 .profile-page .follow {
@@ -17379,11 +17379,11 @@ footer .pull-center {
 
 .profile-page .description {
   margin: 1.071rem auto 0;
-  max-width: 600px;
+  max-width: 80%;
 }
 
 .profile-page .profile-tabs {
-  margin-top: 4.284rem;
+  margin-top: 2rem;
 }
 
 .profile-page .gallery {
