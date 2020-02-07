@@ -1,11 +1,18 @@
 <body class="index-page sidebar-collapse">
-  <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('./assets/backgroundtestkite.jpg');">
+  <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('./assets/background/board.jpg');">
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
           <div class="brand">
             <h1>tests board</h1>
-
+                <a class="carousel-control-prev" href="<%= kite_index_path %>" role="button" data-slide="prev">
+                  <i class="material-icons">keyboard_arrow_left</i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="<%= surfboard_index_path %>" role="button" data-slide="next">
+                  <i class="material-icons">keyboard_arrow_right</i>
+                  <span class="sr-only">Next</span>
+                </a>
           </div>
         </div>
       </div>
@@ -201,7 +208,7 @@ marque car tout sera pensé et optimisé pour votre confort.</p>
 	    <i class="fas fa-star"></i>
 	    <% @control = @control + 1 %>
 	  <%end%>
-	  <% @wave = 0 %>
+	  <% @control = 0 %>
       </td>
       <td><% while @progression < t.progression %>
 	    <i class="fas fa-star"></i>
