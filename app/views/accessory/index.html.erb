@@ -1,12 +1,192 @@
-  <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('./assets/backgroundtestkite.jpg');">
+<body class="index-page sidebar-collapse">
+  <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('./assets/background/accessory.jpg');">
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
           <div class="brand">
-            <h1>tests accessoires</h1>
-            <h3>En construction</h3>
+            <h1>Accessoires</h1>
+                <a class="carousel-control-prev" href="<%= wingfoil_index_path %>" role="button" data-slide="prev">
+                  <i class="material-icons">keyboard_arrow_left</i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="<%= strap_index_path %>" role="button" data-slide="next">
+                  <i class="material-icons">keyboard_arrow_right</i>
+                  <span class="sr-only">Next</span>
+                </a>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="main main-raised">
+
+            <div class="navbar navbar-expand-lg bg-info">
+              <div class="container">
+                <div class="collapse navbar-collapse">
+                  <ul class="navbar-nav">
+                    <li class="active nav-item">
+           <%= link_to "menu", accessory_index_path(anchor: "menu"), class:" nav-link"%>
+                     </li>
+                    <li class="nav-item">
+           <%= link_to "introduction", accessory_index_path(anchor: "intro"), class:" nav-link"%>
+                    </li>
+                    <li class="nav-item">
+           <%= link_to "foil", accessory_index_path(anchor: "foil"), class:" nav-link"%>
+                    </li>
+                    <li class="nav-item">
+           <%= link_to "compare", accessory_index_path(anchor: "compare"), class:" nav-link"%>
+                    </li>
+                    <li class="nav-item">
+           <%= link_to "presentation", accessory_index_path(anchor: "presentation"), class:" nav-link"%>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+<section id="intro">
+<div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
+   <div class="container for-about">
+   <h1>Comment sont fait nos tests</h1>
+   </div>
+</div>
+    <div class="container tim-container m-3">
+        <div id="extras">
+            <div class="space"></div>
+            <div class="row">
+                <div class="col-md-7 col-md-offset-0 col-sm-10 col-sm-offset-1">
+                    <div class="text-center">
+                        <img src="assets/commentsontfaitnostests.jpg" alt="Rounded Image" class="img-rounded img-responsive img-dog" style="width:100%">
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                                <h1 class="text-center">Les accessoires</h1>
+                                
+                                <h2><small class="subtitle">Comment pisser dans sa combi et oublier son harnais sur le spot</small></h2>
+                                <hr>
+                                <p>La navigation en surfkite grossit encore et toujours plus ! Les fabricants
+proposent deux styles de surfs distincts pour répondre à la demande de la
+discipline montante : le strapless et plus encore, le "freestyle wave" allant
+même jusqu'à mettre au point des surfs freestyle strapless avec la tendance
+no nose (noseless), sans nez quoi !
+Voici les surfkites, véritables surfs étudiés et adaptés à nos besoins.
+On retrouve toujours les surfs dédiés au waveriding, conçus pour réellement
+surfer, bottom et roller au programme, strapés et strapless. Les shapes de
+ces derniers n'ont pas forcément trop évolués puisqu'ils proviennent de
+l'expérience surf à la rame qui a beaucoup apporté à la conception des
+surfkites. Ce sont des valeurs sûres et abouties en la matière. Ces surfs sont
+en général assez étroits, avec du scoop, pas trop larges au pied arrière
+et présentent un outline régulier, un arrière rond ou carré... Ils sont incisifs,
+précis en courbe avec une excellente accroche, un peu instables car
+étroits. Certains ont gagné en volume avec des rails plus ronds pour être
+plus ludiques dans les petites vagues, plus doux et plus axés strapless. L'autre
+type de surf que l'on trouve chez toutes les marques cette année est un
+modèle dédié au strapless et orienté "freestyle".</p>
+                </div>
+            </div>
+        </div>
+    <!--     end extras -->    
+    </div>
+<!-- end container -->
+</section>
+
+<section id="foil">
+<div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
+   <div class="container for-about">
+   <h1>PAds et Straps</h1>
+   </div>
+</div>
+
+<div class="row">
+<% @accessories.each do |t, index| %>
+
+<div class="card-deck m-3">
+  <div class="row mx-3">  
+    <div style="max-width: 600px;">
+        <a href="<%= accessory_path(t) %>">
+	<div class="img-raised rounded img-fluid p-2">
+	<img src="assets/testaccessory/accessory.png" style="max-width: 200px">
+          <h3 class="card-title"><%= t.name %></h3><h4> <%= t.brand %></h4>
+	</div>
+    </div></a>
+  </div>
+</div>
+<%end%>
+</div>
+</section>
+
+
+
+
+<section id="presentation">
+<div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
+   <div class="container for-about">
+   <h1>Ils ont testé pour vous</h1>
+   </div>
+</div>
+
+        <div class="team">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="/assets/Hugo.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Hugo
+                    <br>
+                    <small class="card-description text-muted">Model</small>
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="/assets/Greg.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Greg
+                    <br>
+                    <small class="card-description text-muted">Designer</small>
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="/assets/Marvin.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Marvin
+                    <br>
+                    <small class="card-description text-muted">Model</small>
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+   </section>
+
+<br>
+<br>
+<br>
+    <%= yield %>
+
+  </body>
+</html>
+

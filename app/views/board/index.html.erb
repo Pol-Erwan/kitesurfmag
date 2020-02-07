@@ -58,7 +58,6 @@
                     <div class="text-center">
                         <img src="assets/commentsontfaitnostests.jpg" alt="Rounded Image" class="img-rounded img-responsive img-dog" style="width:100%">
 			<br><br>
-			<img src="assets/tangle.jpg" alt="Rounded Image" class="img-rounded img-responsive img-dog" style="width:100%">
                     </div>
                 </div>
                 <div class="col-md-5 col-sm-12">
@@ -92,6 +91,95 @@ marque car tout sera pensé et optimisé pour votre confort.</p>
     </div>
 <!-- end container -->
 </section>
+
+<section id="kite">
+<div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
+   <div class="container for-about">
+   <h1>Twin-tip</h1>
+   </div>
+</div>
+
+<div class="row">
+<% @boards.each do |t, index| %>
+
+<div class="card-deck m-3">
+  <div class="row mx-3">  
+    <div style="max-width: 600px;">
+        <a href="<%= board_path(t) %>">
+  <h3 class="card-header"><%= t.brand %>
+  </h3>
+	<div class="img-raised rounded img-fluid p-2">
+	<img src="assets/testboard/board.jpg">
+ 	<img src="assets/testboard/boardback.jpg">
+          <h3 class="card-title"><%= t.name %></h3><h4><i class="fas fa-heart"></i> <%= t.favorite %></h4>
+	</div>
+    </div>
+  </div></a>
+</div>
+<%end%>
+</div>
+</section>
+
+<section id="compare">
+<div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
+   <div class="container for-about">
+   <h1>comparer twin-tip</h1>
+   </div>
+</div>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Control</th>
+      <th scope="col">Progression</th>
+      <th scope="col">Freeride</th>
+      <th scope="col">Freestyle</th>
+      <th scope="col">Maniability</th>
+    </tr>
+  </thead>
+      <% @boards.each do |t, index| %>
+  <tbody>
+    <tr>
+      <th scope="row"><%= t.name %></th>
+      <td><% while @control < t.control %>
+	    <i class="fas fa-star"></i>
+	    <% @control = @control + 1 %>
+	  <%end%>
+	  <% @control = 0 %>
+      </td>
+      <td><% while @progression < t.progression %>
+	    <i class="fas fa-star"></i>
+	    <% @progression = @progression + 1 %>
+	  <%end%>
+	  <% @progression = 0 %>
+      </td>
+      <td><% while @freeride < t.freeride %>
+	    <i class="fas fa-star"></i>
+	    <% @freeride = @freeride + 1 %>
+	  <%end%>
+	  <% @freeride = 0 %>
+      </td>
+      <td><% while @freestyle < t.freestyle %>
+	    <i class="fas fa-star"></i>
+	    <% @freestyle = @freestyle + 1 %>
+	  <%end%>
+	  <% @freestyle = 0 %>
+      </td>
+      <td><% while @maniability < t.maniability %>
+	    <i class="fas fa-star"></i>
+	    <% @maniability = @maniability + 1 %>
+	  <%end%>
+	  <% @maniability = 0 %>
+      </td>
+
+    </tr>
+  </tbody>
+<%end%>
+</table> 
+</section>
+
 
 <section id="presentation">
 <div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
@@ -157,89 +245,6 @@ marque car tout sera pensé et optimisé pour votre confort.</p>
         </div>
    </section>
 
-<section id="kite">
-<div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
-   <div class="container for-about">
-   <h1>Twin-tip</h1>
-   </div>
-</div>
-
-<div class="row">
-<% @boards.each do |t, index| %>
-
-<div class="card-deck m-3">
-  <div class="row mx-3">  
-    <div class="card m-3 p-2" style="max-width: 200px;">
-        <a href="<%= board_path(t) %>">
-	<img src="assets/testboard/board.jpg" class="img-raised rounded img-fluid" alt="..."></a>
-    
-          <h3 class="card-title"><%= t.name %></h3><h4> <%= t.brand %></h4>
-    </div>
-  </div>
-</div>
-<%end%>
-</div>
-</section>
-
-<section id="compare">
-<div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
-   <div class="container for-about">
-   <h1>comparer twin-tip</h1>
-   </div>
-</div>
-
-
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">Control</th>
-      <th scope="col">Progression</th>
-      <th scope="col">Freeride</th>
-      <th scope="col">Freestyle</th>
-      <th scope="col">Maniability</th>
-    </tr>
-  </thead>
-      <% @boards.each do |t, index| %>
-  <tbody>
-    <tr>
-      <th scope="row"><%= t.name %></th>
-      <td><% while @control < t.control %>
-	    <i class="fas fa-star"></i>
-	    <% @control = @control + 1 %>
-	  <%end%>
-	  <% @control = 0 %>
-      </td>
-      <td><% while @progression < t.progression %>
-	    <i class="fas fa-star"></i>
-	    <% @progression = @progression + 1 %>
-	  <%end%>
-	  <% @progression = 0 %>
-      </td>
-      <td><% while @freeride < t.freeride %>
-	    <i class="fas fa-star"></i>
-	    <% @freeride = @freeride + 1 %>
-	  <%end%>
-	  <% @freeride = 0 %>
-      </td>
-      <td><% while @freestyle < t.freestyle %>
-	    <i class="fas fa-star"></i>
-	    <% @freestyle = @freestyle + 1 %>
-	  <%end%>
-	  <% @freestyle = 0 %>
-      </td>
-      <td><% while @maniability < t.maniability %>
-	    <i class="fas fa-star"></i>
-	    <% @maniability = @maniability + 1 %>
-	  <%end%>
-	  <% @maniability = 0 %>
-      </td>
-
-    </tr>
-  </tbody>
-<%end%>
-</table> 
-</section>
 <br>
 <br>
 <br>

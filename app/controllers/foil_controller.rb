@@ -2,6 +2,9 @@ class FoilController < ApplicationController
 
   def index
     @foils = Foil.all
+    @courbe = 0
+    @wind = 0
+    @transition = 0
   end
 
   def show
