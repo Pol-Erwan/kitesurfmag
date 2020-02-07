@@ -2,11 +2,26 @@ class SurfboardController < ApplicationController
 
   def index
     @surfboards = Surfboard.all
-
+    @courbes = 0
+    @wind = 0
+    @sideshore = 0
+    @onshore = 0
+    @wave = 0
+    @freestyle = 0
+    @straps = 0
+    @strapless = 0
   end
 
   def show
-
+    @surfboard = Surfoard.find(params[:id])
+    @courbes = 0
+    @wind = 0
+    @sideshore = 0
+    @onshore = 0
+    @wave = 0
+    @freestyle = 0
+    @straps = 0
+    @strapless = 0
   end
 
   def new

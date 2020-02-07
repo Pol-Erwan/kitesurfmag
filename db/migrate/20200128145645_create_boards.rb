@@ -5,8 +5,8 @@ class CreateBoards < ActiveRecord::Migration[5.2]
       t.string :description       
       t.string :domain
       t.string :brand
-      t.string :tailledispo
-      t.string :tailletest
+      t.string :size
+      t.string :testsize
       t.string :favorite
       t.string :picture
       t.integer :control
