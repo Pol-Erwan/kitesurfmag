@@ -9,20 +9,22 @@
         <div class="row">
           <div class="col-md-12 ml-auto mr-auto">
             <div class="profile">
-              <div class="avatar">
-                <img src="/assets/testboard/board.jpg" alt="Circle Image" class="img-raised rounded img-fluid">
+              <div class="avatar" class="img-raised rounded img-fluid">
+                <img src="/assets/testsurfboard/surfboard.jpg" alt="Circle Image" style="max-width: 100px">
+                <img src="/assets/testsurfboard/surfboardcarre.jpg" alt="Circle Image" style="max-width: 50px">
+                <img src="/assets/testsurfboard/surfboardback.jpg" alt="Circle Image" style="max-width: 100px">
               </div>
 	    </div>
 	  </div>
           <div class="col-md-4 ml-auto mr-auto">
             <div class="profile">
               <div class="name">
-                <h3 class="title"><%= @board.brand %> <%= @board.name %></h3>
-                <h6>Domain : <%= @board.domain %></h6>
-                <h6>Taille testé : <%= @board.testsize %>m</h6>
-                <h6>Son point fort : <%= @board.favorite %></h6>
-                <h6>Taille disponible : <%= @board.size %></h6>
-                <h6>Prix en shop : <%= @board.price %>€ pour une <%= @board.testsize %> nue</h6>
+                <h3 class="title"><%= @surfboard.brand %> <%= @surfboard.name %></h3>
+                <h6>Domain : <%= @surfboard.domain %></h6>
+                <h6>Taille testé : <%= @surfboard.testsize %>m</h6>
+                <h6>Son point fort : <%= @surfboard.favorite %></h6>
+                <h6>Taille disponible : <%= @surfboard.size %></h6>
+                <h6>Prix en shop : <%= @surfboard.price %>€ pour une <%= @surfboard.testsize %> nue</h6>
 
               </div>
             </div>
@@ -70,7 +72,7 @@
           <div class="tab-pane active text-center gallery" id="resume">
             <div class="row">
         <div class="description text-center">
-          <p class="card-text"><%= @board.description %></p>
+          <p class="card-text"><%= @surfboard.description %></p>
         </div>
 
             </div>
@@ -79,12 +81,12 @@
           <div class="tab-pane text-center gallery" id="zoom">
             <div class="row">
               <div class="col-md-3 ml-auto">
-                <img src="/assets/testboard/board fin.jpg" class="rounded">
-                <img src="/assets/testboard/board ride.jpg" class="rounded">
+                <img src="/assets/testsurfboard/finn.jpg" class="rounded">
+                <img src="/assets/testsurfboard/pads.jpg" class="rounded">
               </div>
               <div class="col-md-3 mr-auto">
-                <img src="/assets/testboard/board strap.jpg" class="rounded">
-                <img src="/assets/testboard/board strap2.jpg" class="rounded">
+                <img src="/assets/testsurfboard/pads2.jpg" class="rounded">
+                <img src="/assets/testsurfboard/surfboardride.jpg" class="rounded">
 
               </div>
             </div>
@@ -108,38 +110,63 @@
 
 	  <div class="card card-body m-2" style="width: 300px">
             <p class="card-text">
-	      Control : <%= @board.control %> 
-              <% while @control < @board.control %>
+	      Courbes : <%= @surfboard.courbes %> 
+              <% while @courbes < @surfboard.courbes %>
 	        <i class="fas fa-star"></i>
-	        <% @control = @control + 1 %>
+	        <% @courbes = @courbes + 1 %>
 	      <%end%>
-              <% while @control < 5 %>
+              <% while @courbes < 5 %>
 	        <i class="far fa-star"></i>
-                <% @control = @control + 1 %>
+                <% @courbes = @courbes + 1 %>
               <%end%>
+		<% @courbes = 0 %>
 		<br>
-	      Progression <%= @board.progression %>
-              <% while @progression < @board.progression %>
+	      Wind <%= @surfboard.wind %>
+              <% while @wind < @surfboard.wind %>
 	        <i class="fas fa-star"></i>
-	        <% @progression = @progression + 1 %>
+	        <% @wind = @wind + 1 %>
 	      <%end%>
-              <% while @progression < 5 %>
+              <% while @wind < 5 %>
 	        <i class="far fa-star"></i>
-                <% @progression = @progression + 1 %>
+                <% @wind = @wind + 1 %>
               <%end%>
+		<% @wind = 0 %>
 		<br>
-	      Freeride <%= @board.freeride %> 
-              <% while @freeride < @board.freeride %>
+	      Sideshore <%= @surfboard.sideshore %> 
+              <% while @sideshore < @surfboard.sideshore %>
 	        <i class="fas fa-star"></i>
-	        <% @freeride = @freeride + 1 %>
+	        <% @sideshore = @sideshore + 1 %>
 	      <%end%>
-              <% while @freeride < 5 %>
+              <% while @sideshore < 5 %>
 	        <i class="far fa-star"></i>
-                <% @freeride = @freeride + 1 %>
+                <% @sideshore = @sideshore + 1 %>
               <%end%>
+		<% @sideshore = 0 %>
 		<br>
-	      Freestyle <%= @board.freestyle %> 
-              <% while @freestyle < @board.freestyle %>
+	      Onshore <%= @surfboard.onshore %> 
+              <% while @onshore < @surfboard.onshore %>
+	        <i class="fas fa-star"></i>
+	        <% @onshore = @onshore + 1 %>
+	      <%end%>
+              <% while @onshore < 5 %>
+	        <i class="far fa-star"></i>
+                <% @onshore = @onshore + 1 %>
+              <%end%>
+		<% @onshore = 0 %>
+		<br>
+	      Wave : <%= @surfboard.wave %> 
+              <% while @wave < @surfboard.wave %>
+	        <i class="fas fa-star"></i>
+	        <% @wave = @wave + 1 %>
+	      <%end%>
+              <% while @wave < 5 %>
+	        <i class="far fa-star"></i>
+                <% @wave = @wave + 1 %>
+              <%end%>
+		<% @wave = 0 %>
+		<br>
+	      Freestyle <%= @surfboard.freestyle %> 
+              <% while @freestyle < @surfboard.freestyle %>
 	        <i class="fas fa-star"></i>
 	        <% @freestyle = @freestyle + 1 %>
 	      <%end%>
@@ -147,17 +174,30 @@
 	        <i class="far fa-star"></i>
                 <% @freestyle = @freestyle + 1 %>
               <%end%>
+		<% @freestyle = 0 %>
 		<br>
-	      Maniability <%= @board.maniability %> 
-              <% while @maniability < @board.maniability %>
+	      Straps <%= @surfboard.straps %> 
+              <% while @straps < @surfboard.straps %>
 	        <i class="fas fa-star"></i>
-	        <% @maniability = @maniability + 1 %>
+	        <% @straps = @straps + 1 %>
 	      <%end%>
-      		<% while @maniability < 5 %>
+      		<% while @straps < 5 %>
 	        <i class="far fa-star"></i>
-        	<% @maniability = @maniability + 1 %>
+        	<% @straps = @straps + 1 %>
               <%end%>
+		<% @straps = 0 %>
 		<br>
+	      Strapless <%= @surfboard.strapless %> 
+              <% while @strapless < @surfboard.strapless %>
+	        <i class="fas fa-star"></i>
+	        <% @strapless = @strapless + 1 %>
+	      <%end%>
+      		<% while @strapless < 5 %>
+	        <i class="far fa-star"></i>
+        	<% @strapless = @strapless + 1 %>
+              <%end%>
+		<% @strapless = 0 %>
+
             </p>
 	  </div>
 

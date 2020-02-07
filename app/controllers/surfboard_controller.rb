@@ -13,7 +13,7 @@ class SurfboardController < ApplicationController
   end
 
   def show
-    @surfboard = Surfoard.find(params[:id])
+    @surfboard = Surfboard.find(params[:id])
     @courbes = 0
     @wind = 0
     @sideshore = 0

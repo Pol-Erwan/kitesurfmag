@@ -92,70 +92,6 @@ modèle dédié au strapless et orienté "freestyle".</p>
 <!-- end container -->
 </section>
 
-<section id="presentation">
-<div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
-   <div class="container for-about">
-   <h1>Ils ont testé pour vous</h1>
-   </div>
-</div>
-
-        <div class="team">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="team-player">
-                <div class="card card-plain">
-                  <div class="col-md-6 ml-auto mr-auto">
-                    <img src="/assets/Hugo.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                  </div>
-                  <h4 class="card-title">Hugo
-                    <br>
-                    <small class="card-description text-muted">Model</small>
-                  </h4>
-                  <div class="card-body">
-                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="team-player">
-                <div class="card card-plain">
-                  <div class="col-md-6 ml-auto mr-auto">
-                    <img src="/assets/Greg.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                  </div>
-                  <h4 class="card-title">Greg
-                    <br>
-                    <small class="card-description text-muted">Designer</small>
-                  </h4>
-                  <div class="card-body">
-                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="team-player">
-                <div class="card card-plain">
-                  <div class="col-md-6 ml-auto mr-auto">
-                    <img src="/assets/Marvin.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                  </div>
-                  <h4 class="card-title">Marvin
-                    <br>
-                    <small class="card-description text-muted">Model</small>
-                  </h4>
-                  <div class="card-body">
-                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-   </section>
-
 <section id="surf">
 <div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
    <div class="container for-about">
@@ -168,17 +104,21 @@ modèle dédié au strapless et orienté "freestyle".</p>
 
 <div class="card-deck m-3">
   <div class="row mx-3">  
-    <div class="card m-3 p-2" style="max-width: 200px;">
+    <div style="max-width: 600px;">
         <a href="<%= surfboard_path(t) %>">
-	<img src="assets/testsurfboard/surfboard.jpg" class="img-raised rounded img-fluid" alt="..."></a>
-    
+	<div class="img-raised rounded img-fluid">
+	<img src="assets/testsurfboard/surfboard.jpg"> 
+	<img src="assets/testsurfboard/surfboardcarre.jpg">
           <h3 class="card-title"><%= t.name %></h3><h4> <%= t.brand %></h4>
-    </div>
+	</div>
+    </div></a>
   </div>
 </div>
 <%end%>
 </div>
 </section>
+
+
 
 <section id="compare">
 <div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
@@ -261,6 +201,71 @@ modèle dédié au strapless et orienté "freestyle".</p>
 <%end%>
 </table> 
 </section>
+
+<section id="presentation">
+<div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
+   <div class="container for-about">
+   <h1>Ils ont testé pour vous</h1>
+   </div>
+</div>
+
+        <div class="team">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="/assets/Hugo.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Hugo
+                    <br>
+                    <small class="card-description text-muted">Model</small>
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="/assets/Greg.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Greg
+                    <br>
+                    <small class="card-description text-muted">Designer</small>
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="/assets/Marvin.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Marvin
+                    <br>
+                    <small class="card-description text-muted">Model</small>
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+   </section>
+
 <br>
 <br>
 <br>
