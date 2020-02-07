@@ -21,6 +21,11 @@ user = []
 kite = []
 board = []
 surfboard = []
+foil = []
+strap = []
+bar = []
+accessory = []
+wingfoil = []
 
 kite_name = ["Bandit","Boost II","GTS","RPM","Torch","Chaos","Razor","Vegas","Reo","FS"]
 brand = ["F-One","Flysurfer","Core","Slingshot","Naish","Cabrinha","Airush","Duotone","Ozone","Eleveight"]
@@ -79,8 +84,17 @@ qui veulent performer"]
 surfboard_name = ["custom","go to","mitu pro","Sleece","global","squad","compact","stallion","skater","Whip"]
 surfboard_description = ["C'est le meilleur surfkite, mate les rollers de batard"] 
 
+foil_name = ["custom","go to","mitu pro","Sleece","global","squad","compact","stallion","skater","Whip"]
+foil_description = ["meilleurs sensations que le tapis volant d'Aladin"] 
 
+bar_name = ["lynx","flysurfer bar","carbon bar","sling bar","Torque atb","cab bar","airush bar","Click bar","top barre","eleveight bar"]
+bar_description = ["Ici on est heureux de retrouver le rouge à gauche"] 
 
+accessory_description = ["On a pissé dedans et même pas ça nous démange en navigation alors que ne l'a jamais rincé"] 
+
+strap_description = ["Plus confort qu'une bonne paire de pantoufle, on ne les quitte plus"] 
+
+wingfoil_description = ["J'avais encore 5000€ de coté après l'achat de mon fat quiver de kite alors j'ai cracqué pour cette planche à voile miniature"] 
 
 
 variable = 0
@@ -89,9 +103,19 @@ variable = 0
 
 	kite << Kite.create(name: kite_name[variable],description: kite_description[0],domain: "freestyle",brand: brand[variable],wind: "6/7/8/9/10/11/12/13/14", favorite: "#freeride", testsize: "10", wave: rand(0..5),bigair: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5),feeling: rand(0..5), price: rand(1200..1600),year: "2020")
 
-	board << Board.create(name: board_name[variable],description: board_description[0],brand: brand[variable],control: rand(0..5),progression: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5), price: rand(500..1000),year: "2020")
+	board << Board.create(name: board_name[variable],description: board_description[0],brand: brand[variable],control: rand(0..5),progression: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5), price: rand(500..1000),year: "2020",domain:"freestyle",size:"136x42 / 138x43",testsize:"138x43",favorite:"pop")
 
-	surfboard << Surfboard.create(name: surfboard_name[variable],brand: brand[variable],description: surfboard_description[0],transitions: rand(0..5),courbes: rand(0..5),wind: rand(0..5),sideshore: rand(0..5),onshore: rand(0..5),freestyle: rand(0..5),wave: rand(0..5), straps: rand(0..5),strapless: rand(0..5), price: rand(700..1100),year: "2020")
+	surfboard << Surfboard.create(name: surfboard_name[variable],brand: brand[variable],description: surfboard_description[0],transitions: rand(0..5),courbes: rand(0..5),wind: rand(0..5),sideshore: rand(0..5),onshore: rand(0..5),freestyle: rand(0..5),wave: rand(0..5), straps: rand(0..5),strapless: rand(0..5), price: rand(700..1100),year: "2020",domain:"freestyle",size:"6'2 / 6'4 / 7'2",testsize:"6'4",favorite:"son pads")
+
+	foil << Foil.create(name: foil_name[variable],brand: brand[variable],description: foil_description[0],transitions: rand(0..5),courbes: rand(0..5),wind: rand(0..5),price: rand(700..1100),year: "2020",domain:"Race",testsize:"90",size:"70 / 80 / 90")
+
+	bar << Bar.create(name: bar_name[variable],brand: brand[variable],description: bar_description[0],transitions: rand(0..5),price: rand(250..680),year: "2020",domain:"Ride",size:"40 / 45 / 55")
+
+	accessory << Accessory.create(name:"Rip Curl Flash Bomb",brand: brand[variable],description: accessory_description[0],price: rand(200..500),year: "2020",size:"S / M / L / XL / XXL")
+
+	strap << Strap.create(name:"Apex",brand: brand[variable],description: strap_description[0],price: rand(150..270),year: "2020",domain:"Ride")
+
+	wingfoil << Wingfoil.create(name:"wingfoil name",brand: brand[variable],description: wingfoil_description[0],price: rand(2000..6000),year: "2020",transitions: rand(0..5),courbes: rand(0..5),size:"S / M / XL",testsize:"M",wing:"1400")
 
 variable = variable + 1
 

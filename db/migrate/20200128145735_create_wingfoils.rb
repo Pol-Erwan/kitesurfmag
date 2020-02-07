@@ -6,10 +6,13 @@ class CreateWingfoils < ActiveRecord::Migration[5.2]
       t.string :domain
       t.string :description
       t.string :picture
+      t.string :testsize
+      t.string :size
       t.integer :transitions
       t.integer :courbes
-      t.integer :wind
+      t.integer :wing
       t.integer :price
+      t.integer :year
 
       t.timestamps
     end

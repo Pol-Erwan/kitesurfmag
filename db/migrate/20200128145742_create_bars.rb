@@ -8,6 +8,7 @@ class CreateBars < ActiveRecord::Migration[5.2]
       t.integer :transitions
       t.string :size
       t.integer :price
+      t.integer :year
 
       t.timestamps
     end

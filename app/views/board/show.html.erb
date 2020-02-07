@@ -1,42 +1,112 @@
-<%= render "layouts/navbar" %>
-<br>
-<br>
-<div class="card">
-  <div class="card-body">
-    <h4 class="text"> <%= @board.name %></h4>
+<!DOCTYPE html>
 
-  <div class="card p-2">
-    <div class="row d-flex justify-content-around">
+<body class="profile-page sidebar-collapse">
 
-      <div class="card p-2">
-        <div class="col-sm-6">
-          <%= image_tag "/assets/board ride.jpg", alt: "photo bandit app" %>
+  <div class="page-header" data-parallax="true" style="background-image: url('/assets/Cape_Town.jpg');"></div>
+  <div class="main main-raised">
+    <div class="profile-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 ml-auto mr-auto">
+            <div class="profile">
+              <div class="avatar">
+                <img src="/assets/testboard/board.jpg" alt="Circle Image" class="img-raised rounded img-fluid">
+              </div>
+	    </div>
+	  </div>
+          <div class="col-md-4 ml-auto mr-auto">
+            <div class="profile">
+              <div class="name">
+                <h3 class="title"><%= @board.brand %> <%= @board.name %></h3>
+                <h6>Domain : <%= @board.domain %></h6>
+                <h6>Taille testé : <%= @board.tailletest %>m</h6>
+                <h6>Son point fort : <%= @board.favorite %></h6>
+                <h6>Taille disponible : <%= @board.tailledispo %></h6>
+                <h6>Prix en shop : <%= @board.price %>€ pour une <%= @board.tailletest %> nue</h6>
+
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+	</div>
+	</div>
 
-      <div class="card p-2">
-        <div class="col-sm-6">
-          <%= image_tag "/assets/board.jpg", alt: "photo bandit ruby" %>
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto">
+            <div class="profile-tabs">
+              <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#resume" role="tab" data-toggle="tab">
+                    <i class="fas fa-id-card"></i> présentation
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#zoom" role="tab" data-toggle="tab">
+                    <i class="material-icons">camera</i> Zoom
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#water" role="tab" data-toggle="tab">
+                    <i class="fas fa-images"></i> photos
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#competence" role="tab" data-toggle="tab">
+                    <i class="material-icons">favorite</i> competences
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
+                    <i class="fas fa-video"></i> video
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="card-body">
-          <%= image_tag "/assets/board fin.jpg", alt: "photo bandit ruby" %>
-          <%= image_tag "/assets/board strap.jpg", alt: "photo bandit ruby" %>
-          <%= image_tag "/assets/board strap2.jpg", alt: "photo bandit ruby" %>
+
+
+        <div class="tab-content tab-space">
+          <div class="tab-pane active text-center gallery" id="resume">
+            <div class="row">
+        <div class="description text-center">
+          <p class="card-text"><%= @board.description %></p>
         </div>
-      </div>
 
-    </div>
-  </div>
+            </div>
+          </div>
 
-<br>
-<br>
+          <div class="tab-pane text-center gallery" id="zoom">
+            <div class="row">
+              <div class="col-md-3 ml-auto">
+                <img src="/assets/testboard/board fin.jpg" class="rounded">
+                <img src="/assets/testboard/board ride.jpg" class="rounded">
+              </div>
+              <div class="col-md-3 mr-auto">
+                <img src="/assets/testboard/board strap.jpg" class="rounded">
+                <img src="/assets/testboard/board strap2.jpg" class="rounded">
 
-  <div class="card p-2">
-    <div class="row d-flex justify-content-around">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane text-center gallery" id="water">
+            <div class="row">
+              <div class="col-md-3 ml-auto">
+                <img src="/assets/testkite/bandit ride.jpg" class="rounded">
+                <img src="/assets/examples/clem-onojegaw.jpg" class="rounded">
+                <img src="/assets/testkite/bandit ride.jpg" class="rounded">
+              </div>
+              <div class="col-md-3 mr-auto">
+                <img src="/assets/examples/mariya-georgieva.jpg" class="rounded">
+                <img src="/assets/testkite/bandit ride.jpg" class="rounded">
+                <img src="/assets/testkite/bandit.jpg" class="rounded">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane text-center gallery" id="competence">
+            <div class="row">
 
-      <div class="card">
-        <div class="col-sm-6">
-	  <div class="card card-body m-2" style="width: 400px">
+	  <div class="card card-body m-2" style="width: 300px">
             <p class="card-text">
 	      Control : <%= @board.control %> 
               <% while @control < @board.control %>
@@ -90,31 +160,30 @@
 		<br>
             </p>
 	  </div>
-        </div>
 
-        <div class="card-body">
-	  <div class="card">
-            <%= image_tag "/assets/barre bandit.jpg", alt: "photo bandit ruby" %>
-	  </div>
-        </div>
-      </div>
-
-      <div class="card p-2">
-          <div class="card card-body" style="width: 600px">
-            <h2 class="text"> <%= @board.name %></h4>
-	    <h3 class="text"> <%= @board.marque %></h3>	
-            <p class="card-text"><small class="text-muted">board nue : <%= @board.price %>€</small></p>
-	    <h6 class="card-text text-muted">taille disponible : <%= @board.tailledispo %></h6>	
-        </div>
-
-	<div class="card bg-light m-2" style="max-width: 50rem;">
-	  <div class="card-body">
-	    <p class="card-text"><%= @board.description %></p>
+            </div>
+          </div>
+          <div class="tab-pane text-center gallery" id="favorite">
+            <div class="row">
+              <div class="col-md-3 mr-auto">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZhDjjSTaDcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+              </div>
+            </div>
           </div>
         </div>
 
-      </div>
     </div>
+      </div>
+
   </div>
-    ID : <%= @board.id %> <br>
-</div>
+</body>
+
+
+
+
+
+
+
+
+

@@ -6,10 +6,10 @@ class CreateSurfboards < ActiveRecord::Migration[5.2]
       t.integer :transitions
       t.string :domain
       t.string :brand
-      t.string :tailledispo
+      t.string :size
       t.string :favorite
       t.string :picture
-      t.integer :tailletest
+      t.integer :testsize
       t.integer :courbes
       t.integer :wind
       t.integer :sideshore
