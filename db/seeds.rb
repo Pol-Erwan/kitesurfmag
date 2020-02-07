@@ -87,11 +87,11 @@ variable = 0
 
 10.times do
 
-	kite << Kite.create(name: kite_name[variable],description: kite_description[0],domain: "freestyle",brand: kite_brand[variable],wind: "6/7/8/9/10/11/12/13/14", favorite: "#freeride", testsize: "10", wave: rand(0..5),bigair: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5),feeling: rand(0..5), price: rand(1200..1600),year: "2020")
+	kite << Kite.create(name: kite_name[variable],description: kite_description[0],domain: "freestyle",brand: brand[variable],wind: "6/7/8/9/10/11/12/13/14", favorite: "#freeride", testsize: "10", wave: rand(0..5),bigair: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5),feeling: rand(0..5), price: rand(1200..1600),year: "2020")
 
-	board << Board.create(name: board_name[variable],description: board_description[0],control: rand(0..5),progression: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5), price: rand(500..1000),year: "2020")
+	board << Board.create(name: board_name[variable],description: board_description[0],brand: brand[variable],control: rand(0..5),progression: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5), price: rand(500..1000),year: "2020")
 
-	surfboard << Surfboard.create(name: surfboard_name[variable],description: surfboard_description[0],transitions: rand(0..5),courbes: rand(0..5),wind: rand(0..5),sideshore: rand(0..5),onshore: rand(0..5),freestyle: rand(0..5),wave: rand(0..5), straps: rand(0..5),strapless: rand(0..5), price: rand(700..1100),year: "2020")
+	surfboard << Surfboard.create(name: surfboard_name[variable],brand: brand[variable],description: surfboard_description[0],transitions: rand(0..5),courbes: rand(0..5),wind: rand(0..5),sideshore: rand(0..5),onshore: rand(0..5),freestyle: rand(0..5),wave: rand(0..5), straps: rand(0..5),strapless: rand(0..5), price: rand(700..1100),year: "2020")
 
 variable = variable + 1
 
