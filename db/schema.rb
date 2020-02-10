@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_10_120938) do
+ActiveRecord::Schema.define(version: 2020_02_10_123829) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 2020_02_10_120938) do
     t.string "stance"
     t.string "champs"
     t.string "weigh"
-    t.string "carène"
+    t.string "carene"
     t.string "flex"
     t.integer "control"
     t.integer "progression"
@@ -153,6 +153,20 @@ ActiveRecord::Schema.define(version: 2020_02_10_120938) do
     t.string "domain"
     t.string "description"
     t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shops", force: :cascade do |t|
+    t.string "title"
+    t.string "intro"
+    t.string "resume"
+    t.string "author"
+    t.string "content"
+    t.string "domain"
+    t.string "description"
+    t.string "picture"
+    t.integer "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -14,7 +14,7 @@ class CreateBoards < ActiveRecord::Migration[5.2]
       t.string :stance
       t.string :champs
       t.string :weigh
-      t.string :carène
+      t.string :carene
       t.string :flex
       t.integer :control
       t.integer :progression

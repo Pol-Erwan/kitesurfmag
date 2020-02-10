@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'article#index'
+
+  root 'static_page#index'
   devise_for :users
 
   resources :static_page, only:[:index]
@@ -14,10 +15,12 @@ Rails.application.routes.draw do
   resources :strap
   resources :wingfoil
   resources :accessory
-  resources :portfolio
 
+  resources :portfolio
   resources :article
   resources :trip
+  resources :event
+  resources :shop
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 
