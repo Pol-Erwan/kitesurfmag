@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <body class="profile-page sidebar-collapse">
-
   <div class="page-header" data-parallax="true" style="background-image: url('/assets/Cape_Town.jpg');"></div>
   <div class="main main-raised">
     <div class="profile-content">
@@ -9,27 +8,43 @@
         <div class="row">
           <div class="col-md-12 ml-auto mr-auto">
             <div class="profile">
+	      <h1><%= @kite.brand %> <%= @kite.name %></h1>
               <div class="avatar">
                 <img src="/assets/testkite/bandit.jpg" alt="Circle Image" class="img-raised rounded img-fluid">
+                <img src="/assets/testkite/bridage bandit.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid m-4" style="width:100px">
+                <img src="/assets/testkite/valve bandit.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid m-4" style="width:100px">
+                <img src="/assets/testkite/poulie bandit.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid m-4" style="width:100px">
               </div>
 	    </div>
 	  </div>
-          <div class="col-md-4 ml-auto mr-auto">
-            <div class="profile">
-              <div class="name">
-                <h3 class="title"><%= @kite.brand %> <%= @kite.name %></h3>
-                <h6>Domain : <%= @kite.domain %></h6>
-                <h6>Taille testé : <%= @kite.testsize %>m</h6>
-                <h6>Son point fort : <%= @kite.favorite %></h6>
-                <h6>Taille disponible : <%= @kite.wind %></h6>
-                <h6>Prix en shop : <%= @kite.price %>€ pour une <%= @kite.testsize %>m nue</h6>
 
+          <div class="col-md-8">
+              <div class="name">
+		<div class="card pb-4">
+		  <div class="row">
+                    <div class="col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1">
+                      <div class="text-center">
+                        <h3 class="title"><i class="fas fa-id-card"></i> <%= @kite.brand %> <%= @kite.name %></h3>
+                        <img src="/assets/testkite/bandit ride.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid mt-3" style="width:200px">
+                      </div>
+                    </div>
+                    <div class="mt-5 col-md-5 col-sm-12">
+                      <h6><i class="fas fa-heart"></i>  Son point fort : <%= @kite.favorite %></h6>
+                      <h6>Domain : <%= @kite.domain %></h6>
+                      <h6>Taille testé : <%= @kite.testsize %>m</h6>
+                      <h6>Taille disponible : <%= @kite.wind %></h6>
+                      <h6>Prix en shop : <%= @kite.price %>€ pour une <%= @kite.testsize %>m nue</h6>
+		      <h6>nombre de lattes : <%= @kite.strut %></h6>
+		      <h6>type de bridage : <%= @kite.bridle %></h6>
+		      <h6>millésime : <%= @kite.year %></h6>
+		    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 	</div>
-	</div>
+      </div>
+    </div>
 
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto">
