@@ -17384,6 +17384,7 @@ footer .pull-center {
 
 .profile-page .profile-tabs {
   margin-top: 2rem;
+  margin-top: -80px;
 }
 
 .profile-page .gallery {

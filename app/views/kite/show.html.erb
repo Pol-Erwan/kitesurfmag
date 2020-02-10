@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-
 <body class="profile-page sidebar-collapse">
-  <div class="page-header" data-parallax="true" style="background-image: url('/assets/Cape_Town.jpg');"></div>
-  <div class="main main-raised">
+<div class="page-header" data-parallax="true" style="background-image: url('/assets/Cape_Town.jpg');"></div>
+  <div class="main main-raised p-2">
     <div class="profile-content">
       <div class="container">
         <div class="row">
           <div class="col-md-12 ml-auto mr-auto">
             <div class="profile">
-	      <h1><%= @kite.brand %> <%= @kite.name %></h1>
               <div class="avatar">
                 <img src="/assets/testkite/bandit.jpg" alt="Circle Image" class="img-raised rounded img-fluid">
                 <img src="/assets/testkite/bridage bandit.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid m-4" style="width:100px">
@@ -17,81 +14,86 @@
               </div>
 	    </div>
 	  </div>
-
-          <div class="col-md-8">
-              <div class="name">
-		<div class="card pb-4">
-		  <div class="row">
-                    <div class="col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1">
-                      <div class="text-center">
-                        <h3 class="title"><i class="fas fa-id-card"></i> <%= @kite.brand %> <%= @kite.name %></h3>
-                        <img src="/assets/testkite/bandit ride.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid mt-3" style="width:200px">
-                      </div>
-                    </div>
-                    <div class="mt-5 col-md-5 col-sm-12">
-                      <h6><i class="fas fa-heart"></i>  Son point fort : <%= @kite.favorite %></h6>
-                      <h6>Domain : <%= @kite.domain %></h6>
-                      <h6>Taille testé : <%= @kite.testsize %>m</h6>
-                      <h6>Taille disponible : <%= @kite.wind %></h6>
-                      <h6>Prix en shop : <%= @kite.price %>€ pour une <%= @kite.testsize %>m nue</h6>
-		      <h6>nombre de lattes : <%= @kite.strut %></h6>
-		      <h6>type de bridage : <%= @kite.bridle %></h6>
-		      <h6>millésime : <%= @kite.year %></h6>
-		    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 	</div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-8 ml-auto mr-auto">
+        <div class="profile-tabs">
+          <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+	    <li class="nav-item">
+              <i class="text-center fas fa-id-card"></i>
+              <%= link_to "Id card", kite_path(anchor: "idcard"), class:"nav-link active" %>
+            </li>
+	    <li class="nav-item">
+              <i class="text-center far fa-comment-dots"></i>
+              <%= link_to "En bref", kite_path(anchor: "resume"), class:"nav-link" %>
+            </li>
+	    <li class="nav-item">
+              <i class="text-center fas fa-images"></i>
+              <%= link_to "Zoom", kite_path(anchor: "zoom"), class:"nav-link" %>
+            </li>
+	    <li class="nav-item">
+              <i class="text-center fas fa-cogs"></i>
+              <%= link_to "competences", kite_path(anchor: "competence"), class:"nav-link" %>
+            </li>
+	    <li class="nav-item">
+              <i class="text-center fas fa-video"></i>
+              <%= link_to "video", kite_path(anchor: "video"), class:"nav-link" %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-        <div class="row">
-          <div class="col-md-8 ml-auto mr-auto">
-            <div class="profile-tabs">
-              <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#resume" role="tab" data-toggle="tab">
-                    <i class="fas fa-id-card"></i> présentation
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#zoom" role="tab" data-toggle="tab">
-                    <i class="material-icons">camera</i> Zoom
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#water" role="tab" data-toggle="tab">
-                    <i class="fas fa-images"></i> photos
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#competence" role="tab" data-toggle="tab">
-                    <i class="material-icons">favorite</i> competences
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
-                    <i class="fas fa-video"></i> video
-                  </a>
-                </li>
-              </ul>
+	<section id="idcard" class="d-flex justify-content-center">
+          <div class="col-md-8">
+            <div class="name">
+	      <div class="card pb-4">
+	        <div class="row">
+		  <div class="col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1">
+                    <div class="text-center">
+                      <h3 class="title"><i class="fas fa-id-card"></i> <%= @kite.brand %> <%= @kite.name %></h3>
+                      <img src="/assets/testkite/bandit ride.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid mt-3" style="width:200px">
+                    </div>
+                  </div>
+                  <div class="mt-5 col-md-5 col-sm-12">
+                    <h6><i class="fas fa-heart"></i>  Son point fort : <%= @kite.favorite %></h6>
+                    <h6>Domain : <%= @kite.domain %></h6>
+                    <h6>Taille testé : <%= @kite.testsize %>m</h6>
+                    <h6>Taille disponible : <%= @kite.wind %></h6>
+                    <h6>Prix en shop : <%= @kite.price %>€ pour une <%= @kite.testsize %>m nue</h6>
+		    <h6>nombre de lattes : <%= @kite.strut %></h6>
+		    <h6>type de bridage : <%= @kite.bridle %></h6>
+		    <h6>millésime : <%= @kite.year %></h6>
+		  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+	</section>
 
-
-        <div class="tab-content tab-space">
-          <div class="tab-pane active text-center gallery" id="resume">
+	<section id="resume"class="d-flex justify-content-center">
+	  <div class="card col-lg-8 m-3 p-3">
             <div class="row">
-        <div class="description text-center">
-          <p class="card-text"><%= @kite.description %></p>
-        </div>
-
+              <div class="col-md-3">
+                <ul class="nav nav-pills nav-pills-icons flex-column" role="tablist">
+                  <div class="col-md-12 ml-auto mr-auto">
+                    <img src="/assets/Hugo.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                </ul>
+              </div>
+              <div class="col-md-8">
+                <div class="tab-content">
+		  <p><%= @kite.description %></p>
+                </div>
+              </div>
             </div>
           </div>
+	</section>
 
-          <div class="tab-pane text-center gallery" id="zoom">
+	<section id="zoom" class="d-flex justify-content-center">
+	  <div class="card col-lg-8 m-3">
             <div class="row">
               <div class="col-md-3 ml-auto">
                 <img src="/assets/testkite/bridage bandit.jpg" class="rounded">
@@ -100,30 +102,17 @@
               <div class="col-md-3 mr-auto">
                 <img src="/assets/testkite/poulie bandit.jpg" class="rounded">
                 <img src="/assets/testkite/bandit.jpg" class="rounded">
-
               </div>
             </div>
-          </div>
-          <div class="tab-pane text-center gallery" id="water">
-            <div class="row">
-              <div class="col-md-3 ml-auto">
-                <img src="/assets/testkite/bandit ride.jpg" class="rounded">
-                <img src="/assets/examples/clem-onojegaw.jpg" class="rounded">
-                <img src="/assets/testkite/bandit ride.jpg" class="rounded">
-              </div>
-              <div class="col-md-3 mr-auto">
-                <img src="/assets/examples/mariya-georgieva.jpg" class="rounded">
-                <img src="/assets/testkite/bandit ride.jpg" class="rounded">
-                <img src="/assets/testkite/bandit.jpg" class="rounded">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane text-center gallery" id="competence">
-            <div class="row">
+	  </div>
+	</section>
 
-	  <div class="card card-body m-2" style="width: 300px">
-            <p class="card-text">
-	      Wave : <%= @kite.wave %> 
+	<section id="competence" class="d-flex justify-content-center">
+	  <div class="card m-3 col-lg-8">            
+	    <div class="row">
+	      <div class="card-body m-2" style="width: 300px">
+                <p class="card-text">
+	        Wave : <%= @kite.wave %> 
               <% while @wave < @kite.wave %>
 	        <i class="fas fa-star"></i>
 	        <% @wave = @wave + 1 %>
@@ -188,25 +177,25 @@
         	<% @feeling = @feeling + 1 %>
               <%end%>
 		<% @feeling = 0 %>
-            </p>
-	  </div>
+                </p>
+	      </div>
+            </div>
+          </div>
+	</section>
 
+
+        <section id="video" class="d-flex justify-content-center">
+            <div class="card row m-3 p-3 col-lg-8">
+              <div class="center">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/ZhDjjSTaDcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	      </div>
             </div>
-          </div>
-          <div class="tab-pane text-center gallery" id="favorite">
-            <div class="row">
-              <div class="col-md-3 mr-auto">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZhDjjSTaDcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
 
     </div>
-      </div>
-
   </div>
+</div>
+
 </body>
 
 
