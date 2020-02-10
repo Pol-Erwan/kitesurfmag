@@ -1,0 +1,37 @@
+<body class="index-page sidebar-collapse">
+  <div class="main main-raised">
+
+
+
+<section id="foil">
+<div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
+   <div class="container for-about">
+   <h1>Archives</h1>
+   </div>
+</div>
+
+<div class="row">
+<% @shops.each do |t, index| %>
+
+<div class="card-deck m-3">
+  <div class="row mx-3">  
+    <div style="max-width: 600px;">
+        <a href="<%= shop_path(t) %>">
+	<div class="img-raised rounded img-fluid p-2">
+	<img src="assets/shop/mag.jpg" style="max-width: 200px">
+          <h3 class="card-title"><%= t.title %></h3><h4> <%= t.number %></h4>
+	</div>
+    </div></a>
+  </div>
+</div>
+<%end%>
+</div>
+</section>
+
+
+
+    <%= yield %>
+
+  </body>
+</html>
+
