@@ -8,6 +8,8 @@ class CreateKites < ActiveRecord::Migration[5.2]
       t.string :wind
       t.string :favorite
       t.string :picture
+      t.string :strut
+      t.string :bridle
       t.integer :testsize
       t.integer :wave
       t.integer :bigair

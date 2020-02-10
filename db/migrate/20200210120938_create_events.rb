@@ -1,6 +1,6 @@
-class CreateArticles < ActiveRecord::Migration[5.2]
+class CreateEvents < ActiveRecord::Migration[5.2]
   def change
-    create_table :articles do |t|
+    create_table :events do |t|
       t.string :title
       t.string :intro
       t.string :resume
@@ -15,5 +15,3 @@ class CreateArticles < ActiveRecord::Migration[5.2]
     end
   end
 end
-
-

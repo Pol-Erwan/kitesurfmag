@@ -5,8 +5,13 @@ class CreateBars < ActiveRecord::Migration[5.2]
       t.string :brand
       t.string :domain
       t.string :description
-      t.integer :transitions
+      t.string :line
+      t.string :trim
+      t.string :twist
+      t.string :v
+      t.string :detail
       t.string :size
+      t.integer :transitions
       t.integer :price
       t.integer :year
 

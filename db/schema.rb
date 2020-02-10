@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_05_171851) do
+ActiveRecord::Schema.define(version: 2020_02_10_120938) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,11 @@ ActiveRecord::Schema.define(version: 2020_02_05_171851) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
+    t.string "intro"
+    t.string "resume"
+    t.string "author"
+    t.string "title2"
+    t.string "title3"
     t.string "content"
     t.string "domain"
     t.string "description"
@@ -41,8 +46,13 @@ ActiveRecord::Schema.define(version: 2020_02_05_171851) do
     t.string "brand"
     t.string "domain"
     t.string "description"
-    t.integer "transitions"
+    t.string "line"
+    t.string "trim"
+    t.string "twist"
+    t.string "v"
+    t.string "detail"
     t.string "size"
+    t.integer "transitions"
     t.integer "price"
     t.integer "year"
     t.datetime "created_at", null: false
@@ -58,6 +68,13 @@ ActiveRecord::Schema.define(version: 2020_02_05_171851) do
     t.string "testsize"
     t.string "favorite"
     t.string "picture"
+    t.string "finn"
+    t.string "width"
+    t.string "stance"
+    t.string "champs"
+    t.string "weigh"
+    t.string "carène"
+    t.string "flex"
     t.integer "control"
     t.integer "progression"
     t.integer "freeride"
@@ -65,6 +82,21 @@ ActiveRecord::Schema.define(version: 2020_02_05_171851) do
     t.integer "maniability"
     t.integer "price"
     t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.string "intro"
+    t.string "resume"
+    t.string "author"
+    t.string "title2"
+    t.string "title3"
+    t.string "content"
+    t.string "domain"
+    t.string "description"
+    t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -94,6 +126,8 @@ ActiveRecord::Schema.define(version: 2020_02_05_171851) do
     t.string "wind"
     t.string "favorite"
     t.string "picture"
+    t.string "strut"
+    t.string "bridle"
     t.integer "testsize"
     t.integer "wave"
     t.integer "bigair"
@@ -109,6 +143,16 @@ ActiveRecord::Schema.define(version: 2020_02_05_171851) do
 
   create_table "portfolios", force: :cascade do |t|
     t.string "name"
+    t.string "title"
+    t.string "intro"
+    t.string "resume"
+    t.string "author"
+    t.string "title2"
+    t.string "title3"
+    t.string "content"
+    t.string "domain"
+    t.string "description"
+    t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -119,6 +163,11 @@ ActiveRecord::Schema.define(version: 2020_02_05_171851) do
     t.string "domain"
     t.string "description"
     t.string "picture"
+    t.string "weigh"
+    t.string "velcros"
+    t.string "details"
+    t.integer "pad"
+    t.integer "strap"
     t.integer "year"
     t.integer "price"
     t.datetime "created_at", null: false
@@ -134,6 +183,15 @@ ActiveRecord::Schema.define(version: 2020_02_05_171851) do
     t.string "size"
     t.string "favorite"
     t.string "picture"
+    t.string "length"
+    t.string "maitrebau"
+    t.string "width"
+    t.string "thickness"
+    t.string "weigh"
+    t.string "volum"
+    t.string "finn"
+    t.string "carene"
+    t.string "box"
     t.integer "testsize"
     t.integer "courbes"
     t.integer "wind"
@@ -151,6 +209,11 @@ ActiveRecord::Schema.define(version: 2020_02_05_171851) do
 
   create_table "trips", force: :cascade do |t|
     t.string "title"
+    t.string "intro"
+    t.string "resume"
+    t.string "author"
+    t.string "title2"
+    t.string "title3"
     t.string "content"
     t.string "domain"
     t.string "description"

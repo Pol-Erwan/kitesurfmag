@@ -9,6 +9,13 @@ class CreateBoards < ActiveRecord::Migration[5.2]
       t.string :testsize
       t.string :favorite
       t.string :picture
+      t.string :finn
+      t.string :width
+      t.string :stance
+      t.string :champs
+      t.string :weigh
+      t.string :carène
+      t.string :flex
       t.integer :control
       t.integer :progression
       t.integer :freeride

@@ -9,6 +9,15 @@ class CreateSurfboards < ActiveRecord::Migration[5.2]
       t.string :size
       t.string :favorite
       t.string :picture
+      t.string :length
+      t.string :maitrebau
+      t.string :width
+      t.string :thickness
+      t.string :weigh
+      t.string :volum
+      t.string :finn
+      t.string :carene
+      t.string :box
       t.integer :testsize
       t.integer :courbes
       t.integer :wind

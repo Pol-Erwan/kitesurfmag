@@ -2,6 +2,11 @@ class CreateTrips < ActiveRecord::Migration[5.2]
   def change
     create_table :trips do |t|
       t.string :title
+      t.string :intro
+      t.string :resume
+      t.string :author
+      t.string :title2
+      t.string :title3
       t.string :content
       t.string :domain
       t.string :description

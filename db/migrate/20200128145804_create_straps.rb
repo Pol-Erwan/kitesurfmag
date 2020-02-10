@@ -6,6 +6,11 @@ class CreateStraps < ActiveRecord::Migration[5.2]
       t.string :domain
       t.string :description
       t.string :picture
+      t.string :weigh
+      t.string :velcros
+      t.string :details
+      t.integer :pad
+      t.integer :strap
       t.integer :year
       t.integer :price
       t.timestamps
