@@ -7,7 +7,7 @@
           <div class="col-md-12 ml-auto mr-auto">
             <div class="profile">
               <div class="avatar">
-                <img src="/assets/testkite/bandit.jpg" alt="Circle Image" class="img-raised rounded img-fluid">
+                <img src="/assets/testkite/bandit.png" alt="Circle Image" class="img-raised rounded img-fluid">
                 <img src="/assets/testkite/bridage bandit.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid m-4" style="width:100px">
                 <img src="/assets/testkite/valve bandit.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid m-4" style="width:100px">
                 <img src="/assets/testkite/poulie bandit.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid m-4" style="width:100px">
@@ -17,6 +17,10 @@
 	</div>
       </div>
     </div>
+
+    <h1 class="title" id="navshow"> <%= @kite.name %></h1>
+	<h3 class="ml-4"> by <%= @kite.brand %></h3>
+
     <div class="row">
       <div class="col-md-8 ml-auto mr-auto">
         <div class="profile-tabs">
@@ -41,39 +45,51 @@
               <i class="text-center fas fa-video"></i>
               <%= link_to "video", kite_path(anchor: "video"), class:"nav-link" %>
             </li>
+	    <li class="nav-item">
+	      <i class="text-center fas fa-shopping-cart"></i>
+              <%= link_to "Buy", kite_path(anchor: "shop"), class:"nav-link" %>
+            </li>
+
           </ul>
         </div>
       </div>
     </div>
 
-	<section id="idcard" class="d-flex justify-content-center">
+	<section id="idcard">
+          <h2 class="ml-5 fas fa-id-card"> Id Card</h2>
+	<div class="d-flex justify-content-center">
           <div class="col-md-8">
             <div class="name">
 	      <div class="card pb-4">
 	        <div class="row">
 		  <div class="col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1">
                     <div class="text-center">
-                      <h3 class="title"><i class="fas fa-id-card"></i> <%= @kite.brand %> <%= @kite.name %></h3>
-                      <img src="/assets/testkite/bandit ride.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid mt-3" style="width:200px">
+                      <h2 class=""><i class="fas fa-id-badge"></i> <%= @kite.name %></h2>
+                      <img src="/assets/testkite/bandit ride.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid mt-2" style="width:200px">
                     </div>
                   </div>
                   <div class="mt-5 col-md-5 col-sm-12">
                     <h6><i class="fas fa-heart"></i>  Son point fort : <%= @kite.favorite %></h6>
                     <h6>Domain : <%= @kite.domain %></h6>
                     <h6>Taille testé : <%= @kite.testsize %>m</h6>
-                    <h6>Taille disponible : <%= @kite.wind %></h6>
+                    <h6>Tailles disponible : <%= @kite.wind %></h6>
                     <h6>Prix en shop : <%= @kite.price %>€ pour une <%= @kite.testsize %>m nue</h6>
 		    <h6>nombre de lattes : <%= @kite.strut %></h6>
 		    <h6>type de bridage : <%= @kite.bridle %></h6>
 		    <h6>millésime : <%= @kite.year %></h6>
+		    <a class="btn btn-success" href="https://fr.f-one.world/produit/bandit-2020/" target="blank_">more details</a>
 		  </div>
                 </div>
+  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="fa fa-angle-double-up"></i></a>
               </div>
             </div>
           </div>
+	</div>
 	</section>
 
-	<section id="resume"class="d-flex justify-content-center">
+	<section id="resume">
+          <h2 class="ml-5 fas fa-comment-dots"> En bref</h2>
+	<div class="d-flex justify-content-center">
 	  <div class="card col-lg-8 m-3 p-3">
             <div class="row">
               <div class="col-md-3">
@@ -89,25 +105,33 @@
                 </div>
               </div>
             </div>
+  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="fa fa-angle-double-up"></i></a>
           </div>
+	</div>
 	</section>
 
-	<section id="zoom" class="d-flex justify-content-center">
+	<section id="zoom">
+	          <h2 class="ml-5 fas fa-images"> Zoom</h2>
+	<div class="d-flex justify-content-center">
 	  <div class="card col-lg-8 m-3">
             <div class="row">
               <div class="col-md-3 ml-auto">
-                <img src="/assets/testkite/bridage bandit.jpg" class="rounded">
-                <img src="/assets/testkite/valve bandit.jpg" class="rounded">
+                <img src="/assets/testkite/bandit.jpg" class="rounded" style="width:200px">
+                <img src="/assets/testkite/valve bandit.jpg" class="rounded" style="width:200px">
               </div>
               <div class="col-md-3 mr-auto">
-                <img src="/assets/testkite/poulie bandit.jpg" class="rounded">
-                <img src="/assets/testkite/bandit.jpg" class="rounded">
+                <img src="/assets/testkite/poulie bandit.jpg" class="rounded" style="width:200px">
+                <img src="/assets/testkite/bridage bandit.jpg" class="rounded" style="width:200px">
               </div>
             </div>
+  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end m-3"><i class="fa fa-angle-double-up"></i></a>
 	  </div>
+	</div>
 	</section>
 
-	<section id="competence" class="d-flex justify-content-center">
+	<section id="competence">
+          <h2 class="ml-5 fas fa-cogs"> Compétences</h2>
+	<div class="d-flex justify-content-center">
 	  <div class="card m-3 col-lg-8">            
 	    <div class="row">
 	      <div class="card-body m-2" style="width: 300px">
@@ -178,24 +202,46 @@
               <%end%>
 		<% @feeling = 0 %>
                 </p>
+  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end"><i class="fa fa-angle-double-up"></i></a>
 	      </div>
             </div>
           </div>
+	</div>
 	</section>
 
 
-        <section id="video" class="d-flex justify-content-center">
+        <section id="video">
+          <h2 class="ml-5 fas fa-id-card"> Video</h2>
+	<div class="d-flex justify-content-center">
             <div class="card row m-3 p-3 col-lg-8">
-              <div class="center">
+              <div class="d-flex justify-content-center">
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/ZhDjjSTaDcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	      </div>
+  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="fa fa-angle-double-up"></i></a>
             </div>
+	</div>
         </section>
+
+	<section id="shop">
+	          <h2 class="ml-5 fas fa-shopping-cart"> where buy</h2>
+	<div class="d-flex justify-content-center">
+	  <div class="card col-lg-8 m-3">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="/assets/testkite/bandit.png" class="rounded m-1" style="width:100px"> flysurf
+                <img src="/assets/testkite/bandit.png" class="rounded m-1" style="width:100px"> vague et vent
+                <img src="/assets/testkite/bandit.png" class="rounded m-1" style="width:100px"> corner chop
+              </div>
+            </div>
+  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end m-3"><i class="fa fa-angle-double-up"></i></a>
+	  </div>
+	</div>
+	</section>
+
 
     </div>
   </div>
 </div>
-
 </body>
 
 
