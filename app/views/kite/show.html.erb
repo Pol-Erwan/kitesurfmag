@@ -55,6 +55,10 @@
       </div>
     </div>
 
+
+
+
+
 	<section id="idcard">
           <h2 class="ml-5 fas fa-id-card"> Id Card</h2>
 	<div class="d-flex justify-content-center">
@@ -131,82 +135,71 @@
 
 	<section id="competence">
           <h2 class="ml-5 fas fa-cogs"> Compétences</h2>
-	<div class="d-flex justify-content-center">
-	  <div class="card m-3 col-lg-8">            
-	    <div class="row">
-	      <div class="card-body m-2" style="width: 300px">
-                <p class="card-text">
-	        Wave : <%= @kite.wave %> 
-              <% while @wave < @kite.wave %>
-	        <i class="fas fa-star"></i>
-	        <% @wave = @wave + 1 %>
-	      <%end%>
-              <% while @wave < 5 %>
-	        <i class="far fa-star"></i>
-                <% @wave = @wave + 1 %>
-              <%end%>
-		<% @wave = 0 %>
-		<br>
-	      Big Air <%= @kite.bigair %>
-              <% while @bigair < @kite.bigair %>
-	        <i class="fas fa-star"></i>
-	        <% @bigair = @bigair + 1 %>
-	      <%end%>
-              <% while @bigair < 5 %>
-	        <i class="far fa-star"></i>
-                <% @bigair = @bigair + 1 %>
-              <%end%>
-		<% @bigair = 0 %>
-		<br>
-	      Freeride <%= @kite.freeride %> 
-              <% while @freeride < @kite.freeride %>
-	        <i class="fas fa-star"></i>
-	        <% @freeride = @freeride + 1 %>
-	      <%end%>
-              <% while @freeride < 5 %>
-	        <i class="far fa-star"></i>
-                <% @freeride = @freeride + 1 %>
-              <%end%>
-		<% @freeride = 0 %>
-		<br>
-	      Freestyle <%= @kite.freestyle %> 
-              <% while @freestyle < @kite.freestyle %>
-	        <i class="fas fa-star"></i>
-	        <% @freestyle = @freestyle + 1 %>
-	      <%end%>
-              <% while @freestyle < 5 %>
-	        <i class="far fa-star"></i>
-                <% @freestyle = @freestyle + 1 %>
-              <%end%>
-		<% @freestyle = 0 %>
-		<br>
-	      Maniability <%= @kite.maniability %> 
-              <% while @maniability < @kite.maniability %>
-	        <i class="fas fa-star"></i>
-	        <% @maniability = @maniability + 1 %>
-	      <%end%>
-      		<% while @maniability < 5 %>
-	        <i class="far fa-star"></i>
-        	<% @maniability = @maniability + 1 %>
-              <%end%>
-		<% @maniability = 0 %>
-		<br>
-	      Feeling <%= @kite.feeling %> 
-              <% while @feeling < @kite.feeling %>
-		<i class="fas fa-star"></i>
-		<% @feeling = @feeling + 1 %>
-	      <%end%>
-              <% while @feeling < 5 %>
-		<i class="far fa-star"></i>
-        	<% @feeling = @feeling + 1 %>
-              <%end%>
-		<% @feeling = 0 %>
-                </p>
+
+<div class="m-3 d-flex flex-row">
+
+<div class="card m-3 p-3" style="width:40%">
+<h6>Wave : <%= @kite.wave %>/5</h6>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: <%= @kite.wave*20 %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<h6>Big Air: <%= @kite.bigair %>/5</h6>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%= @kite.bigair*20 %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<h6>Freeride: <%= @kite.freeride %>/5</h6>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: <%= @kite.freeride*20 %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<h6>Freestyle: <%= @kite.freestyle %>/5</h6>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: <%= @kite.freestyle*20 %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<h6>Maniability: <%= @kite.maniability %>/5</h6>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: <%= @kite.maniability*20 %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<h6>Feeling: <%= @kite.feeling %>/5</h6>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-rose" role="progressbar" style="width: <%= @kite.feeling*20 %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</div>
+
+
+<div class="card m-3 p-3">
+<canvas id="birdsChart" width="500px" height="200px"></canvas>
+<script>
+var birdsCanvas = document.getElementById("birdsChart");
+
+var birdsData = {
+  labels: ["Wave","Big Air","Freeride","Freestyle","Maniability","Feeling"],
+  datasets: [{
+    data: [<%= @kite.wave %>,<%= @kite.bigair %>, <%= @kite.freeride %>, <%= @kite.freestyle %>, <%= @kite.maniability %>, <%= @kite.feeling %>],
+    backgroundColor: [
+      "rgba(255, 0, 0, 0.5)",
+      "#cde9ce",
+      "rgba(200, 50, 255, 0.5)",
+      "rgba(0, 100, 255, 0.5)",
+      "rgba(255, 0, 0, 0.5)",
+      "rgba(100, 255, 0, 0.5)"
+    ]
+  }]
+};
+
+var polarAreaChart = new Chart(birdsCanvas, {
+  type: 'polarArea',
+  data: birdsData
+});
+</script>
   		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end"><i class="fa fa-angle-double-up"></i></a>
-	      </div>
-            </div>
-          </div>
-	</div>
+</div>
+
+
+</div>
+
+
+
+
 	</section>
 
 
