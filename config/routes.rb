@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :static_page, only:[:index]
 
-  resources :user
+  resources :user, only:[:show]
 
   resources :kite
   resources :board

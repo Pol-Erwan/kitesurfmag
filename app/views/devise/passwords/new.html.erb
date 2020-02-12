@@ -1,16 +1,32 @@
-<h2>Forgot your password?</h2>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<%= render"layouts/navbar" %>
+  <div class="page-header header-filter" style="background-image: url('/assets/background/profil.jpg'); background-size: cover; background-position: top center;">
+    <div class="pt-5 container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6 ml-auto mr-auto">
+          <div class="card card-login">
+            <form class="form" method="" action="">
+              <div class="card-header card-header-primary text-center">
+                <h4 class="card-title">Mot de passe oublié ?</h4>
+              </div>
+              <div class="card-body p-3">
+                <%= devise_error_messages! %>
+		<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  		<%= render "devise/shared/error_messages", resource: resource %>
+  		<div class="field">
+    		<%= f.label :email %><br />
+    		<%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %><br>
+  	      </div>
+	      <div class="actions mx-5"><br>
+	        <%= f.submit "Send me reset password instructions", class: "btn btn-primary btn-block"  %>
+	      </div>
+	      <% end %>
+	      <div class="text-center"><br><br>
+                <%= link_to "Je me connecte", new_user_session_path, class:"btn btn-sm btn-primary btn-link"%><br>
+                <%= link_to "Je m'inscris", new_user_registration_path, class:"btn btn-sm btn-primary btn-link"%>
+	      </div>
+	    </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>

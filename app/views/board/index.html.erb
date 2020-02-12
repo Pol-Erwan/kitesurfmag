@@ -1,10 +1,11 @@
-<body class="index-page sidebar-collapse">
+<%= render"layouts/navbartest" %>
+<body class="pt-5 index-page sidebar-collapse">
   <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('./assets/background/board.jpg');">
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
           <div class="brand">
-            <h1>tests board</h1>
+            <h1>Les boards</h1>
                 <a class="carousel-control-prev" href="<%= kite_index_path %>" role="button" data-slide="prev">
                   <i class="material-icons">keyboard_arrow_left</i>
                   <span class="sr-only">Previous</span>
@@ -31,21 +32,217 @@
            <%= link_to "introduction", board_index_path(anchor: "intro"), class:" nav-link"%>
                     </li>
                     <li class="nav-item">
+           <%= link_to "Tous les twin-tips", board_index_path(anchor: "board"), class:" nav-link"%>
+                    </li>
+                    <li class="nav-item">
            <%= link_to "presentation", board_index_path(anchor: "presentation"), class:" nav-link"%>
                     </li>
                     <li class="nav-item">
-           <%= link_to "kites", board_index_path(anchor: "kite"), class:" nav-link"%>
-                    </li>
-                    <li class="nav-item">
-           <%= link_to "compare", board_index_path(anchor: "compare"), class:" nav-link"%>
+           <%= link_to "comparer", board_index_path(anchor: "compare"), class:" nav-link"%>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
 
+    <section id="intro">
+    <br><br><br>
+      <div class="jumbotron" style="background-image: url(/assets/introtest2.jpg); background-size: 100%;">
+        <div class="container for-about">
+        <h1>Comment sont fait nos tests</h1>
+        </div>
+      </div>
+
+      <div class="container tim-container mt-3">
+        <h1 class="m-5">Twin-Tip</h1>                              
+        <h2><small class="subtitle">La board du kitesurfer</small></h2>
+          <div class="row">
+            <div class="col-md-7 col-md-offset-0 col-sm-10 col-sm-offset-1">
+              <div class="text-center">
+                <img src="assets/introtestboard.jpg" alt="Rounded Image" class="card img-rounded img-responsive img-dog" style="width:100%">
+              </div>
+            </div>
+            <div class="mt-5 col-md-5 col-sm-12">
+              <p>
+	C’est à 99 % la planche avec laquelle on a tous débuté le
+kitesurf. Ce sera même peut-être la seule et unique board
+que vous utiliserez tout au long de votre «carrière» de rider.
+Ce n’est donc pas un invetsissement à prendre à la légère
+et chaque détail compte pour que l’ensemble réponde à
+vos attentes.
+Les marques ont développé une planche d’un côté et un
+équipement de l’autre afin d’avoir le plus de confort et
+de performances réunies nadaptés à vos besoins. Sachez
+qu’aujourdh’ui, le twin tip peut s’acheter nu donc sans son
+équipement pads straps pour vous laisser le choix car souvent
+les majors proposent 2 gammes d’accessoires : entrée de
+gamme (moins cher) et premium (quasi le double du prix).
+Vous pouvez également conserver votre TT et l’équiper avec
+un ensemble pads-straps d’une autre marque. Dans ce cas
+là, vérifiez bien en amont que les platines s’adaptent bien
+à votre planche, l’entraxe doit être identique. Bien sur, il est
+conseillé d’acheter planche et accessoires de la même
+marque car tout sera pensé et optimisé pour votre confort.
+            </div>
+       <h2><small class="subtitle"># Twin-Tip</small></h2>
+          </div>
+        </div>
+<div class="d-flex flex-row justify-content-around">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Contrôle: slashy - rail</h5>
+        <p class="card-text">Toutes les boards ont désormais une bon contrôle mais on différencie
+deux comportements.
+D’un côté, un TT qui va avoir tendance à déraper. Il va falloir un
+bon niveau technique pour l’exploiter. On parle d’une tendance
+slashy qui sera appréciée pour certaines manoeuvres. Il ne s’agit
+pas du tout d’un défaut, c’est une question de style. En revanche,
+on classera un TT “rail” quand on sera calé comme sur un rail dans
+toutes les conditions, avec beaucoup d’accroche. Il aura alors
+souvent moins de maniabilité.</p>
+       </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Maniabilité: maniable - joueur</h5>
+        <p class="card-text">Cette fois, on a voulu faire ressortir le côté “skate” d’une board.
+Tous les TT sont maniables puisque l’on peut sans souci passer en
+frontside facilement. Mais certains seront plus joueurs que d’autres,
+souvent grâce au scoop tendu ou non. Encore une fois, ce sont des
+sensations et non pas des points positifs ou négatifs, à toi de voir
+comment tu aimes ton twin tip !</p>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="container tim-container m-3">
+        <div class="d-flex flex-row">
+          <div class="card m-3 p-3">
+            <p>Le poids : l’ensemble pads/straps doit conserver un minimum
+de légèreté afin de ne pas pénaliser le poids total planche +
+équipement.
+le nombre de Velcros : 1 - 2 ou 4 Plus il y en a plus mieux c’est ? Plus ou
+moins…mais 4 Velcros vous permettent d’ajuster indépendamment
+votre coup de pied et s’adapter à votre anatomie.
+le prix : le confort ou la technicté ont un prix et l’ensemble le plus
+cher n’est pas forcément le plus adapté à votre morphologie.</p>
+          </div>
+          <div class="p-3">
+            <img src="assets/teststrap/strap.jpg" alt="Rounded Image" class="card">
+          </div>
+        </div>    
+
+        <div class="m-3 d-flex flex-row">
+
+          <div class="card m-3 p-3" style="width:60%">
+	    <h6>Wave : 4/5</h6>
+	    <div class="progress">
+	      <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+	    </div>
+	    <h6>Big Air: 2/5</h6>
+	    <div class="progress">
+  	      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+	    </div>
+	    <h6>Freeride: 3/5</h6>
+	    <div class="progress">
+  	      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+	    </div>
+	    <h6>Freestyle: 5/5</h6>
+	    <div class="progress">
+  	      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+	    </div>
+	    <h6>Maniability: 1/5</h6>
+	    <div class="progress">
+	      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+	    </div>
+	    <h6>Feeling: 4/5</h6>
+	    <div class="progress">
+  	      <div class="progress-bar progress-bar-striped bg-rose" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+	    </div>
+	  </div>
+
+	  <div class="card m-3 p-3">
+	    <canvas id="birdsChart" width="300px" height="200px"></canvas>
+	    <script>
+		var birdsCanvas = document.getElementById("birdsChart");
+		var birdsData = {
+		  labels: ["Wave","Big Air","Freeride","Freestyle","Maniability","Feeling"],
+		  datasets: [{
+		    data: [ 4, 2, 3, 5, 1, 4],
+		    backgroundColor: [
+		      "rgba(255, 0, 0, 0.5)",
+		      "#cde9ce",
+ 		      "rgba(200, 50, 255, 0.5)",
+ 		      "rgba(0, 100, 255, 0.5)",
+		      "rgba(255, 0, 0, 0.5)",
+		      "rgba(100, 255, 0, 0.5)"
+		    ]
+		  }]
+		};
+
+		var polarAreaChart = new Chart(birdsCanvas, {
+		  type: 'polarArea',
+		  data: birdsData
+		});
+	    </script>
+	  </div>
+
+	</div>
+
+	<div class="d-flex flex-row">
+	  <div class="card m-2">
+  	    <div class="card-body">
+    	      <h5 class="card-title">Feeling en barre</h5>
+    	      <h6 class="card-subtitle mb-2 text-muted">Léger - Présent</h6>
+    	      <p class="card-text">La présence en barre correspond au feeling que tu as en pilotant l’aile,
+		c’est-à-dire si tu la ressens légère, sans trop de pression, juste présente
+		pour bien la situer dans les airs, ou au contraire, présente dans le sens
+		bien pêchue, voire assez physique et donc avec beaucoup de ressenti !</p>
+	    </div>
+	  </div>
+	  <div class="card m-2">
+  	  <div class="card-body">
+            <h5 class="card-title">Maniabilité</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Maniable - Vif</h6>
+            <p class="card-text">Une aile maniable se placera là où on le souhaite, mais elle restera ensuite
+		bien calée en fenêtre pour réaliser par exemple des figures de wakestyle
+		en déhooké. Une aile rapide sera très maniable. Enfin une aile vive (dans
+		le sens très rapide) pivotera très rapidement sur l’oreille, valeur sûre dans
+		les vagues par exemple.</p>
+  	  </div>
+	</div>
+	<div class="card m-2">
+  	  <div class="card-body">
+	    <h5 class="card-title">Drift</h5>
+	    <h6 class="card-subtitle mb-2 text-muted">How - Ligh</h6>
+	    <p class="card-text">Nous avons conservé "le drift" uniquement pour les ailes de vagues
+		destinées au surf et au strapless. Le drift, c’est la capacité de l’aile "à
+		déraper" pendant que l’on surfe. Une aile qui a du drift ne décroche pas
+		mais au contraire continue de suivre le rider sans tomber.</p>
+  	  </div>
+	</div>
+	<div class="card m-2">
+	  <div class="card-body">
+	    <h5 class="card-title">Big Air</h5>
+	    <h6 class="card-subtitle mb-2 text-muted"></h6>
+	    <p class="card-text">Nous avons introduit la notion de Big Air qui donne une info sur le hang
+		time et la sustentation de l'aile. Cette discipline revient en force, elle a
+		donc sa place aux côtés du freeride - new school ou waveriding.</p>
+	  </div>
+	</div>
+      </div>
+    </div>
+    <a href="#navtest" class="p-3 scrollup d-flex justify-content-end align-items-end"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+
+  </section>
+
+
 <section id="intro">
-<div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
+<br><br><br>
+<div class="jumbotron" style="background-image: url(/assets/introtest2.jpg); background-size: 100%;">
    <div class="container for-about">
    <h1>Comment sont fait nos tests</h1>
    </div>
@@ -92,7 +289,7 @@ marque car tout sera pensé et optimisé pour votre confort.</p>
 <!-- end container -->
 </section>
 
-<section id="kite">
+<section id="board">
 <div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
    <div class="container for-about">
    <h1>Twin-tip</h1>

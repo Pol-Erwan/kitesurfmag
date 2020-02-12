@@ -1,26 +1,51 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<%= render"layouts/navbar" %>
+  <div class="page-header header-filter" style="background-image: url('/assets/background/profil.jpg'); background-size: cover; background-position: top center;">
+    <div class="pt-5 container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6 ml-auto mr-auto">
+          <div class="card card-login">
+              <div class="card-header card-header-primary text-center">
+                <h4 class="card-title">Se connecter</h4>
+                <div class="social-line">
+                  <a href="#pablo" class="btn btn-just-icon btn-link">
+                    <i class="fab fa-facebook-square"></i>
+                  </a>
+                  <a href="#pablo" class="btn btn-just-icon btn-link">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="#pablo" class="btn btn-just-icon btn-link">
+                    <i class="fab fa-google-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <p class="description text-center">Or Be Classical</p>
+              <div class="card-body p-3">
+		<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        	<%= devise_error_messages! %>
+  		<div class="form-group">
+    		  <%= f.label :email, "Email" %>
+    		  <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
+  		</div>
+  		<div class="form-group">
+    		  <%= f.label :password %>
+    		  <%= f.password_field :password, autocomplete: "current-password", class:"form-control" %>
+  		</div>
+		<% if devise_mapping.rememberable? %>
+    		<div class="form-group">
+      		  <%= f.check_box :remember_me %>
+      		  <%= f.label :remember_me %>
+    		</div>
+  		<% end %>
+  		<div class="actions mx-5">
+    		  <%= f.submit "Je me connecte", class: "btn btn-primary btn-block" %>
+  		</div>
+              </div>
+	    <% end %>
+            <%= link_to "Je ne suis pas inscrit", new_user_registration_path, class:"btn btn-sm btn-primary btn-link"%>
+            <%= link_to "J'ai oublié mon mot de passe", new_user_password_path, class:"btn btn-sm btn-primary btn-link"%>
+          </div>
+        </div>
+      </div>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
