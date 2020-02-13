@@ -25,7 +25,7 @@
 
     <div class="navbar navbar-expand-lg bg-info">
       <div class="container">
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse d-flex justify-content-around">
           <ul class="navbar-nav">
             <li class="active nav-item">
             <%= link_to "menu", kite_index_path(anchor: "menu"), class:" nav-link"%>
@@ -374,7 +374,7 @@
         <ul class="nav nav-pills nav-pills-icons flex-column" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" href="#dashboard-2" role="tab" data-toggle="tab">
-            <i class="fas fa-snowboarding"></i> Freestyle
+            <i class="fas fa-umbrella-beach"></i> Mono latte
             </a>
           </li>
           <li class="nav-item">
@@ -384,14 +384,14 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#schedule-3" role="tab" data-toggle="tab">
-            <i class="fas fa-umbrella-beach"></i> Mono latte
+            <i class="fas fa-snowboarding"></i> Freestyle
             </a>
           </li>
         </ul>
       </div>
       <div class="col-md-8">
         <div class="tab-content">
-          <div class="tab-pane active" id="dashboard-2">
+          <div class="tab-pane" id="schedule-3">
                       Ceci est un tableau comparatif des kites testés freeride / freestyle, pour avoir une idée plus précise, merci de bien lire le test de la voile en détail.
           <br>
 
@@ -705,7 +705,7 @@
 
                     </div>
 
-                   <div class="tab-pane" id="schedule-3">
+                   <div class="tab-pane active" id="dashboard-2">
                       Ceci est un tableau comparatif des kites testés mono latte, pour avoir une idée plus précise, merci de bien lire le test de la voile en détail.                      <br>
 <table class="table table-striped text-center">
   <thead>
