@@ -6,33 +6,42 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="<%= article_index_path %>">
-              <i class="material-icons">apps</i> articles
-            </a>
+	  <li class="nav-item">
+            <%= link_to article_index_path, class:"nav-link" do %>
+	      <i class="text-center far fa-newspaper" style="font-size:30px"></i>
+	      <h6 class="text-center">Articles</h6>
+	    <%end%>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<%= trip_index_path %>">
-              <i class="material-icons">explore</i> trip
-            </a>
+	  <li class="nav-item">
+            <%= link_to trip_index_path, class:"nav-link" do %>
+	      <i class="text-center far fa-compass" style="font-size:30px"></i>
+	      <h6 class="text-center">Trip</h6>
+	    <%end%>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<%= portfolio_index_path %>">
-              <i class="material-icons">camera</i> Portfolio
-            </a>
+	  <li class="nav-item">
+            <%= link_to portfolio_index_path, class:"nav-link" do %>
+	      <i class="text-center fas fa-photo-video" style="font-size:30px"></i>
+	      <h6 class="text-center">Portfolio</h6>
+	    <%end%>
           </li>
-
+	  <li class="nav-item">
+            <%= link_to event_index_path, class:"nav-link" do %>
+	      <i class="text-center far fa-calendar-check" style="font-size:30px"></i>
+	      <h6 class="text-center">Event</h6>
+	    <%end%>
+          </li>
           <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">settings</i> Tests
+            <a href="#" class="nav-link" data-toggle="dropdown">
+		<i class="text-center fas fa-tasks" style="font-size:30px"></i>
+	      <h6 class="text-center dropdown-toggle">Tests</h6>
             </a>
             <div class="dropdown-menu dropdown-with-icons">
               <a href="<%= kite_index_path %>" class="dropdown-item">
                 <i class="material-icons">layers</i> Kites
               </a>
               <a href="<%= board_index_path %>" class="dropdown-item">
-                <i class="material-icons">layers</i> Boards
-              </a>
+		<i class="fas fa-snowboarding" style="font-size:20px">   Twin-Tips</i>
+	      </a>
               <a href="<%= surfboard_index_path %>" class="dropdown-item">
                 <i class="material-icons">layers</i> Surfboards
               </a>
@@ -57,8 +66,9 @@
             </div>
           </li>
           <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">face</i> E-shop
+            <a href="#" class="nav-link" data-toggle="dropdown">
+              <i class="text-center fas fa-cart-arrow-down" style="font-size:30px"></i>
+		<h6 class="text-center dropdown-toggle">e-Shop</h6>
             </a>
             <div class="dropdown-menu dropdown-with-icons">
               <a href="<%= shop_index_path %>" class="dropdown-item">
