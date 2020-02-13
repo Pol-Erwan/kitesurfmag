@@ -1,0 +1,91 @@
+  <nav class="navbar bg-dark fixed-top navbar-expand-lg" id="sectionsNav">
+    <div class="container">
+
+      <div class="navbar-logo">
+        <a href="<%= root_path %>"><img data-0="width:155px;" data-300=" width:120px;" src="/assets/logo_KSM_mini.png" alt=""></a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="material-icons">settings</i> panel admin
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= article_index_path %>">
+              <i class="material-icons">apps</i> articles
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= trip_index_path %>">
+              <i class="material-icons">explore</i> trip
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<%= portfolio_index_path %>">
+              <i class="material-icons">camera</i> Portfolio
+            </a>
+          </li>
+
+          <li class="dropdown nav-item">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+              <i class="material-icons">settings</i> Tests
+            </a>
+            <div class="dropdown-menu dropdown-with-icons">
+              <a href="<%= kite_index_path %>" class="dropdown-item">
+                <i class="material-icons">layers</i> Kites
+              </a>
+              <a href="<%= board_index_path %>" class="dropdown-item">
+                <i class="material-icons">layers</i> Boards
+              </a>
+              <a href="<%= surfboard_index_path %>" class="dropdown-item">
+                <i class="material-icons">layers</i> Surfboards
+              </a>
+              <a href="<%= foil_index_path %>" class="dropdown-item">
+                <i class="material-icons">layers</i> Foils
+              </a>
+                        <div class="dropdown-divider"></div>
+              <a href="<%= bar_index_path %>" class="dropdown-item">
+                <i class="material-icons">layers</i> Barres
+              </a>
+              <a href="<%= strap_index_path %>" class="dropdown-item">
+                <i class="material-icons">layers</i> pads / straps
+              </a>
+              <a href="<%= accessory_index_path %>" class="dropdown-item">
+                <i class="material-icons">layers</i> harness / wetsuits
+              </a>
+                        <div class="dropdown-divider"></div>
+              <a href="<%= wingfoil_index_path %>" class="dropdown-item">
+                <i class="material-icons">layers</i> Wingfoil
+              </a>
+
+            </div>
+          </li>
+          <li class="dropdown nav-item">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+              <i class="material-icons">face</i> E-shop
+            </a>
+            <div class="dropdown-menu dropdown-with-icons">
+              <a href="<%= shop_index_path %>" class="dropdown-item">
+                <i class="material-icons">layers</i> Magazine (archives)
+              </a>
+              <a href="#" class="dropdown-item">
+                <i class="material-icons">layers</i> Abonnement
+              </a>
+          <% if user_signed_in? %>
+		<div class="dropdown-divider"></div>
+                  <%= link_to "Mon Profil", user_path(current_user), class:"dropdown-item"%>
+                <div class="dropdown-divider"></div>
+                  <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class:"dropdown-item"%>
+            </div>
+	  <%else%>
+		<div class="dropdown-divider"></div>
+             <%= link_to " Se Connecter", new_user_session_path, class:"dropdown-item" %>
+	  <%end%>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+

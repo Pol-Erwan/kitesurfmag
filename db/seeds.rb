@@ -107,12 +107,19 @@ strap_description = ["Plus confort qu'une bonne paire de pantoufle, on ne les qu
 
 wingfoil_description = ["J'avais encore 5000€ de coté après l'achat de mon fat quiver de kite alors j'ai cracqué pour cette planche à voile miniature"] 
 
+user_first_name = ["Pol-Erwan","Scaphoil","Hugo","Sharkeye","Gwen","Jean","René","Milo","Léon","Paul"]
+user_last_name = ["kite"]
+user_email = ["polo@mail.com","scaphoilmag@gmail.com","hugo@kitesurfmag.com","reloadprod34@gmail.com","gwen@mail.com","jean@mail.com","rene@mail.com","milo@mail.com","leon@mail.com","paul@mail.com"]
+user_password = ["polomo","polomo","sharkeye","shakeye","polomo","polomo","polomo","polomo","polomo","polomo"]
+user_is_admin = ["true","true","true","true","false","false","false","false","false","false"]
+
+picture = ["https://www.youtube.com/embed/ZhDjjSTaDcQ"]
 
 variable = 0
 
 10.times do
 
-	kite << Kite.create(name: kite_name[variable],description: kite_description[0],domain: "freestyle",brand: brand[variable],wind: "6/7/8/9/10/11/12/13/14", favorite: "#freeride", testsize: "10", wave: rand(0..5),bigair: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5),feeling: rand(0..5), price: rand(1200..1600),year: "2020",strut: rand(1..5), bridle: "no poulies")
+	kite << Kite.create(name: kite_name[variable],description: kite_description[0],domain: "freestyle",brand: brand[variable],wind: "6/7/8/9/10/11/12/13/14", favorite: "#freeride", testsize: "10", wave: rand(0..5),bigair: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5),feeling: rand(0..5), price: rand(1200..1600),year: "2020",strut: rand(1..5), bridle: "no poulies", picture: picture[0])
 
 	board << Board.create(name: board_name[variable],description: board_description[0],brand: brand[variable],control: rand(0..5),progression: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5), price: rand(500..1000),year: "2020",domain:"freestyle",size:"136x42 / 138x43",testsize:"138x43",favorite:"pop", finn: "3.5cm",width: "36.5 cm",stance: "62cm / 65cm / 68cm",champs: "HRD", weigh: "3.5kg", carene: "channel",flex:"medium")
 
@@ -135,6 +142,7 @@ variable = 0
 	trip << Trip.create(title:"Cape Town", title2:"welcome to South Africa", author:"Hugo")
 	portfolio << Portfolio.create(title:"Portfolio", title2:"best shoots", author:"Hugo")
 
+	user << User.create(first_name: user_first_name[variable], last_name: user_last_name[0],email: user_email[variable], password: user_password[variable], is_admin: user_is_admin[variable])
 
 variable = variable + 1
 

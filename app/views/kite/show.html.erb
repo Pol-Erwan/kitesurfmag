@@ -27,6 +27,10 @@
         <div class="profile-tabs">
           <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
 	    <li class="nav-item">
+              <i class="text-center fas fa-chevron-left"></i>
+              <%= link_to "Tous les Kites", kite_index_path, class:"nav-link" %>
+            </li>
+	    <li class="nav-item">
               <i class="text-center fas fa-id-card"></i>
               <%= link_to "Id card", kite_path(anchor: "idcard"), class:"nav-link active" %>
             </li>
@@ -50,7 +54,10 @@
 	      <i class="text-center fas fa-shopping-cart"></i>
               <%= link_to "Buy", kite_path(anchor: "shop"), class:"nav-link" %>
             </li>
-
+	    <li class="nav-item">
+              <i class="text-center fas fa-chevron-right"></i>
+              <%= link_to "Tous les Twin-Tips", board_index_path, class:"nav-link" %>
+            </li>
           </ul>
         </div>
       </div>
@@ -206,7 +213,7 @@ var polarAreaChart = new Chart(birdsCanvas, {
 	<div class="d-flex justify-content-center">
             <div class="card row m-3 p-3 col-lg-8">
               <div class="d-flex justify-content-center">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/ZhDjjSTaDcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe width="560" height="315" src="<%= @kite.picture %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	      </div>
   		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
             </div>
