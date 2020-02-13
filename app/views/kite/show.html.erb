@@ -27,36 +27,52 @@
         <div class="profile-tabs">
           <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
 	    <li class="nav-item">
-              <i class="text-center fas fa-chevron-left"></i>
-              <%= link_to "Tous les Kites", kite_index_path, class:"nav-link" %>
+              <%= link_to kite_index_path, class:"nav-link" do %>
+		<i class="text-center fas fa-chevron-left"></i>
+		<h6 class="text-center">Tous les kites</h6>
+		<%end%>
             </li>
 	    <li class="nav-item">
+              <%= link_to kite_path(anchor: "idcard"), class:"nav-link active" do %>
               <i class="text-center fas fa-id-card"></i>
-              <%= link_to "Id card", kite_path(anchor: "idcard"), class:"nav-link active" %>
+		<h6 class="text-center">Id Card</h6>
+		<%end%>
             </li>
 	    <li class="nav-item">
-              <i class="text-center far fa-comment-dots"></i>
-              <%= link_to "En bref", kite_path(anchor: "resume"), class:"nav-link" %>
+              <%= link_to kite_path(anchor: "resume"), class:"nav-link" do %>
+              <i class="text-center fas fa-comment-dots"></i>
+		<h6 class="text-center">En bref</h6>
+		<%end%>
             </li>
 	    <li class="nav-item">
+              <%= link_to kite_path(anchor: "zoom"), class:"nav-link" do %>
               <i class="text-center fas fa-images"></i>
-              <%= link_to "Zoom", kite_path(anchor: "zoom"), class:"nav-link" %>
+		<h6 class="text-center">Zoom</h6>
+		<%end%>
             </li>
 	    <li class="nav-item">
+              <%= link_to kite_path(anchor: "competence"), class:"nav-link" do %>
               <i class="text-center fas fa-cogs"></i>
-              <%= link_to "competences", kite_path(anchor: "competence"), class:"nav-link" %>
+		<h6 class="text-center">Competences</h6>
+		<%end%>
             </li>
 	    <li class="nav-item">
+              <%= link_to kite_path(anchor: "video"), class:"nav-link" do %>
               <i class="text-center fas fa-video"></i>
-              <%= link_to "video", kite_path(anchor: "video"), class:"nav-link" %>
+		<h6 class="text-center">Video</h6>
+		<%end%>
             </li>
 	    <li class="nav-item">
-	      <i class="text-center fas fa-shopping-cart"></i>
-              <%= link_to "Buy", kite_path(anchor: "shop"), class:"nav-link" %>
+              <%= link_to kite_path(anchor: "shop"), class:"nav-link" do %>
+              <i class="text-center fas fa-shopping-cart"></i>
+		<h6 class="text-center">Buy</h6>
+		<%end%>
             </li>
 	    <li class="nav-item">
-              <i class="text-center fas fa-chevron-right"></i>
-              <%= link_to "Tous les Twin-Tips", board_index_path, class:"nav-link" %>
+              <%= link_to board_index_path, class:"nav-link" do %>
+		<i class="text-center fas fa-chevron-right"></i>
+		<h6 class="text-center">Tous les Twin-Tips</h6>
+		<%end%>
             </li>
           </ul>
         </div>
