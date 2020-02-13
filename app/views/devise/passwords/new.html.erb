@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-lg-5 col-md-6 ml-auto mr-auto">
           <div class="card card-login">
-            <form class="form" method="" action="">
+
               <div class="card-header card-header-primary text-center">
                 <h4 class="card-title">Mot de passe oublié ?</h4>
               </div>
@@ -21,10 +21,9 @@
 	      </div>
 	      <% end %>
 	      <div class="text-center"><br><br>
-                <%= link_to "Je me connecte", new_user_session_path, class:"btn btn-sm btn-primary btn-link"%><br>
-                <%= link_to "Je m'inscris", new_user_registration_path, class:"btn btn-sm btn-primary btn-link"%>
+                  <%= render "devise/shared/links" %>
 	      </div>
-	    </div>
+
           </div>
         </div>
       </div>

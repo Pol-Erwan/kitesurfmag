@@ -41,8 +41,7 @@
   		</div>
               </div>
 	    <% end %>
-            <%= link_to "Je ne suis pas inscrit", new_user_registration_path, class:"btn btn-sm btn-primary btn-link"%>
-            <%= link_to "J'ai oublié mon mot de passe", new_user_password_path, class:"btn btn-sm btn-primary btn-link"%>
+                  <%= render "devise/shared/links" %>
           </div>
         </div>
       </div>

@@ -556,7 +556,7 @@
     <tr>
       <th scope="col">kite <i class="fas fa-chevron-circle-right"></i></th>
 <% @kites.each do |t, index| %>
-<% if t.wave > 4 %>
+<% if t.wave >= 4 %>
 
       <th scope="col"><%= t.name %></th>
 <%end%>
@@ -567,7 +567,7 @@
     <tr>
       <th scope="row">Compétences<br><i class="fas fa-chevron-circle-down"></i></th>
 <% @kites.each do |t, index| %>
-<% if t.wave > 4 %>
+<% if t.wave >= 4 %>
       <td><img src="assets/testkite/bandit.png" class="img-raised rounded img-fluid" alt="..." style="width:70px"></td>
 <%end%>
 <%end%>
@@ -575,7 +575,7 @@
     <tr>
       <th scope="row">Marque</th>
 <% @kites.each do |t, index| %>
-<% if t.wave > 4 %>
+<% if t.wave >= 4 %>
       <td><%= t.brand %></td>
 <%end%>
 <%end%>
@@ -583,7 +583,7 @@
     <tr>
       <th scope="row">taille testé</th>
 <% @kites.each do |t, index| %>
-<% if t.wave > 4 %>
+<% if t.wave >= 4 %>
       <td><%= t.testsize %>m</td>
 <%end%>
 <%end%>
@@ -591,7 +591,7 @@
     <tr>
       <th scope="row">Wave</th>
 <% @kites.each do |t, index| %>
-<% if t.wave > 4 %>
+<% if t.wave >= 4 %>
       <td><% while @wave < t.wave %>
 	    <i class="fas fa-star"></i>
 	    <% @wave = @wave + 1 %>
@@ -605,7 +605,7 @@
     <tr>
       <th scope="row">Big Air</th>
 <% @kites.each do |t, index| %>
-<% if t.wave > 4 %>
+<% if t.wave >= 4 %>
       <td><% while @bigair < t.bigair %>
 	    <i class="fas fa-star"></i>
 	    <% @bigair = @bigair + 1 %>
@@ -617,7 +617,7 @@
     <tr>
       <th scope="row">Freeride</th>
 <% @kites.each do |t, index| %>
-<% if t.wave > 4 %>
+<% if t.wave >= 4 %>
       <td><% while @freeride < t.freeride %>
 	    <i class="fas fa-star"></i>
 	    <% @freeride = @freeride + 1 %>
@@ -630,7 +630,7 @@
     <tr>
       <th scope="row">Freestyle</th>
 <% @kites.each do |t, index| %>
-<% if t.wave > 4 %>
+<% if t.wave >= 4 %>
       <td><% while @freestyle < t.freestyle %>
 	    <i class="fas fa-star"></i>
 	    <% @freestyle = @freestyle + 1 %>
@@ -643,7 +643,7 @@
     <tr>
       <th scope="row">Maniability</th>
 <% @kites.each do |t, index| %>
-<% if t.wave > 4 %>
+<% if t.wave >= 4 %>
       <td><% while @maniability < t.maniability %>
 	    <i class="fas fa-star"></i>
 	    <% @maniability = @maniability + 1 %>
@@ -657,7 +657,7 @@
     <tr>
       <th scope="row">Feeling</th>
 <% @kites.each do |t, index| %>
-<% if t.wave > 4 %>
+<% if t.wave >= 4 %>
       <td><% while @feeling < t.feeling %>
 	    <i class="fas fa-star"></i>
 	    <% @feeling = @feeling + 1 %>
@@ -670,14 +670,14 @@
     <tr>
       <th scope="row">Tailles disponibles</th>
 <% @kites.each do |t, index| %>
-<% if t.wave > 4 %>
+<% if t.wave >= 4 %>
       <td><%= t.wind %></td>
 <%end%>
 <%end%>
     </tr>
       <th scope="row">Bridage</th>
 <% @kites.each do |t, index| %>
-<% if t.wave > 4 %>
+<% if t.wave >= 4 %>
       <td><%= t.bridle %></td>
 <%end%>
 <%end%>
@@ -685,7 +685,7 @@
     <tr>
       <th scope="row">Prix</th>
 <% @kites.each do |t, index| %>
-<% if t.wave > 4 %>
+<% if t.wave >= 4 %>
       <td><%= t.price %> €</td>
 <%end%>
 <%end%>
@@ -693,7 +693,7 @@
     <tr>
       <th scope="row"></th>
 <% @kites.each do |t, index| %>
-<% if t.wave > 4 %>
+<% if t.wave >= 4 %>
       <td><a href="<%= kite_path(t) %>" class="scrollup btn btn-success">Détails</a>
 </td>
 <%end%>

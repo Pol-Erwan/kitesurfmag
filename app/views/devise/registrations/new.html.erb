@@ -42,7 +42,7 @@
               <%= f.submit "Je m'inscris", class: "btn btn-primary btn-block" %>
             </div>
             <% end %>
-            <%= link_to "Je suis déjà inscrit", new_user_session_path, class:"btn btn-sm btn-primary btn-link"%>
+                  <%= render "devise/shared/links" %>
           </div>
         </div>
       </div>
