@@ -1,193 +1,252 @@
-<!DOCTYPE html>
-
-<body class="profile-page sidebar-collapse">
-
-  <div class="page-header" data-parallax="true" style="background-image: url('/assets/Cape_Town.jpg');"></div>
-  <div class="main main-raised">
+<%= render "layouts/navbartest" %>
+<body class="pt-5 profile-page sidebar-collapse">
+<div class="page-header" id="header" data-parallax="true" style="background-image: url('/assets/Cape_Town.jpg');"></div>
+  <div class="main main-raised p-2">
     <div class="profile-content">
       <div class="container">
         <div class="row">
           <div class="col-md-12 ml-auto mr-auto">
             <div class="profile">
               <div class="avatar">
-		<div class="img-raised rounded img-fluid">
-                <img src="/assets/testboard/board.jpg" style="max-width: 100px">
-                <img src="/assets/testboard/boardcarre.jpg" style="max-width: 50px">
-                <img src="/assets/testboard/boardback.jpg" style="max-width: 100px">
-		</div>
+                <img src="/assets/testboard/board2.png" alt="Circle Image" class="img-raised rounded img-fluid">
+                <img src="/assets/testboard/board fin.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid m-4" style="width:100px">
+                <img src="/assets/testboard/board strap.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid m-4" style="width:100px">
+                <img src="/assets/testboard/board strap2.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid m-4" style="width:100px">
               </div>
 	    </div>
 	  </div>
-          <div class="col-md-4 ml-auto mr-auto">
-            <div class="profile">
-              <div class="name">
-                <h3 class="title"><%= @board.brand %> <%= @board.name %></h3>
-                <h6>Domain : <%= @board.domain %></h6>
-                <h6>Taille testé : <%= @board.testsize %>m</h6>
-                <h6>Son point fort : <%= @board.favorite %></h6>
-                <h6>Taille disponible : <%= @board.size %></h6>
-                <h6>Prix en shop : <%= @board.price %>€ pour une <%= @board.testsize %> nue</h6>
-
-              </div>
-            </div>
-          </div>
-        </div>
 	</div>
-	</div>
-
-        <div class="row">
-          <div class="col-md-8 ml-auto mr-auto">
-            <div class="profile-tabs">
-              <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#resume" role="tab" data-toggle="tab">
-                    <i class="fas fa-id-card"></i> présentation
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#zoom" role="tab" data-toggle="tab">
-                    <i class="material-icons">camera</i> Zoom
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#water" role="tab" data-toggle="tab">
-                    <i class="fas fa-images"></i> photos
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#competence" role="tab" data-toggle="tab">
-                    <i class="material-icons">favorite</i> competences
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
-                    <i class="fas fa-video"></i> video
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="tab-content tab-space">
-          <div class="tab-pane active text-center gallery" id="resume">
-            <div class="row">
-        <div class="description text-center">
-          <p class="card-text"><%= @board.description %></p>
-        </div>
-
-            </div>
-          </div>
-
-          <div class="tab-pane text-center gallery" id="zoom">
-            <div class="row">
-              <div class="col-md-3 ml-auto">
-                <img src="/assets/testboard/board fin.jpg" class="rounded">
-                <img src="/assets/testboard/board ride.jpg" class="rounded">
-              </div>
-              <div class="col-md-3 mr-auto">
-                <img src="/assets/testboard/board strap.jpg" class="rounded">
-                <img src="/assets/testboard/board strap2.jpg" class="rounded">
-
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane text-center gallery" id="water">
-            <div class="row">
-              <div class="col-md-3 ml-auto">
-                <img src="/assets/testkite/bandit ride.jpg" class="rounded">
-                <img src="/assets/examples/clem-onojegaw.jpg" class="rounded">
-                <img src="/assets/testkite/bandit ride.jpg" class="rounded">
-              </div>
-              <div class="col-md-3 mr-auto">
-                <img src="/assets/examples/mariya-georgieva.jpg" class="rounded">
-                <img src="/assets/testkite/bandit ride.jpg" class="rounded">
-                <img src="/assets/testkite/bandit.jpg" class="rounded">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane text-center gallery" id="competence">
-            <div class="row">
-
-	  <div class="card card-body m-2" style="width: 300px">
-            <p class="card-text">
-	      Control : <%= @board.control %> 
-              <% while @control < @board.control %>
-	        <i class="fas fa-star"></i>
-	        <% @control = @control + 1 %>
-	      <%end%>
-              <% while @control < 5 %>
-	        <i class="far fa-star"></i>
-                <% @control = @control + 1 %>
-              <%end%>
-		<br>
-	      Progression <%= @board.progression %>
-              <% while @progression < @board.progression %>
-	        <i class="fas fa-star"></i>
-	        <% @progression = @progression + 1 %>
-	      <%end%>
-              <% while @progression < 5 %>
-	        <i class="far fa-star"></i>
-                <% @progression = @progression + 1 %>
-              <%end%>
-		<br>
-	      Freeride <%= @board.freeride %> 
-              <% while @freeride < @board.freeride %>
-	        <i class="fas fa-star"></i>
-	        <% @freeride = @freeride + 1 %>
-	      <%end%>
-              <% while @freeride < 5 %>
-	        <i class="far fa-star"></i>
-                <% @freeride = @freeride + 1 %>
-              <%end%>
-		<br>
-	      Freestyle <%= @board.freestyle %> 
-              <% while @freestyle < @board.freestyle %>
-	        <i class="fas fa-star"></i>
-	        <% @freestyle = @freestyle + 1 %>
-	      <%end%>
-              <% while @freestyle < 5 %>
-	        <i class="far fa-star"></i>
-                <% @freestyle = @freestyle + 1 %>
-              <%end%>
-		<br>
-	      Maniability <%= @board.maniability %> 
-              <% while @maniability < @board.maniability %>
-	        <i class="fas fa-star"></i>
-	        <% @maniability = @maniability + 1 %>
-	      <%end%>
-      		<% while @maniability < 5 %>
-	        <i class="far fa-star"></i>
-        	<% @maniability = @maniability + 1 %>
-              <%end%>
-		<br>
-            </p>
-	  </div>
-
-            </div>
-          </div>
-          <div class="tab-pane text-center gallery" id="favorite">
-            <div class="row">
-              <div class="col-md-3 mr-auto">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZhDjjSTaDcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-    </div>
       </div>
+    </div>
 
+    <h1 class="title" id="navshow"> <%= @board.name %></h1>
+	<h3 class="ml-4"> by <%= @board.brand %></h3>
+
+    <div class="row">
+      <div class="col-md-8 ml-auto mr-auto">
+        <div class="profile-tabs">
+          <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+	    <li class="nav-item">
+              <%= link_to board_index_path(anchor: "board"), class:"nav-link" do %>
+		<i class="text-center text-warning fas fa-chevron-left"></i>
+		<h6 class="text-center text-warning">Tous les twin-tips</h6>
+		<%end%>
+            </li>
+	    <li class="nav-item">
+              <%= link_to board_path(anchor: "idcard"), class:"nav-link active" do %>
+              <i class="text-center text-warning fas fa-id-card"></i>
+		<h6 class="text-center text-warning">Id Card</h6>
+		<%end%>
+            </li>
+	    <li class="nav-item">
+              <%= link_to board_path(anchor: "resume"), class:"nav-link" do %>
+              <i class="text-center text-warning fas fa-comment-dots"></i>
+		<h6 class="text-center text-warning">En bref</h6>
+		<%end%>
+            </li>
+	    <li class="nav-item">
+              <%= link_to board_path(anchor: "zoom"), class:"nav-link" do %>
+              <i class="text-center text-warning fas fa-images"></i>
+		<h6 class="text-center text-warning">Zoom</h6>
+		<%end%>
+            </li>
+	    <li class="nav-item">
+              <%= link_to board_path(anchor: "competence"), class:"nav-link" do %>
+              <i class="text-center text-warning fas fa-cogs"></i>
+		<h6 class="text-center text-warning">Competences</h6>
+		<%end%>
+            </li>
+	    <li class="nav-item">
+              <%= link_to board_path(anchor: "video"), class:"nav-link" do %>
+              <i class="text-center text-warning fas fa-video"></i>
+		<h6 class="text-center text-warning">Video</h6>
+		<%end%>
+            </li>
+	    <li class="nav-item">
+              <%= link_to board_path(anchor: "shop"), class:"nav-link disabled" do %>
+              <i class="text-center text-warning fas fa-shopping-cart"></i>
+		<h6 class="text-center text-muted">Buy</h6>
+		<%end%>
+            </li>
+	    <li class="nav-item">
+              <%= link_to surfboard_index_path(anchor: "surfboard"), class:"nav-link" do %>
+		<i class="text-center text-warning fas fa-chevron-right"></i>
+		<h6 class="text-center text-warning">Tous les surfboards</h6>
+		<%end%>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+	<section id="idcard">
+          <h2 class="ml-5 fas fa-id-card"> Id Card</h2>
+	<div class="d-flex justify-content-center">
+          <div class="col-md-8">
+            <div class="name">
+	      <div class="card pb-4">
+	        <div class="row">
+		  <div class="col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1">
+                    <div class="text-center">
+                      <h2 class=""><i class="fas fa-id-badge"></i> <%= @board.name %></h2>
+                      <img src="/assets/testboard/board ride.jpg" alt="Thumbnail Image" class="img-raised rounded img-fluid mt-2" style="width:200px">
+                    </div>
+                  </div>
+                  <div class="mt-5 col-md-5 col-sm-12">
+                    <h6><i class="fas fa-heart"></i>  Son point fort : <%= @board.favorite %></h6>
+                    <h6>Domain : <%= @board.domain %></h6>
+                    <h6>Taille testé : <%= @board.testsize %>m</h6>
+                    <h6>Tailles disponible : <%= @board.size %></h6>
+                    <h6>Prix en shop : <%= @board.price %>€ pour une board nue</h6>
+		    <h6>Stance : <%= @board.stance %></h6>
+		    <h6>poids : <%= @board.weigh %></h6>
+		    <h6>millésime : <%= @board.year %></h6>
+		    <a class="btn btn-success" href="<%= @board.link %>" target="blank_">more details</a>
+		  </div>
+                </div>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+              </div>
+            </div>
+          </div>
+	</div>
+	</section>
+
+	<section id="resume">
+          <h2 class="ml-5 fas fa-comment-dots"> En bref</h2>
+	<div class="d-flex justify-content-center">
+	  <div class="card col-lg-8 m-3 p-3">
+            <div class="row">
+              <div class="col-md-3">
+                <ul class="nav nav-pills nav-pills-icons flex-column" role="tablist">
+                  <div class="col-md-12 ml-auto mr-auto">
+                    <img src="/assets/Hugo.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                </ul>
+              </div>
+              <div class="col-md-8">
+                <div class="tab-content">
+		  <p><%= @board.description %></p>
+                </div>
+              </div>
+            </div>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+          </div>
+	</div>
+	</section>
+
+	<section id="zoom">
+	          <h2 class="ml-5 fas fa-images"> Zoom</h2>
+	<div class="d-flex justify-content-center">
+	  <div class="card col-lg-8 m-3">
+            <div class="row">
+              <div class="col-md-3 ml-auto">
+                <img src="/assets/testboard/board2.png" class="rounded" style="width:200px">
+                <img src="/assets/testboard/board strap.jpg" class="rounded" style="width:200px">
+              </div>
+              <div class="col-md-3 mr-auto">
+                <img src="/assets/testboard/board strap2.jpg" class="rounded" style="width:200px">
+                <img src="/assets/testboard/board fin.jpg" class="rounded" style="width:200px">
+              </div>
+            </div>
+  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end m-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+	  </div>
+	</div>
+	</section>
+
+	<section id="competence">
+          <h2 class="ml-5 fas fa-cogs"> Compétences</h2>
+
+<div class="m-3 d-flex flex-row">
+
+<div class="card m-3 p-3" style="width:60%">
+<h6>Contrôle : <%= @board.control %>/5</h6>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: <%= @board.control*20 %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<h6>Progression: <%= @board.progression %>/5</h6>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%= @board.progression*20 %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<h6>Freeride / Freestyle: <%= @board.freeride %>/5</h6>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: <%= @board.freeride*20 %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<h6>News-School: <%= @board.freestyle %>/5</h6>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: <%= @board.freestyle*20 %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<h6>Maniabilité: <%= @board.maniability %>/5</h6>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: <%= @board.maniability*20 %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</div>
+
+
+<div class="card m-3 p-3">
+<canvas id="birdsChart" width="500px" height="200px"></canvas>
+<script>
+var birdsCanvas = document.getElementById("birdsChart");
+
+var birdsData = {
+  labels: ["Contrôle","Progression","Freeride / Freestyle","Newschool","Maniabilité"],
+  datasets: [{
+    data: [<%= @board.control %>,<%= @board.progression %>, <%= @board.freeride %>, <%= @board.freestyle %>, <%= @board.maniability %>],
+    backgroundColor: [
+      "rgba(255, 0, 0, 0.5)",
+      "#cde9ce",
+      "rgba(200, 50, 255, 0.5)",
+      "rgba(0, 100, 255, 0.5)",
+      "rgba(100, 255, 0, 0.5)"
+    ]
+  }]
+};
+
+var polarAreaChart = new Chart(birdsCanvas, {
+  type: 'polarArea',
+  data: birdsData
+});
+</script>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+</div>
+
+
+</div>
+
+	</section>
+
+
+        <section id="video">
+          <h2 class="ml-5 fas fa-id-card"> Video</h2>
+	<div class="d-flex justify-content-center">
+            <div class="card row m-3 p-3 col-lg-8">
+              <div class="d-flex justify-content-center">
+		<iframe width="560" height="315" src="<%= @board.youtube %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	      </div>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+            </div>
+	</div>
+        </section>
+
+	<section id="shop">
+	          <h2 class="ml-5 fas fa-shopping-cart"> where buy</h2>
+	<div class="d-flex justify-content-center">
+	  <div class="card col-lg-8 m-3">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="/assets/testkite/bandit.png" class="rounded m-1" style="width:100px"> flysurf
+                <img src="/assets/testkite/bandit.png" class="rounded m-1" style="width:100px"> vague et vent
+                <img src="/assets/testkite/bandit.png" class="rounded m-1" style="width:100px"> corner chop
+              </div>
+            </div>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end m-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+	  </div>
+	</div>
+	</section>
+
+	<div class="d-flex justify-content-end">
+              <a class="btn-primary btn-sm" href="<%= board_index_path %>"><i class="fas fa-caret-square-left"></i>  Retour Twin-Tips</a>
+	</div>
+    </div>
   </div>
+</div>
 </body>
-
-
-
-
-
-
-
-
-

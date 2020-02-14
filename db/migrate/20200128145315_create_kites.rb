@@ -7,7 +7,7 @@ class CreateKites < ActiveRecord::Migration[5.2]
       t.string :brand
       t.string :wind
       t.string :favorite
-      t.string :picture
+      t.string :youtube
       t.string :bridle
       t.string :link
       t.integer :strut

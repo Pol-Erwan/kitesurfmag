@@ -5,7 +5,7 @@ class CreateFoils < ActiveRecord::Migration[5.2]
       t.string :brand
       t.string :domain
       t.string :description
-      t.string :picture
+      t.string :youtube
       t.string :link
       t.string :testsize
       t.string :size

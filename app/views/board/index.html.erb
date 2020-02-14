@@ -229,86 +229,169 @@ polyvalentes.</p>
           <div class="card m-3 p-2" style="max-width: 200px;">
             <a href="<%= board_path(t) %>">
 	    <img src="assets/testboard/board2.png" class="img-raised rounded img-fluid" alt="..."></a>
-            <h3 class="card-title"><%= t.name %></h3><h4> <%= t.testsize %> </h4> <h4>By <%= t.brand %></h4>
+            <h3 class="card-title"><%= t.name %></h3><h4><i class="far fa-arrow-alt-circle-right"></i> <%= t.domain %> </h4> <h4>By <%= t.brand %></h4>
           </div>
         </div>
       </div>
       <%end%>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-</div>
 </section>
 
-<section id="compare">
-<div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
-   <div class="container for-about">
-   <h1>comparer twin-tip</h1>
-   </div>
-</div>
+  <section id="compare">
+  <br><br><br>
+  <div class="jumbotron" style="background-image: url(/assets/introtest4.jpg); background-size: 100%;">
+    <div class="container for-about">
+    <h1>comparer Twin-Tips</h1>
+    </div>
+  </div>
 
 
-<table class="table">
+<table class="table table-striped text-center p-2">
   <thead>
     <tr>
-      <th scope="col"></th>
-      <th scope="col">Control</th>
-      <th scope="col">Progression</th>
-      <th scope="col">Freeride</th>
-      <th scope="col">Freestyle</th>
-      <th scope="col">Maniability</th>
+      <th scope="col">Twin-tip <i class="fas fa-chevron-circle-right"></i></th>
+<% @boards.each do |t, index| %>
+
+      <th scope="col"><%= t.name %></th>
+<%end%>
     </tr>
   </thead>
-      <% @boards.each do |t, index| %>
   <tbody>
     <tr>
-      <th scope="row"><%= t.name %></th>
+      <th scope="row">Compétences<br><i class="fas fa-chevron-circle-down"></i></th>
+<% @boards.each do |t, index| %>
+      <td><img src="assets/testboard/board2.png" class="img-raised rounded img-fluid" alt="..." style="width:70px"></td>
+<%end%>
+    </tr>
+    <tr>
+      <th scope="row">Marque</th>
+<% @boards.each do |t, index| %>
+      <td><%= t.brand %></td>
+<%end%>
+    </tr>
+    <tr>
+      <th scope="row">taille testé</th>
+<% @boards.each do |t, index| %>
+      <td><%= t.testsize %>m</td>
+<%end%>
+    </tr>
+    <tr>
+      <th scope="row">Wave</th>
+<% @boards.each do |t, index| %>
       <td><% while @control < t.control %>
 	    <i class="fas fa-star"></i>
 	    <% @control = @control + 1 %>
 	  <%end%>
-	  <% @control = 0 %>
+	  <% @wcontrol = 0 %>
       </td>
+<%end%>
+    </tr>
+    <tr>
+      <th scope="row">Big Air</th>
+<% @boards.each do |t, index| %>
       <td><% while @progression < t.progression %>
 	    <i class="fas fa-star"></i>
 	    <% @progression = @progression + 1 %>
 	  <%end%>
 	  <% @progression = 0 %>
       </td>
+<%end%>
+    </tr>
+    <tr>
+      <th scope="row">Freeride / Freestyle</th>
+<% @boards.each do |t, index| %>
       <td><% while @freeride < t.freeride %>
 	    <i class="fas fa-star"></i>
 	    <% @freeride = @freeride + 1 %>
 	  <%end%>
 	  <% @freeride = 0 %>
       </td>
+<%end%>
+    </tr>
+    <tr>
+      <th scope="row">New-School</th>
+<% @boards.each do |t, index| %>
       <td><% while @freestyle < t.freestyle %>
 	    <i class="fas fa-star"></i>
 	    <% @freestyle = @freestyle + 1 %>
 	  <%end%>
 	  <% @freestyle = 0 %>
       </td>
+<%end%>
+    </tr>
+    <tr>
+      <th scope="row">Maniabilité</th>
+<% @boards.each do |t, index| %>
       <td><% while @maniability < t.maniability %>
 	    <i class="fas fa-star"></i>
 	    <% @maniability = @maniability + 1 %>
 	  <%end%>
 	  <% @maniability = 0 %>
       </td>
-
-    </tr>
-  </tbody>
 <%end%>
-</table> 
-</section>
+    </tr>
 
+    <tr>
+      <th scope="row">Tailles disponibles</th>
+<% @boards.each do |t, index| %>
+      <td><%= t.size %></td>
+<%end%>
+    </tr>
+    <tr>
+      <th scope="row">Ailerons</th>
+<% @boards.each do |t, index| %>
+      <td><%= t.finn %></td>
+<%end%>
+    </tr>
+    <tr>
+      <th scope="row">Stance</th>
+<% @boards.each do |t, index| %>
+      <td><%= t.stance %></td>
+<%end%>
+    </tr>
+    <tr>
+      <th scope="row">Largeur</th>
+<% @boards.each do |t, index| %>
+      <td><%= t.width %></td>
+<%end%>
+    </tr>
+    <tr>
+      <th scope="row">Poids</th>
+<% @boards.each do |t, index| %>
+      <td><%= t.weigh %></td>
+<%end%>
+    </tr>
+    <tr>
+      <th scope="row">Carène</th>
+<% @boards.each do |t, index| %>
+      <td><%= t.carene %></td>
+<%end%>
+    </tr>
+    <tr>
+      <th scope="row">Flex</th>
+<% @boards.each do |t, index| %>
+      <td><%= t.flex %></td>
+<%end%>
+    </tr>
+    <tr>
+      <th scope="row">Prix</th>
+<% @boards.each do |t, index| %>
+      <td><%= t.price %> €</td>
+<%end%>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+<% @boards.each do |t, index| %>
+      <td><a href="<%= board_path(t) %>" class="scrollup btn btn-success">Détails</a>
+</td>
+<%end%>
+    </tr>
+
+  </tbody>
+</table>
+    <a href="#navtest" class="scrollup d-flex justify-content-end align-items-end"><i class="m-3 btn-sm btn-primary fa fa-caret-square-up"></i></a>
+  </section>
 
 <section id="presentation">
 <div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
@@ -325,7 +408,7 @@ polyvalentes.</p>
                   <div class="col-md-6 ml-auto mr-auto">
                     <img src="/assets/Hugo.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                   </div>
-                  <h4 class="card-title">Hugo
+                  <h4 class="card-title text-center">Hugo
                     <br>
                     <small class="card-description text-muted">Model</small>
                   </h4>
@@ -342,7 +425,7 @@ polyvalentes.</p>
                   <div class="col-md-6 ml-auto mr-auto">
                     <img src="/assets/Greg.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                   </div>
-                  <h4 class="card-title">Greg
+                  <h4 class="card-title text-center">Greg
                     <br>
                     <small class="card-description text-muted">Designer</small>
                   </h4>
@@ -359,7 +442,7 @@ polyvalentes.</p>
                   <div class="col-md-6 ml-auto mr-auto">
                     <img src="/assets/Marvin.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                   </div>
-                  <h4 class="card-title">Marvin
+                  <h4 class="card-title text-center">Marvin
                     <br>
                     <small class="card-description text-muted">Model</small>
                   </h4>

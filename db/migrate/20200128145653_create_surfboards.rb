@@ -8,7 +8,7 @@ class CreateSurfboards < ActiveRecord::Migration[5.2]
       t.string :brand
       t.string :size
       t.string :favorite
-      t.string :picture
+      t.string :youtube
       t.string :link
       t.string :length
       t.string :maitrebau

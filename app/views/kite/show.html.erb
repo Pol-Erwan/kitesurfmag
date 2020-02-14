@@ -1,6 +1,6 @@
 <%= render "layouts/navbartest" %>
 <body class="pt-5 profile-page sidebar-collapse">
-<div class="page-header" data-parallax="true" style="background-image: url('/assets/Cape_Town.jpg');"></div>
+<div class="page-header" id="header" data-parallax="true" style="background-image: url('/assets/Cape_Town.jpg');"></div>
   <div class="main main-raised p-2">
     <div class="profile-content">
       <div class="container">
@@ -27,7 +27,7 @@
         <div class="profile-tabs">
           <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
 	    <li class="nav-item">
-              <%= link_to kite_index_path, class:"nav-link" do %>
+              <%= link_to kite_index_path(anchor: "kite"), class:"nav-link" do %>
 		<i class="text-center text-warning fas fa-chevron-left"></i>
 		<h6 class="text-center text-warning">Tous les kites</h6>
 		<%end%>
@@ -69,7 +69,7 @@
 		<%end%>
             </li>
 	    <li class="nav-item">
-              <%= link_to board_index_path, class:"nav-link" do %>
+              <%= link_to board_index_path(anchor: "board"), class:"nav-link" do %>
 		<i class="text-center text-warning fas fa-chevron-right"></i>
 		<h6 class="text-center text-warning">Tous les Twin-Tips</h6>
 		<%end%>
@@ -108,7 +108,7 @@
 		    <a class="btn btn-success" href="<%= @kite.link %>" target="blank_">more details</a>
 		  </div>
                 </div>
-  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
               </div>
             </div>
           </div>
@@ -133,7 +133,7 @@
                 </div>
               </div>
             </div>
-  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
           </div>
 	</div>
 	</section>
@@ -152,7 +152,7 @@
                 <img src="/assets/testkite/bridage bandit.jpg" class="rounded" style="width:200px">
               </div>
             </div>
-  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end m-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end m-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
 	  </div>
 	</div>
 	</section>
@@ -215,7 +215,7 @@ var polarAreaChart = new Chart(birdsCanvas, {
   data: birdsData
 });
 </script>
-  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
 </div>
 
 
@@ -229,9 +229,9 @@ var polarAreaChart = new Chart(birdsCanvas, {
 	<div class="d-flex justify-content-center">
             <div class="card row m-3 p-3 col-lg-8">
               <div class="d-flex justify-content-center">
-		<iframe width="560" height="315" src="<%= @kite.picture %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe width="560" height="315" src="<%= @kite.youtube %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	      </div>
-  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
             </div>
 	</div>
         </section>
@@ -247,7 +247,7 @@ var polarAreaChart = new Chart(birdsCanvas, {
                 <img src="/assets/testkite/bandit.png" class="rounded m-1" style="width:100px"> corner chop
               </div>
             </div>
-  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end m-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end m-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
 	  </div>
 	</div>
 	</section>

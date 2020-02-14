@@ -1,6 +1,6 @@
 <%= render "layouts/navbartest" %>
 <body class="pt-5 profile-page sidebar-collapse">
-<div class="page-header" data-parallax="true" style="background-image: url('/assets/Cape_Town.jpg');"></div>
+<div class="page-header" id="header" data-parallax="true" style="background-image: url('/assets/Cape_Town.jpg');"></div>
   <div class="main main-raised p-2">
     <div class="profile-content">
       <div class="container">
@@ -22,42 +22,62 @@
     <h1 class="title" id="navshow"> <%= @surfboard.name %></h1>
 	<h3 class="ml-4"> by <%= @surfboard.brand %></h3>
 
-    <div class="row">
+   <div class="row">
       <div class="col-md-8 ml-auto mr-auto">
         <div class="profile-tabs">
           <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
 	    <li class="nav-item">
-              <i class="text-center fas fa-id-card"></i>
-              <%= link_to "Id card", surfboard_path(anchor: "idcard"), class:"nav-link active" %>
+              <%= link_to surfboard_index_path(anchor: "surfboard"), class:"nav-link" do %>
+		<i class="text-center text-warning fas fa-chevron-left"></i>
+		<h6 class="text-center text-warning">Toutes les directionnelles</h6>
+		<%end%>
             </li>
 	    <li class="nav-item">
-              <i class="text-center far fa-comment-dots"></i>
-              <%= link_to "En bref", surfboard_path(anchor: "resume"), class:"nav-link" %>
+              <%= link_to surfboard_path(anchor: "idcard"), class:"nav-link active" do %>
+              <i class="text-center text-warning fas fa-id-card"></i>
+		<h6 class="text-center text-warning">Id Card</h6>
+		<%end%>
             </li>
 	    <li class="nav-item">
-              <i class="text-center fas fa-images"></i>
-              <%= link_to "Zoom", surfboard_path(anchor: "zoom"), class:"nav-link" %>
+              <%= link_to surfboard_path(anchor: "resume"), class:"nav-link" do %>
+              <i class="text-center text-warning fas fa-comment-dots"></i>
+		<h6 class="text-center text-warning">En bref</h6>
+		<%end%>
             </li>
 	    <li class="nav-item">
-              <i class="text-center fas fa-cogs"></i>
-              <%= link_to "competences", surfboard_path(anchor: "competence"), class:"nav-link" %>
+              <%= link_to surfboard_path(anchor: "zoom"), class:"nav-link" do %>
+              <i class="text-center text-warning fas fa-images"></i>
+		<h6 class="text-center text-warning">Zoom</h6>
+		<%end%>
             </li>
 	    <li class="nav-item">
-              <i class="text-center fas fa-video"></i>
-              <%= link_to "video", surfboard_path(anchor: "video"), class:"nav-link" %>
+              <%= link_to surfboard_path(anchor: "competence"), class:"nav-link" do %>
+              <i class="text-center text-warning fas fa-cogs"></i>
+		<h6 class="text-center text-warning">Competences</h6>
+		<%end%>
             </li>
 	    <li class="nav-item">
-	      <i class="text-center fas fa-shopping-cart"></i>
-              <%= link_to "Buy", surfboard_path(anchor: "shop"), class:"nav-link" %>
+              <%= link_to surfboard_path(anchor: "video"), class:"nav-link" do %>
+              <i class="text-center text-warning fas fa-video"></i>
+		<h6 class="text-center text-warning">Video</h6>
+		<%end%>
             </li>
-
+	    <li class="nav-item">
+              <%= link_to surfboard_path(anchor: "shop"), class:"nav-link disabled" do %>
+              <i class="text-center text-warning fas fa-shopping-cart"></i>
+		<h6 class="text-center text-muted">Buy</h6>
+		<%end%>
+            </li>
+	    <li class="nav-item">
+              <%= link_to foil_index_path(anchor: "foil"), class:"nav-link" do %>
+		<i class="text-center text-warning fas fa-chevron-right"></i>
+		<h6 class="text-center text-warning">Tous les foils</h6>
+		<%end%>
+            </li>
           </ul>
         </div>
       </div>
     </div>
-
-
-
 
 
 	<section id="idcard">
@@ -80,10 +100,10 @@
                     <h6>Tailles disponible : <%= @surfboard.size %></h6>
                     <h6>Prix en shop : <%= @surfboard.price %>€ pour une <%= @surfboard.testsize %>m nue</h6>
 		    <h6>millésime : <%= @surfboard.year %></h6>
-		    <a class="btn btn-success" href="<%= @kite.link %>" target="blank_">more details</a>
+		    <a class="btn btn-success" href="<%= @surfboard.link %>" target="blank_">more details</a>
 		  </div>
                 </div>
-  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
               </div>
             </div>
           </div>
@@ -108,7 +128,7 @@
                 </div>
               </div>
             </div>
-  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
           </div>
 	</div>
 	</section>
@@ -206,7 +226,7 @@ var polarAreaChart = new Chart(birdsCanvas, {
   data: birdsData
 });
 </script>
-  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
 </div>
 
 
@@ -219,9 +239,9 @@ var polarAreaChart = new Chart(birdsCanvas, {
 	<div class="d-flex justify-content-center">
             <div class="card row m-3 p-3 col-lg-8">
               <div class="d-flex justify-content-center">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/ZhDjjSTaDcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe width="560" height="315" src="<%= @surfboard.youtube %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	      </div>
-  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end mr-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
             </div>
 	</div>
         </section>
@@ -237,7 +257,7 @@ var polarAreaChart = new Chart(birdsCanvas, {
                 <img src="/assets/testkite/bandit.png" class="rounded m-1" style="width:100px"> corner chop
               </div>
             </div>
-  		<a href="#navshow" class="scrollup d-flex justify-content-end align-items-end m-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
+  		<a href="#header" class="scrollup d-flex justify-content-end align-items-end m-3"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
 	  </div>
 	</div>
 	</section>
