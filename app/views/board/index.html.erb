@@ -1,5 +1,5 @@
-<%= render"layouts/navbartest" %>
-<body class="pt-5 index-page sidebar-collapse">
+<%= render"layouts/navbar" %>
+<body class="index-page sidebar-collapse">
   <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('./assets/background/board.jpg');">
     <div class="container">
       <div class="row">
@@ -23,21 +23,21 @@
 
             <div class="navbar navbar-expand-lg bg-info">
               <div class="container">
-                <div class="collapse navbar-collapse">
+                <div class="collapse navbar-collapse d-flex justify-content-around">
                   <ul class="navbar-nav">
-                    <li class="active nav-item">
+                    <li class="active nav-item mx-3">
            <%= link_to "menu", board_index_path(anchor: "menu"), class:" nav-link"%>
                      </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-3">
            <%= link_to "introduction", board_index_path(anchor: "intro"), class:" nav-link"%>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-3">
            <%= link_to "Tous les twin-tips", board_index_path(anchor: "board"), class:" nav-link"%>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-3">
            <%= link_to "presentation", board_index_path(anchor: "presentation"), class:" nav-link"%>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-3">
            <%= link_to "comparer", board_index_path(anchor: "compare"), class:" nav-link"%>
                     </li>
                   </ul>
@@ -119,6 +119,13 @@ comment tu aimes ton twin tip !</p>
   </div>
 </div>
       <div class="container tim-container m-3">
+       <h2><small class="subtitle"># Equipment</small></h2>
+          <div class="ml-5" style="width:200px">
+            <img src="assets/teststrap/strap.jpg" alt="Rounded Image" class="card">
+          </div>
+
+       <h3><small class="subtitle">Pads / straps</small></h3>
+
         <div class="d-flex flex-row">
           <div class="card m-3 p-3">
             <p>Le poids : l’ensemble pads/straps doit conserver un minimum
@@ -129,47 +136,106 @@ moins…mais 4 Velcros vous permettent d’ajuster indépendamment
 votre coup de pied et s’adapter à votre anatomie.
 le prix : le confort ou la technicté ont un prix et l’ensemble le plus
 cher n’est pas forcément le plus adapté à votre morphologie.</p>
-          </div>
-          <div class="p-3">
-            <img src="assets/teststrap/strap.jpg" alt="Rounded Image" class="card">
-          </div>
-        </div>    
+          </div>   
+
+<div class="card col-md-4">
+  <div class="m-1 row d-flex justify-content-around">
+  <h3>Pads </h3>
+    <div class="m-1 card col-md-8">
+      <div class="row d-flex justify-content-center">
+      <h5> soft</h5>
+      <i class="p-1 mt-3 fas fa-square"></i><i class="p-1 mt-3 fas fa-square" style="fa2"></i><i class="pt-1 mt-3 m-1 fas fa-square"></i><i class="pt-1 mt-3 m-1 far fa-square"></i><i class="pt-1 mt-3 m-1 far fa-square"></i><h5>Hard</h5>
+      </div>
+    </div>
+  </div>
+  <div class="m-1 row d-flex justify-content-around">
+  <h3>Straps</h3>
+    <div class="m-1 card col-md-8">
+      <div class="row d-flex justify-content-center">
+      <h5>Souples</h5>
+      <i class="p-1 mt-3 fas fa-square"></i><i class="p-1 mt-3 fas fa-square" style="fa2"></i><i class="pt-1 mt-3 m-1 far fa-square"></i><i class="pt-1 mt-3 m-1 far fa-square"></i><i class="pt-1 mt-3 m-1 far fa-square"></i><h5>Rigides</h5>
+      </div>
+    </div>
+  </div>
+</div>
+        </div> 
+
+        <div class="d-flex flex-row">
+
+
+</div>
+
+       <h2><small class="subtitle">Quel est ton programme ?</small></h2>
 
         <div class="m-3 d-flex flex-row">
 
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Freeride / Freestyle</h5>
+        <p class="card-text">C’est clairement le TT qui convient le mieux à quasiment tout le
+monde. Il est polyvalent, tu peux aller vite et te dépasser en freeride
+tout en ayant un bon contrôle et du pop pour enchaîner les sauts
+aile haute. C’est souvent le fer de lance de chaque marque. Tu vas
+privilégier le confort dans la clapot, la facilité au cap et surtout la
+polyvalence.</p>
+       </div>
+    </div>
+  </div>
+
+
           <div class="card m-3 p-3" style="width:60%">
-	    <h6>Wave : 4/5</h6>
-	    <div class="progress">
-	      <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-	    </div>
-	    <h6>Big Air: 2/5</h6>
-	    <div class="progress">
-  	      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-	    </div>
-	    <h6>Freeride: 3/5</h6>
-	    <div class="progress">
-  	      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-	    </div>
-	    <h6>Freestyle: 5/5</h6>
-	    <div class="progress">
-  	      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-	    </div>
-	    <h6>Maniability: 1/5</h6>
+	    <h6>Maniabilité: 1/5</h6>
 	    <div class="progress">
 	      <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 	    </div>
-	    <h6>Feeling: 4/5</h6>
+	    <h6>New-School : 4/5</h6>
 	    <div class="progress">
-  	      <div class="progress-bar progress-bar-striped bg-rose" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+	      <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+	    </div>
+	    <h6>Freeride / Freestyle: 2/5</h6>
+	    <div class="progress">
+  	      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+	    </div>
+	    <h6>Progression: 3/5</h6>
+	    <div class="progress">
+  	      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+	    </div>
+	    <h6>Contrôle: 5/5</h6>
+	    <div class="progress">
+  	      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 	    </div>
 	  </div>
+
+
+
+
+	</div>
+
+ <div class="d-flex flex-row">
+
+    <div class="card m-3 p-3">
+         <h5 class="card-title">New School Wakestyle</h5>
+        <p class="card-text">On rentre dans la catégorie qui représente pour beaucoup le graal.
+Il faut savoir que ces TT son accessibles même s’ils restent plutôt
+“rigides” en navigation et demandent d’avoir un bon bagage
+technique et une condition physique pour en tirer le meilleur parti.
+Ils sont optimisés pour le blocage, pour délivrer du pop et tutoyer
+les tricks aile basse et autres passages de bâton. Ces TT sont
+également pour la plupart étudiés pour recevoir des chausses, voire
+pour aller enchaîner des sessions de câble en cas de pétole. Ne
+vous étonnez pas de trouver dans notre sélection beaucoup de nos
+coups de coeur car ces boards sont de plus en plus accessibles et
+polyvalentes.</p>
+      </div>
+
 
 	  <div class="card m-3 p-3">
 	    <canvas id="birdsChart" width="300px" height="200px"></canvas>
 	    <script>
 		var birdsCanvas = document.getElementById("birdsChart");
 		var birdsData = {
-		  labels: ["Wave","Big Air","Freeride","Freestyle","Maniability","Feeling"],
+		  labels: ["Maniabilité","New-School","Freeride / Freestyle","Progression","Contrôle"],
 		  datasets: [{
 		    data: [ 4, 2, 3, 5, 1, 4],
 		    backgroundColor: [
@@ -177,8 +243,7 @@ cher n’est pas forcément le plus adapté à votre morphologie.</p>
 		      "#cde9ce",
  		      "rgba(200, 50, 255, 0.5)",
  		      "rgba(0, 100, 255, 0.5)",
-		      "rgba(255, 0, 0, 0.5)",
-		      "rgba(100, 255, 0, 0.5)"
+		      "rgba(255, 0, 0, 0.5)"
 		    ]
 		  }]
 		};
@@ -190,51 +255,9 @@ cher n’est pas forcément le plus adapté à votre morphologie.</p>
 	    </script>
 	  </div>
 
+  </div>
 	</div>
 
-	<div class="d-flex flex-row">
-	  <div class="card m-2">
-  	    <div class="card-body">
-    	      <h5 class="card-title">Feeling en barre</h5>
-    	      <h6 class="card-subtitle mb-2 text-muted">Léger - Présent</h6>
-    	      <p class="card-text">La présence en barre correspond au feeling que tu as en pilotant l’aile,
-		c’est-à-dire si tu la ressens légère, sans trop de pression, juste présente
-		pour bien la situer dans les airs, ou au contraire, présente dans le sens
-		bien pêchue, voire assez physique et donc avec beaucoup de ressenti !</p>
-	    </div>
-	  </div>
-	  <div class="card m-2">
-  	  <div class="card-body">
-            <h5 class="card-title">Maniabilité</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Maniable - Vif</h6>
-            <p class="card-text">Une aile maniable se placera là où on le souhaite, mais elle restera ensuite
-		bien calée en fenêtre pour réaliser par exemple des figures de wakestyle
-		en déhooké. Une aile rapide sera très maniable. Enfin une aile vive (dans
-		le sens très rapide) pivotera très rapidement sur l’oreille, valeur sûre dans
-		les vagues par exemple.</p>
-  	  </div>
-	</div>
-	<div class="card m-2">
-  	  <div class="card-body">
-	    <h5 class="card-title">Drift</h5>
-	    <h6 class="card-subtitle mb-2 text-muted">How - Ligh</h6>
-	    <p class="card-text">Nous avons conservé "le drift" uniquement pour les ailes de vagues
-		destinées au surf et au strapless. Le drift, c’est la capacité de l’aile "à
-		déraper" pendant que l’on surfe. Une aile qui a du drift ne décroche pas
-		mais au contraire continue de suivre le rider sans tomber.</p>
-  	  </div>
-	</div>
-	<div class="card m-2">
-	  <div class="card-body">
-	    <h5 class="card-title">Big Air</h5>
-	    <h6 class="card-subtitle mb-2 text-muted"></h6>
-	    <p class="card-text">Nous avons introduit la notion de Big Air qui donne une info sur le hang
-		time et la sustentation de l'aile. Cette discipline revient en force, elle a
-		donc sa place aux côtés du freeride - new school ou waveriding.</p>
-	  </div>
-	</div>
-      </div>
-    </div>
     <a href="#navtest" class="p-3 scrollup d-flex justify-content-end align-items-end"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
 
   </section>

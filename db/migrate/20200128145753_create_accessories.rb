@@ -4,6 +4,7 @@ class CreateAccessories < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :brand
       t.string :description
+      t.string :link
       t.integer :size
       t.integer :price
       t.integer :year

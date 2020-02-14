@@ -6,6 +6,7 @@ class CreateStraps < ActiveRecord::Migration[5.2]
       t.string :domain
       t.string :description
       t.string :picture
+      t.string :link
       t.string :weigh
       t.string :velcros
       t.string :details

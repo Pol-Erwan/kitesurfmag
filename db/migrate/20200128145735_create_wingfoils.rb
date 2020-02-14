@@ -6,6 +6,7 @@ class CreateWingfoils < ActiveRecord::Migration[5.2]
       t.string :domain
       t.string :description
       t.string :picture
+      t.string :link
       t.string :testsize
       t.string :size
       t.integer :transitions

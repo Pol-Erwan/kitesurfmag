@@ -11,6 +11,7 @@ class CreateBars < ActiveRecord::Migration[5.2]
       t.string :v
       t.string :detail
       t.string :size
+      t.string :link
       t.integer :transitions
       t.integer :price
       t.integer :year

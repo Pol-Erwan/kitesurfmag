@@ -11,6 +11,7 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.string :domain
       t.string :description
       t.string :picture
+      t.string :link
       t.timestamps
     end
   end

@@ -9,7 +9,7 @@ class Admin::KiteController < Admin::BasesController
   end
 
   def create
-      @kite = Kite.new(name: params[:name], brand: params[:brand], domain: params[:domain], favorite: params[:favorite], wave: params[:wave], bigair: params[:bigair], freeride: params[:freeride], freestyle: params[:freestyle], maniability: params[:maniability], feeling: params[:feeling], wind: params[:wind], bridle: params[:bridle], strut: params[:strut], testsize: params[:testsize], price: params[:price], year: params[:year], picture: params[:picture], description: params[:description])
+      @kite = Kite.new(name: params[:name], brand: params[:brand], domain: params[:domain], favorite: params[:favorite], wave: params[:wave], bigair: params[:bigair], freeride: params[:freeride], freestyle: params[:freestyle], maniability: params[:maniability], feeling: params[:feeling], wind: params[:wind], bridle: params[:bridle], strut: params[:strut], testsize: params[:testsize], price: params[:price], year: params[:year], picture: params[:picture], description: params[:description], link: params[:link])
       if @kite.save
         flash[:success] = "Le kite a bien été ajouté !"
         redirect_to admin_kite_index_path

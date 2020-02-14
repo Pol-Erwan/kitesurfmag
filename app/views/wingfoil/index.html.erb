@@ -1,3 +1,5 @@
+<%= render"layouts/navbar" %>
+
 <body class="index-page sidebar-collapse">
   <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('./assets/background/wingfoil.jpg');">
     <div class="container">
@@ -22,21 +24,21 @@
 
             <div class="navbar navbar-expand-lg bg-info">
               <div class="container">
-                <div class="collapse navbar-collapse">
+                <div class="collapse navbar-collapse d-flex justify-content-around">
                   <ul class="navbar-nav">
-                    <li class="active nav-item">
+                    <li class="active nav-item mx-3">
            <%= link_to "menu", wingfoil_index_path(anchor: "menu"), class:" nav-link"%>
                      </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-3">
            <%= link_to "introduction", wingfoil_index_path(anchor: "intro"), class:" nav-link"%>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-3">
            <%= link_to "foil", wingfoil_index_path(anchor: "foil"), class:" nav-link"%>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-3">
            <%= link_to "compare", wingfoil_index_path(anchor: "compare"), class:" nav-link"%>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-3">
            <%= link_to "presentation", wingfoil_index_path(anchor: "presentation"), class:" nav-link"%>
                     </li>
                   </ul>

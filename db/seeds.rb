@@ -119,21 +119,21 @@ variable = 0
 
 10.times do
 
-	kite << Kite.create(name: kite_name[variable],description: kite_description[0],domain: "freestyle",brand: brand[variable],wind: "6/7/8/9/10/11/12/13/14", favorite: "#freeride", testsize: "10", wave: rand(0..5),bigair: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5),feeling: rand(0..5), price: rand(1200..1600),year: "2020",strut: rand(1..5), bridle: "no poulies", picture: picture[0])
+	kite << Kite.create(name: kite_name[variable],description: kite_description[0],domain: "freestyle",brand: brand[variable],wind: "6/7/8/9/10/11/12/13/14", favorite: "#freeride", testsize: "10", wave: rand(0..5),bigair: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5),feeling: rand(0..5), price: rand(1200..1600),year: "2020",strut: rand(1..5), bridle: "no poulies", picture: picture[0], link: "https://fr.f-one.world/produit/bandit-2020/")
 
-	board << Board.create(name: board_name[variable],description: board_description[0],brand: brand[variable],control: rand(0..5),progression: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5), price: rand(500..1000),year: "2020",domain:"freestyle",size:"136x42 / 138x43",testsize:"138x43",favorite:"pop", finn: "3.5cm",width: "36.5 cm",stance: "62cm / 65cm / 68cm",champs: "HRD", weigh: "3.5kg", carene: "channel",flex:"medium")
+	board << Board.create(name: board_name[variable],description: board_description[0],brand: brand[variable],control: rand(0..5),progression: rand(0..5),freeride: rand(0..5),freestyle: rand(0..5), maniability: rand(0..5), price: rand(500..1000),year: "2020",domain:"freestyle",size:"136x42 / 138x43",testsize:"138x43",favorite:"pop", finn: "3.5cm",width: "36.5 cm",stance: "62cm / 65cm / 68cm",champs: "HRD", weigh: "3.5kg", carene: "channel",flex:"medium",link: "https://fr.f-one.world/produit/bandit-2020/")
 
-	surfboard << Surfboard.create(name: surfboard_name[variable],brand: brand[variable],description: surfboard_description[0],transitions: rand(0..5),courbes: rand(0..5),wind: rand(0..5),sideshore: rand(0..5),onshore: rand(0..5),freestyle: rand(0..5),wave: rand(0..5), straps: rand(0..5),strapless: rand(0..5), price: rand(700..1100),year: "2020",domain:"freestyle",size:"6'2 / 6'4 / 7'2",testsize:"6'4",favorite:"son pads",length: rand(150..180),maitrebau:rand(40..50),width:rand(33..38),thickness:rand(5.5..6.8),weigh:rand(3.5..4.5),volum:rand(22..26),finn:rand(10..14),carene:"channel",box:"futures fins")
+	surfboard << Surfboard.create(name: surfboard_name[variable],brand: brand[variable],description: surfboard_description[0],transitions: rand(0..5),courbes: rand(0..5),wind: rand(0..5),sideshore: rand(0..5),onshore: rand(0..5),freestyle: rand(0..5),wave: rand(0..5), straps: rand(0..5),strapless: rand(0..5), price: rand(700..1100),year: "2020",domain:"freestyle",size:"6'2 / 6'4 / 7'2",testsize:"6'4",favorite:"son pads",length: rand(150..180),maitrebau:rand(40..50),width:rand(33..38),thickness:rand(5.5..6.8),weigh:rand(3.5..4.5),volum:rand(22..26),finn:rand(10..14),carene:"channel",box:"futures fins",link: "https://fr.f-one.world/produit/bandit-2020/")
 
-	foil << Foil.create(name: foil_name[variable],brand: brand[variable],description: foil_description[0],transitions: rand(0..5),courbes: rand(0..5),wind: rand(0..5),price: rand(700..1100),year: "2020",domain:"Race",testsize:"90",size:"70 / 80 / 90")
+	foil << Foil.create(name: foil_name[variable],brand: brand[variable],description: foil_description[0],transitions: rand(0..5),courbes: rand(0..5),wind: rand(0..5),price: rand(700..1100),year: "2020",domain:"Race",testsize:"90",size:"70 / 80 / 90",link: "https://fr.f-one.world/produit/bandit-2020/")
 
 	bar << Bar.create(name: bar_name[variable],brand: brand[variable],description: bar_description[0],transitions: rand(0..5),price: rand(250..680),year: "2020",domain:"Ride",size:"40 / 45 / 55",line:"23m",trim:"sangle",twist:"oui",v:"V",detail:"super confortable, lignes renforcées")
 
-	accessory << Accessory.create(name:"Rip Curl Flash Bomb",brand: brand[variable],description: accessory_description[0],price: rand(200..500),year: "2020",size:"S / M / L / XL / XXL")
+	accessory << Accessory.create(name:"Rip Curl Flash Bomb",brand: brand[variable],description: accessory_description[0],price: rand(200..500),year: "2020",size:"S / M / L / XL / XXL",link: "https://fr.f-one.world/produit/bandit-2020/")
 
-	strap << Strap.create(name:"Apex",brand: brand[variable],description: strap_description[0],price: rand(150..270),year: "2020",domain:"Ride",weigh:rand(0.7..1.7),velcros:rand(1..4),details:"très confort, facile à régler",pad:rand(0..5),strap:rand(0..5))
+	strap << Strap.create(name:"Apex",brand: brand[variable],description: strap_description[0],price: rand(150..270),year: "2020",domain:"Ride",weigh:rand(0.7..1.7),velcros:rand(1..4),details:"très confort, facile à régler",pad:rand(0..5),strap:rand(0..5),link: "https://fr.f-one.world/produit/bandit-2020/")
 
-	wingfoil << Wingfoil.create(name:"wingfoil name",brand: brand[variable],description: wingfoil_description[0],price: rand(2000..6000),year: "2020",transitions: rand(0..5),courbes: rand(0..5),size:"S / M / XL",testsize:"M",wing:"1400")
+	wingfoil << Wingfoil.create(name:"wingfoil name",brand: brand[variable],description: wingfoil_description[0],price: rand(2000..6000),year: "2020",transitions: rand(0..5),courbes: rand(0..5),size:"S / M / XL",testsize:"M",wing:"1400",link: "https://fr.f-one.world/produit/bandit-2020/")
 
 	shop << Shop.create(title:"Kitesurf Mag", intro:"Test matos", author:"Hugo", number: variable + 102)
 

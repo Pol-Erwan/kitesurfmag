@@ -9,6 +9,7 @@ class CreateBoards < ActiveRecord::Migration[5.2]
       t.string :testsize
       t.string :favorite
       t.string :picture
+      t.string :link
       t.string :finn
       t.string :width
       t.string :stance

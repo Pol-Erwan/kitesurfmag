@@ -9,6 +9,7 @@ class CreateShops < ActiveRecord::Migration[5.2]
       t.string :domain
       t.string :description
       t.string :picture
+      t.string :link
       t.integer :number
       t.timestamps
     end
