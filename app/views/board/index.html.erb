@@ -118,52 +118,6 @@ comment tu aimes ton twin tip !</p>
     </div>
   </div>
 </div>
-      <div class="container tim-container m-3">
-       <h2><small class="subtitle"># Equipment</small></h2>
-          <div class="ml-5" style="width:200px">
-            <img src="assets/teststrap/strap.jpg" alt="Rounded Image" class="card">
-          </div>
-
-       <h3><small class="subtitle">Pads / straps</small></h3>
-
-        <div class="d-flex flex-row">
-          <div class="card m-3 p-3">
-            <p>Le poids : l’ensemble pads/straps doit conserver un minimum
-de légèreté afin de ne pas pénaliser le poids total planche +
-équipement.
-le nombre de Velcros : 1 - 2 ou 4 Plus il y en a plus mieux c’est ? Plus ou
-moins…mais 4 Velcros vous permettent d’ajuster indépendamment
-votre coup de pied et s’adapter à votre anatomie.
-le prix : le confort ou la technicté ont un prix et l’ensemble le plus
-cher n’est pas forcément le plus adapté à votre morphologie.</p>
-          </div>   
-
-<div class="card col-md-4">
-  <div class="m-1 row d-flex justify-content-around">
-  <h3>Pads </h3>
-    <div class="m-1 card col-md-8">
-      <div class="row d-flex justify-content-center">
-      <h5> soft</h5>
-      <i class="p-1 mt-3 fas fa-square"></i><i class="p-1 mt-3 fas fa-square" style="fa2"></i><i class="pt-1 mt-3 m-1 fas fa-square"></i><i class="pt-1 mt-3 m-1 far fa-square"></i><i class="pt-1 mt-3 m-1 far fa-square"></i><h5>Hard</h5>
-      </div>
-    </div>
-  </div>
-  <div class="m-1 row d-flex justify-content-around">
-  <h3>Straps</h3>
-    <div class="m-1 card col-md-8">
-      <div class="row d-flex justify-content-center">
-      <h5>Souples</h5>
-      <i class="p-1 mt-3 fas fa-square"></i><i class="p-1 mt-3 fas fa-square" style="fa2"></i><i class="pt-1 mt-3 m-1 far fa-square"></i><i class="pt-1 mt-3 m-1 far fa-square"></i><i class="pt-1 mt-3 m-1 far fa-square"></i><h5>Rigides</h5>
-      </div>
-    </div>
-  </div>
-</div>
-        </div> 
-
-        <div class="d-flex flex-row">
-
-
-</div>
 
        <h2><small class="subtitle">Quel est ton programme ?</small></h2>
 
@@ -256,61 +210,9 @@ polyvalentes.</p>
 	  </div>
 
   </div>
-	</div>
 
     <a href="#navtest" class="p-3 scrollup d-flex justify-content-end align-items-end"><i class="btn-sm btn-primary fa fa-caret-square-up"></i></a>
-
   </section>
-
-
-<section id="intro">
-<br><br><br>
-<div class="jumbotron" style="background-image: url(/assets/introtest2.jpg); background-size: 100%;">
-   <div class="container for-about">
-   <h1>Comment sont fait nos tests</h1>
-   </div>
-</div>
-    <div class="container tim-container m-3">
-        <div id="extras">
-            <div class="space"></div>
-            <div class="row">
-                <div class="col-md-7 col-md-offset-0 col-sm-10 col-sm-offset-1">
-                    <div class="text-center">
-                        <img src="assets/commentsontfaitnostests.jpg" alt="Rounded Image" class="img-rounded img-responsive img-dog" style="width:100%">
-			<br><br>
-                    </div>
-                </div>
-                <div class="col-md-5 col-sm-12">
-                                <h1 class="text-center">Twin Tip</h1>
-                                
-                                <h2><small class="subtitle">La Board du kitesurfer</small></h2>
-                                <hr>
-                                <p>C’est à 99 % la planche avec laquelle on a tous débuté le
-kitesurf. Ce sera même peut-être la seule et unique board
-que vous utiliserez tout au long de votre «carrière» de rider.
-Ce n’est donc pas un invetsissement à prendre à la légère
-et chaque détail compte pour que l’ensemble réponde à
-vos attentes.
-Les marques ont développé une planche d’un côté et un
-équipement de l’autre afin d’avoir le plus de confort et
-de performances réunies nadaptés à vos besoins. Sachez
-qu’aujourdh’ui, le twin tip peut s’acheter nu donc sans son
-équipement pads straps pour vous laisser le choix car souvent
-les majors proposent 2 gammes d’accessoires : entrée de
-gamme (moins cher) et premium (quasi le double du prix).
-Vous pouvez également conserver votre TT et l’équiper avec
-un ensemble pads-straps d’une autre marque. Dans ce cas
-là, vérifiez bien en amont que les platines s’adaptent bien
-à votre planche, l’entraxe doit être identique. Bien sur, il est
-conseillé d’acheter planche et accessoires de la même
-marque car tout sera pensé et optimisé pour votre confort.</p>
-                </div>
-            </div>
-        </div>
-    <!--     end extras -->    
-    </div>
-<!-- end container -->
-</section>
 
 <section id="board">
 <div class="jumbotron" style="background-image: url(/assets/introtestkite.jpg); background-size: 100%;">
@@ -322,21 +224,28 @@ marque car tout sera pensé et optimisé pour votre confort.</p>
 <div class="row">
 <% @boards.each do |t, index| %>
 
-<div class="card-deck m-3">
-  <div class="row mx-3">  
-    <div style="max-width: 600px;">
-        <a href="<%= board_path(t) %>">
-  <h3 class="card-header"><%= t.brand %>
-  </h3>
-	<div class="img-raised rounded img-fluid p-2">
-	<img src="assets/testboard/board.jpg">
- 	<img src="assets/testboard/boardback.jpg">
-          <h3 class="card-title"><%= t.name %></h3><h4><i class="fas fa-heart"></i> <%= t.favorite %></h4>
-	</div>
+      <div class="card-deck m-3">
+        <div class="row mx-3">  
+          <div class="card m-3 p-2" style="max-width: 200px;">
+            <a href="<%= board_path(t) %>">
+	    <img src="assets/testboard/board2.png" class="img-raised rounded img-fluid" alt="..."></a>
+            <h3 class="card-title"><%= t.name %></h3><h4> <%= t.testsize %> </h4> <h4>By <%= t.brand %></h4>
+          </div>
+        </div>
+      </div>
+      <%end%>
     </div>
-  </div></a>
-</div>
-<%end%>
+
+
+
+
+
+
+
+
+
+
+
 </div>
 </section>
 
@@ -469,6 +378,7 @@ marque car tout sera pensé et optimisé pour votre confort.</p>
 <br>
 <br>
     <%= yield %>
+</div>
 
   </body>
 </html>
