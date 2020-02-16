@@ -1,4 +1,4 @@
-<%= render"layouts/navbar" %>
+<%= render"layouts/navbartest" %>
 
 <body class="index-page sidebar-collapse">
   <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('./assets/background/kite.jpg');">
@@ -22,6 +22,44 @@
   </div>
 
   <div class="main main-raised">
+
+  <nav id='nav_bar'>
+    <ul class='nav_links d-flex justify-content-center'>
+            <li class="active nav-item mx-3">
+            <%= link_to "menu", kite_index_path(anchor: "menu"), class:" nav-link"%>
+            </li>
+            <li class="nav-item mx-3">
+            <%= link_to "introduction", kite_index_path(anchor: "intro"), class:" nav-link"%>
+            </li>
+            <li class="nav-item mx-3">
+            <%= link_to "Tous les kites", kite_index_path(anchor: "kite"), class:" nav-link"%>
+            </li>
+            <li class="nav-item mx-3">
+            <%= link_to "presentation", kite_index_path(anchor: "presentation"), class:" nav-link"%>
+            </li>
+            <li class="nav-item mx-3">
+            <%= link_to "comparer", kite_index_path(anchor: "compare"), class:" nav-link"%>
+            </li>      
+    </ul>
+  </nav>
+<script>
+$(document).ready(function() {
+  
+  $(window).scroll(function () {
+      //if you hard code, then use console
+      //.log to determine when you want the 
+      //nav bar to stick.  
+      console.log($(window).scrollTop())
+    if ($(window).scrollTop() > 280) {
+      $('#nav_bar').addClass('navbar-fixed');
+    }
+    if ($(window).scrollTop() < 281) {
+      $('#nav_bar').removeClass('navbar-fixed');
+    }
+  });
+});
+</script>
+
 
     <div class="navbar navbar-expand-lg bg-info">
       <div class="container">

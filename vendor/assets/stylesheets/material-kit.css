@@ -15886,8 +15886,8 @@ h2.title {
 }
 
 .progress {
-  height: 4px;
-  border-radius: 0;
+  height: 10px;
+  border-radius: 10;
   box-shadow: none;
   background: #DDDDDD;
   margin-bottom: 20px;
@@ -18111,10 +18111,85 @@ a.socialIcon:hover, .socialHoverClass {
 	transition: all 0.2s;
 }
 .social-circle i {
-	color: #fff;
+	color: #aaa;
 	-webkit-transition: all 0.8s;
 	-moz-transition: all 0.8s;
 	-o-transition: all 0.8s;
 	-ms-transition: all 0.8s;
 	transition: all 0.8s;
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+
+.navbar-fixed {
+    top: 120px;
+    z-index: 100;
+  position: fixed;
+    width: 100%;
+}
+
+#body_div {
+	top: 0;
+	position: relative;
+    height: 200px;
+    background-color: green;
+}
+
+#banner {
+	width: 100%;
+	height: 273px;
+    background-color: gray;
+	overflow: hidden;
+}
+
+#nav_bar {
+	border: 0;
+	background-color: white;
+	border-radius: 0px;
+	margin-bottom: 0;
+    height: 100px;
+}
+
+.nav_links {
+    margin: 0;
+}
+
+.nav_links li {
+	display: inline-block;
+    margin-top: 4px;
+}
+.nav_links li a {
+	padding: 0 15.5px;
+	color: #3498db;
+	text-decoration: none;
 }

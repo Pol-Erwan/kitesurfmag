@@ -137,7 +137,7 @@ variable = 0
 
 	shop << Shop.create(title:"Kitesurf Mag", intro:"Test matos", author:"Hugo", number: variable + 102)
 
-	article << Article.create(title:"freestyle session", title2:"pures conditions", author:"Hugo")
+	article << Article.create(title:"freestyle session", title2:"pures conditions", author:"Hugo", picture:"assets/article/article.jpg" )
 	event << Event.create(title:"Lord Of Tram", title2:"compétition aérienne", author:"Hugo")
 	trip << Trip.create(title:"Cape Town", title2:"welcome to South Africa", author:"Hugo")
 	portfolio << Portfolio.create(title:"Portfolio", title2:"best shoots", author:"Hugo")

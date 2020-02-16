@@ -1,12 +1,107 @@
-  <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('./assets/backgroundtestkite.jpg');">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 ml-auto mr-auto">
-          <div class="brand">
-            <h1>trip</h1>
-            <h3>En construction</h3>
-          </div>
-        </div>
+<%= render"layouts/navbartest" %>
+
+
+
+
+
+
+
+
+<div id="banner">
+     <h2>put what you want here</h2>
+     <p>just adjust javascript size to match this window</p>
+  </div>
+
+  <nav id='nav_bar'>
+    <ul class='nav_links d-flex justify-content-center'>
+      <li class="nav-item m-4">
+              <%= link_to kite_index_path(anchor: "kite"), class:"nav-link" do %>
+		<i class="text-center fas fa-cogs"></i>
+		<h6 class="text-center">index</h6>
+		<%end%>
+      </li>
+      <li class="nav-item m-4">
+              <%= link_to kite_index_path(anchor: "kite"), class:"nav-link" do %>
+		<i class="text-center fas fa-cogs"></i>
+		<h6 class="text-center">index</h6>
+		<%end%>
+      </li>  
+      <li class="nav-item m-4">
+              <%= link_to kite_index_path(anchor: "kite"), class:"nav-link" do %>
+		<i class="text-center fas fa-cogs"></i>
+		<h6 class="text-center">index</h6>
+		<%end%>
+      </li>  
+      <li class="nav-item m-4">
+              <%= link_to kite_index_path(anchor: "kite"), class:"nav-link" do %>
+		<i class="text-center fas fa-cogs"></i>
+		<h6 class="text-center">index</h6>
+		<%end%>
+      </li>  
+      <li class="nav-item m-4">
+              <%= link_to kite_index_path(anchor: "kite"), class:"nav-link" do %>
+		<i class="text-center fas fa-cogs"></i>
+		<h6 class="text-center">index</h6>
+		<%end%>
+      </li>        
+    </ul>
+  </nav>
+
+<div class="main">
+    <div class="container tim-container">
+
+<div id='body_div'>
+    <p style='margin: 0; padding-top: 50px;'>and more stuff to continue scrolling here</p>
+</div>
+
+<script>
+$(document).ready(function() {
+  
+  $(window).scroll(function () {
+      //if you hard code, then use console
+      //.log to determine when you want the 
+      //nav bar to stick.  
+      console.log($(window).scrollTop())
+    if ($(window).scrollTop() > 280) {
+      $('#nav_bar').addClass('navbar-fixed');
+    }
+    if ($(window).scrollTop() < 281) {
+      $('#nav_bar').removeClass('navbar-fixed');
+    }
+  });
+});
+</script>
+
+
+<div class="card col-sm-8"> 
+<div class="row">
+  <% @trips.each do |t, index| %>
+
+  <div class="col-sm-6">
+    <div class="card">
+    <img class="card-img-top" src="<%= t.picture %>" alt="Card image cap">
+      <div class="card-body">
+      <h5 class="card-title"><%= t.title2 %></h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
   </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+    <img class="card-img-top" src="<%= t.picture %>" alt="Card image cap">
+      <div class="card-body">
+      <h5 class="card-title"><%= t.title2 %></h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+<%end%>
+</div>
+</div>
+</div>
+</div>
+
+
